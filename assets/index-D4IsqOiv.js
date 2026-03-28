@@ -1,41 +1,4 @@
-var e=Object.defineProperty,t=(t,n)=>{let r={};for(var i in t)e(r,i,{get:t[i],enumerable:!0});return n||e(r,Symbol.toStringTag,{value:`Module`}),r};(function(){let e=document.createElement(`link`).relList;if(e&&e.supports&&e.supports(`modulepreload`))return;for(let e of document.querySelectorAll(`link[rel="modulepreload"]`))n(e);new MutationObserver(e=>{for(let t of e)if(t.type===`childList`)for(let e of t.addedNodes)e.tagName===`LINK`&&e.rel===`modulepreload`&&n(e)}).observe(document,{childList:!0,subtree:!0});function t(e){let t={};return e.integrity&&(t.integrity=e.integrity),e.referrerPolicy&&(t.referrerPolicy=e.referrerPolicy),e.crossOrigin===`use-credentials`?t.credentials=`include`:e.crossOrigin===`anonymous`?t.credentials=`omit`:t.credentials=`same-origin`,t}function n(e){if(e.ep)return;e.ep=!0;let n=t(e);fetch(e.href,n)}})();function n(){let e=document.getElementById(`bubbles-canvas`);if(!e)return;let t=e.getContext(`2d`);if(!t)return;let n=window.innerWidth,r=window.innerHeight;e.width=n,e.height=r;let i=[],a=window.innerWidth<768?12:20,o=.12;function s(){i=[];for(let e=0;e<a;e++)i.push({x:Math.random()*n,y:Math.random()*r,radius:Math.random()*80+40,vx:(Math.random()-.5)*.2,vy:(Math.random()-.5)*.1,alpha:Math.random()*o,alphaSpeed:(Math.random()-.5)*.005})}s();let c,l=!0;function u(){!t||!l||(t.clearRect(0,0,n,r),i.forEach(e=>{e.x+=e.vx,e.y+=e.vy,e.x<-e.radius&&(e.x=n+e.radius),e.x>n+e.radius&&(e.x=-e.radius),e.y<-e.radius&&(e.y=r+e.radius),e.y>r+e.radius&&(e.y=-e.radius),e.alpha+=e.alphaSpeed,e.alpha>o?(e.alpha=o,e.alphaSpeed=-e.alphaSpeed):e.alpha<.02&&(e.alpha=.02,e.alphaSpeed=-e.alphaSpeed);let i=t.createRadialGradient(e.x,e.y,e.radius*.2,e.x,e.y,e.radius);i.addColorStop(0,`rgba(255, 51, 125, ${e.alpha*.6})`),i.addColorStop(1,`rgba(255, 51, 125, 0)`),t.beginPath(),t.arc(e.x,e.y,e.radius,0,Math.PI*2),t.fillStyle=i,t.fill()}),c=requestAnimationFrame(u))}function d(){n=window.innerWidth,r=window.innerHeight,e.width=n,e.height=r,s()}function f(){l=!document.hidden,l&&!c&&(c=requestAnimationFrame(u))}return u(),window.addEventListener(`resize`,d),document.addEventListener(`visibilitychange`,f),()=>{window.removeEventListener(`resize`,d),document.removeEventListener(`visibilitychange`,f),c&&cancelAnimationFrame(c)}}var r=[{name:`Управление сообществами`,icon:`users`,category:`Навыки`},{name:`Разработка и автоматизация`,icon:`code`,category:`Навыки`},{name:`SMM-Менеджмент`,icon:`megaphone`,category:`Навыки`},{name:`Брендинг сообществ`,icon:`palette`,category:`Навыки`},{name:`Техническое продюсирование`,icon:`monitor`,category:`Навыки`},{name:`Дизайн`,icon:`pencil`,category:`Навыки`}],i=[`Figma`,`IntelliJ IDEA`,`Adobe Photoshop`,`Adobe After Effects`,`Adobe Premiere`,`Adobe Audition`,`Capcut`,`Excel / Google docs`],a=`modulepreload`,o=function(e){return`/my-portfolio/`+e},s={},c=function(e,t,n){let r=Promise.resolve();if(t&&t.length>0){let e=document.getElementsByTagName(`link`),i=document.querySelector(`meta[property=csp-nonce]`),c=i?.nonce||i?.getAttribute(`nonce`);function l(e){return Promise.all(e.map(e=>Promise.resolve(e).then(e=>({status:`fulfilled`,value:e}),e=>({status:`rejected`,reason:e}))))}r=l(t.map(t=>{if(t=o(t,n),t in s)return;s[t]=!0;let r=t.endsWith(`.css`),i=r?`[rel="stylesheet"]`:``;if(n)for(let n=e.length-1;n>=0;n--){let i=e[n];if(i.href===t&&(!r||i.rel===`stylesheet`))return}else if(document.querySelector(`link[href="${t}"]${i}`))return;let l=document.createElement(`link`);if(l.rel=r?`stylesheet`:a,r||(l.as=`script`),l.crossOrigin=``,l.href=t,c&&l.setAttribute(`nonce`,c),document.head.appendChild(l),r)return new Promise((e,n)=>{l.addEventListener(`load`,e),l.addEventListener(`error`,()=>n(Error(`Unable to preload CSS for ${t}`)))})}))}function i(e){let t=new Event(`vite:preloadError`,{cancelable:!0});if(t.payload=e,window.dispatchEvent(t),!t.defaultPrevented)throw e}return r.then(t=>{for(let e of t||[])e.status===`rejected`&&i(e.reason);return e().catch(i)})};function l(e){return{Figma:`figma-logo`,"IntelliJ IDEA":`code`,"Adobe Photoshop":`image`,"Adobe After Effects":`film-strip`,"Adobe Premiere":`video`,"Adobe Audition":`waveform`,Capcut:`scissors`,"Excel / Google docs":`table`}[e]||`gear`}function u(){let e=document.getElementById(`skills`);e&&(e.innerHTML=`
-    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
-      ${r.map(e=>`
-        <div class="skill-card">
-          <i class="ph-${e.icon} text-2xl text-[#FF337D] flex-shrink-0"></i>
-          <span class="font-medium text-gray-200 text-sm md:text-base">${e.name}</span>
-        </div>
-      `).join(``)}
-    </div>
-  `)}function d(){let e=document.getElementById(`skills`);e&&(e.innerHTML=`
-    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
-      ${i.map(e=>`
-        <div class="bg-[#1a1a1a] rounded-xl p-4 flex items-center gap-3 hover:bg-[#222] transition-all duration-300 border border-white/5 hover:border-[#FF337D]/50">
-          <i class="ph-${l(e)} text-2xl text-[#FF337D] flex-shrink-0"></i>
-          <span class="font-medium text-gray-200">${e}</span>
-        </div>
-      `).join(``)}
-    </div>
-  `)}function f(e){return[...e].sort((e,t)=>e.starred&&!t.starred?-1:!e.starred&&t.starred?1:e.id-t.id)}function p(e){let t=document.getElementById(`projects-grid`);if(!t)return;let n=f(e);if(n.length===0){t.innerHTML=`<div class="col-span-full text-center text-gray-400 py-12">Проектов пока нет</div>`;return}t.innerHTML=n.map(e=>`
-    <div onclick="openProject(${e.id})" 
-         class="group bg-[#121212] rounded-3xl overflow-hidden cursor-pointer hover:scale-[1.02] transition-all duration-300 border border-white/5 hover:border-white/10 relative">
-      ${e.starred?`
-        <div class="absolute top-3 right-3 z-10">
-          <i class="ph-fill ph-star text-[#FF337D] text-xl drop-shadow-md"></i>
-        </div>
-      `:``}
-      <div class="relative aspect-video bg-zinc-900">
-        <img src="${e.image}" alt="${e.title}" 
-             class="w-full h-full object-cover transition-transform group-hover:scale-105"
-             onerror="this.src='https://via.placeholder.com/1280x720?text=No+Image'">
-      </div>
-      <div class="p-5">
-        <div class="text-sm text-gray-400 mb-1">${e.subtitle}</div>
-        <h3 class="text-xl font-bold mb-2">${e.title}</h3>
-        <p class="text-gray-400 text-sm line-clamp-2">${e.shortDesc}</p>
-      </div>
-    </div>
-  `).join(``)}function m(e){c(async()=>{let{projects:e}=await Promise.resolve().then(()=>g);return{projects:e}},void 0).then(({projects:t})=>{document.querySelectorAll(`.filter-btn`).forEach(t=>{t.classList.toggle(`active`,t.getAttribute(`data-filter`)===e),t.getAttribute(`data-filter`)===e?t.setAttribute(`aria-pressed`,`true`):t.setAttribute(`aria-pressed`,`false`)});let n;n=e===`all`?t:e===`starred`?t.filter(e=>e.starred===!0):t.filter(t=>t.category.includes(e)),p(n)})}function h(e){document.querySelectorAll(`.tab-btn`).forEach((t,n)=>{t.classList.toggle(`active`,n===e),t.setAttribute(`aria-selected`,n===e?`true`:`false`)}),e===0?u():d()}var g=t({projects:()=>_}),_=[{id:1,title:`MILKSHAKE`,subtitle:`Discord`,image:`https://i.imgur.com/rJeIc2S.jpeg`,category:[`discord`],starred:!0,shortDesc:`12 800+ участников • Активное игровое комьюнити`,fullContent:`
+(function(){let e=document.createElement(`link`).relList;if(e&&e.supports&&e.supports(`modulepreload`))return;for(let e of document.querySelectorAll(`link[rel="modulepreload"]`))n(e);new MutationObserver(e=>{for(let t of e)if(t.type===`childList`)for(let e of t.addedNodes)e.tagName===`LINK`&&e.rel===`modulepreload`&&n(e)}).observe(document,{childList:!0,subtree:!0});function t(e){let t={};return e.integrity&&(t.integrity=e.integrity),e.referrerPolicy&&(t.referrerPolicy=e.referrerPolicy),e.crossOrigin===`use-credentials`?t.credentials=`include`:e.crossOrigin===`anonymous`?t.credentials=`omit`:t.credentials=`same-origin`,t}function n(e){if(e.ep)return;e.ep=!0;let n=t(e);fetch(e.href,n)}})();function e(){let e=document.getElementById(`bubbles-canvas`);if(!e)return;let t=e.getContext(`2d`);if(!t)return;let n=window.innerWidth,r=window.innerHeight;e.width=n,e.height=r;let i=[],a=window.innerWidth<768?12:20,o=.12;function s(){i=[];for(let e=0;e<a;e++)i.push({x:Math.random()*n,y:Math.random()*r,radius:Math.random()*80+40,vx:(Math.random()-.5)*.2,vy:(Math.random()-.5)*.1,alpha:Math.random()*o,alphaSpeed:(Math.random()-.5)*.005})}s();let c,l=!0;function u(){!t||!l||(t.clearRect(0,0,n,r),i.forEach(e=>{e.x+=e.vx,e.y+=e.vy,e.x<-e.radius&&(e.x=n+e.radius),e.x>n+e.radius&&(e.x=-e.radius),e.y<-e.radius&&(e.y=r+e.radius),e.y>r+e.radius&&(e.y=-e.radius),e.alpha+=e.alphaSpeed,e.alpha>o?(e.alpha=o,e.alphaSpeed=-e.alphaSpeed):e.alpha<.02&&(e.alpha=.02,e.alphaSpeed=-e.alphaSpeed);let i=t.createRadialGradient(e.x,e.y,e.radius*.2,e.x,e.y,e.radius);i.addColorStop(0,`rgba(255, 51, 125, ${e.alpha*.6})`),i.addColorStop(1,`rgba(255, 51, 125, 0)`),t.beginPath(),t.arc(e.x,e.y,e.radius,0,Math.PI*2),t.fillStyle=i,t.fill()}),c=requestAnimationFrame(u))}function d(){n=window.innerWidth,r=window.innerHeight,e.width=n,e.height=r,s()}function f(){l=!document.hidden,l&&!c&&(c=requestAnimationFrame(u))}return u(),window.addEventListener(`resize`,d),document.addEventListener(`visibilitychange`,f),()=>{window.removeEventListener(`resize`,d),document.removeEventListener(`visibilitychange`,f),c&&cancelAnimationFrame(c)}}var t=[{name:`Управление сообществами`,icon:`users`,category:`Навыки`},{name:`Разработка и автоматизация`,icon:`code`,category:`Навыки`},{name:`SMM-Менеджмент`,icon:`megaphone`,category:`Навыки`},{name:`Брендинг сообществ`,icon:`palette`,category:`Навыки`},{name:`Техническое продюсирование`,icon:`monitor`,category:`Навыки`},{name:`Дизайн`,icon:`pencil`,category:`Навыки`}],n=[`Figma`,`IntelliJ IDEA`,`Adobe Photoshop`,`Adobe After Effects`,`Adobe Premiere`,`Adobe Audition`,`Capcut`,`Excel / Google docs`],r=[{id:1,title:`MILKSHAKE`,subtitle:`Discord`,image:`/images/milkshake/cover.png`,category:[`discord`],starred:!0,shortDesc:`12 800+ участников • Активное игровое комьюнити`,fullContent:`
       <div class="space-y-6">
         <h1 class="text-4xl font-bold">Milkshake</h1>
         <p class="text-xl text-gray-300">Discord-сообщество по играм и общению, основанное в 2022 году. Сейчас насчитывает <strong class="text-[#FF337D]">12 800+ участников</strong>.</p>
@@ -53,7 +16,7 @@ var e=Object.defineProperty,t=(t,n)=>{let r={};for(var i in t)e(r,i,{get:t[i],en
           </h2>
           <p class="text-gray-300 mb-4">Главный персонаж — девушка с кошачьими ушками по имени <strong>Милка</strong> (от названия «Милкшейк») с дурашливым характером. Её образ используется в эмодзи, дизайне и рекламных материалах.</p>
           <div class="bg-[#2a2a2a] rounded-xl p-4 text-center">
-            <img src="https://i.imgur.com/M5cN1Wm.png" 
+            <img src="/images/milkshake/emojies.png" 
                 alt="Эмодзи Милки" 
                 class="max-w-full h-auto mx-auto rounded-lg">
             <p class="text-gray-400 text-sm mt-2">Набор эмодзи с Милкой для Discord-сервера</p>
@@ -88,7 +51,7 @@ var e=Object.defineProperty,t=(t,n)=>{let r={};for(var i in t)e(r,i,{get:t[i],en
           </div>
         </div>
       </div>
-    `},{id:2,title:`BetBoom Esports`,subtitle:`Discord + Организация`,image:`https://i.imgur.com/e1rE0lQ.png`,category:[`discord`],starred:!0,shortDesc:`Официальный Discord BetBoom Esports`,fullContent:`
+    `},{id:2,title:`BetBoom Esports`,subtitle:`Discord + Организация`,image:`/images/betboom_esports/cover.jpg`,category:[`discord`],starred:!0,shortDesc:`Официальный Discord BetBoom Esports`,fullContent:`
       <div class="space-y-6">
         <!-- ... предыдущий контент без изменений ... -->
         
@@ -101,9 +64,9 @@ var e=Object.defineProperty,t=(t,n)=>{let r={};for(var i in t)e(r,i,{get:t[i],en
           
           <div class="carousel" data-carousel>
             <div class="carousel-slides">
-              <div class="carousel-slide"><img src="https://i.imgur.com/bINn9l1.png" alt="Скриншот турнира 1"></div>
-              <div class="carousel-slide"><img src="https://i.imgur.com/uq7nuyG.jpeg" alt="Скриншот турнира 2"></div>
-              <div class="carousel-slide"><img src="https://i.imgur.com/JtQYdw6.jpeg" alt="Скриншот турнира 3"></div>
+              <div class="carousel-slide"><img src="/images/betboom_esports/tournament-1.png" alt="Скриншот турнира 1"></div>
+              <div class="carousel-slide"><img src="/images/betboom_esports/tournament-2.jpg" alt="Скриншот турнира 2"></div>
+              <div class="carousel-slide"><img src="/images/betboom_esports/tournament-3.jpg" alt="Скриншот турнира 3"></div>
             </div>
             <button class="carousel-prev" aria-label="Назад"><i class="ph-bold ph-caret-left"></i></button>
             <button class="carousel-next" aria-label="Вперёд"><i class="ph-bold ph-caret-right"></i></button>
@@ -127,7 +90,7 @@ var e=Object.defineProperty,t=(t,n)=>{let r={};for(var i in t)e(r,i,{get:t[i],en
           </div>
         </div>
       </div>
-    `},{id:3,title:`GIF Discord`,subtitle:`Telegram`,image:`https://i.imgur.com/sN9cFdR.jpeg`,category:[`telegram`],starred:!0,shortDesc:`Структурный гиф-контент канал`,fullContent:`
+    `},{id:3,title:`GIF Discord`,subtitle:`Telegram`,image:`/images/artpix/cover.jpg`,category:[`telegram`],starred:!0,shortDesc:`Структурный гиф-контент канал`,fullContent:`
       <div class="space-y-6">
         <!-- ... предыдущий контент без изменений ... -->
         
@@ -140,9 +103,9 @@ var e=Object.defineProperty,t=(t,n)=>{let r={};for(var i in t)e(r,i,{get:t[i],en
           
           <div class="carousel" data-carousel>
             <div class="carousel-slides">
-              <div class="carousel-slide"><img src="https://i.imgur.com/DCPUJGy.png" alt="Скриншот работы бота 1"></div>
-              <div class="carousel-slide"><img src="https://i.imgur.com/dxf5lli.png" alt="Скриншот работы бота 2"></div>
-              <div class="carousel-slide"><img src="https://i.imgur.com/b8aASJ2.png" alt="Скриншот работы бота 3"></div>
+              <div class="carousel-slide"><img src="/images/artpix/post-production-1.png" alt="Скриншот работы бота 1"></div>
+              <div class="carousel-slide"><img src="/images/artpix/post-production-2.png" alt="Скриншот работы бота 2"></div>
+              <div class="carousel-slide"><img src="/images/artpix/post-production-2.png" alt="Скриншот работы бота 3"></div>
             </div>
             <button class="carousel-prev" aria-label="Назад"><i class="ph-bold ph-caret-left"></i></button>
             <button class="carousel-next" aria-label="Вперёд"><i class="ph-bold ph-caret-right"></i></button>
@@ -152,7 +115,7 @@ var e=Object.defineProperty,t=(t,n)=>{let r={};for(var i in t)e(r,i,{get:t[i],en
         
         <!-- ... остальной контент без изменений ... -->
       </div>
-    `},{id:4,title:`Bad Bunnies`,subtitle:`Discord`,image:`https://i.imgur.com/3pTxpyY.jpeg`,category:[`discord`,`new`],starred:!0,shortDesc:`Свободное взрослое общение`,fullContent:`
+    `},{id:4,title:`Bad Bunnies`,subtitle:`Discord`,image:`/images/badbunnies/cover.jpg`,category:[`discord`,`new`],starred:!0,shortDesc:`Свободное взрослое общение`,fullContent:`
       <div class="space-y-6">
         <h1 class="text-4xl font-bold">Bad Bunnies</h1>
         <p class="text-xl text-gray-300">Относительно новый сервер, продвигающий свободное общение и совместное времяпровождение с возрастной меткой <strong>16+</strong>.</p>
@@ -172,7 +135,7 @@ var e=Object.defineProperty,t=(t,n)=>{let r={};for(var i in t)e(r,i,{get:t[i],en
           </div>
           <p class="text-gray-300 mb-4">В качестве главного персонажа был выбран кролик с выбитым глазом. Оформлен в чуть менее дружелюбном, местами токсичном стиле.</p>
           <div class="bg-[#2a2a2a] rounded-xl p-4 text-center">
-            <img src="https://i.imgur.com/ZhCscT3.png" 
+            <img src="/images/badbunnies/emojies.png" 
                 alt="Эмодзи Bad Bunnies" 
                 class="max-w-full h-auto mx-auto rounded-lg">
             <p class="text-gray-400 text-sm mt-2">Набор эмодзи с кроликом</p>
@@ -186,7 +149,7 @@ var e=Object.defineProperty,t=(t,n)=>{let r={};for(var i in t)e(r,i,{get:t[i],en
           </div>
           <p class="text-gray-300 mb-4">Мы взяли лучшее от Milkshake, чтобы учесть все ошибки разработки и вдохнуть свежести в старый код. Система стала гибкой, послушной и удобной.</p>
           <div class="bg-[#2a2a2a] rounded-xl p-4 text-center">
-            <img src="https://i.imgur.com/8ggiYs2.png" 
+            <img src="/images/badbunnies/stats.png" 
                 alt="Скриншот бота" 
                 class="max-w-full h-auto mx-auto rounded-lg">
             <p class="text-gray-400 text-sm mt-2">Интерфейс бота Bad Bunnies</p>
@@ -204,7 +167,7 @@ var e=Object.defineProperty,t=(t,n)=>{let r={};for(var i in t)e(r,i,{get:t[i],en
           </a>
         </div>
       </div>
-    `},{id:5,title:`Daily Furina`,subtitle:`Telegram`,image:`https://i.imgur.com/hFALq2V.png`,category:[`telegram`],starred:!1,shortDesc:`Творчество по Фурине из Genshin Impact`,fullContent:`
+    `},{id:5,title:`Daily Furina`,subtitle:`Telegram`,image:`/images/dailyfurina/cover.png`,category:[`telegram`],starred:!1,shortDesc:`Творчество по Фурине из Genshin Impact`,fullContent:`
       <div class="space-y-6">
         <h1 class="text-4xl font-bold">Daily Furina</h1>
         <p class="text-xl text-gray-300">Телеграм-канал, посвящённый творчеству по одному персонажу из игры Genshin Impact — Фурине.</p>
@@ -228,7 +191,7 @@ var e=Object.defineProperty,t=(t,n)=>{let r={};for(var i in t)e(r,i,{get:t[i],en
           </a>
         </div>
       </div>
-    `},{id:6,title:`Genshin Forum`,subtitle:`Telegram`,image:`https://i.imgur.com/FLJIeYj.png`,category:[`telegram`],starred:!1,shortDesc:`Новости и находки по Genshin Impact`,fullContent:`
+    `},{id:6,title:`Genshin Forum`,subtitle:`Telegram`,image:`/images/genshinforum/cover.png`,category:[`telegram`],starred:!1,shortDesc:`Новости и находки по Genshin Impact`,fullContent:`
       <div class="space-y-6">
         <h1 class="text-4xl font-bold">Genshin Forum</h1>
         <p class="text-xl text-gray-300">Телеграм-канал по игре Genshin Impact, на котором постятся новости и находки с форумов Reddit, X (Twitter), TikTok.</p>
@@ -252,7 +215,7 @@ var e=Object.defineProperty,t=(t,n)=>{let r={};for(var i in t)e(r,i,{get:t[i],en
           </a>
         </div>
       </div>
-    `},{id:7,title:`Hoyozen`,subtitle:`Telegram`,image:`https://i.imgur.com/dzdMGJb.png`,category:[`telegram`],starred:!1,shortDesc:`Новости Zenless Zone Zero`,fullContent:`
+    `},{id:7,title:`Hoyozen`,subtitle:`Telegram`,image:`/images/hoyozen/cover.png`,category:[`telegram`],starred:!1,shortDesc:`Новости Zenless Zone Zero`,fullContent:`
       <div class="space-y-6">
         <h1 class="text-4xl font-bold">Hoyozen</h1>
         <p class="text-xl text-gray-300">Новостной телеграм-канал по игре Zenless Zone Zero от Hoyoverse.</p>
@@ -276,7 +239,7 @@ var e=Object.defineProperty,t=(t,n)=>{let r={};for(var i in t)e(r,i,{get:t[i],en
           </a>
         </div>
       </div>
-    `},{id:8,title:`WB BOMB`,subtitle:`Telegram`,image:`https://i.imgur.com/sy3g7Cu.png`,category:[`telegram`],starred:!1,shortDesc:`Подборки с маркетплейсов`,fullContent:`
+    `},{id:8,title:`WB BOMB`,subtitle:`Telegram`,image:`/images/wbbomb/cover.png`,category:[`telegram`],starred:!1,shortDesc:`Подборки с маркетплейсов`,fullContent:`
       <div class="space-y-6">
         <h1 class="text-4xl font-bold">WB BOMB</h1>
         <p class="text-xl text-gray-300">Телеграм-канал по подборкам с маркетплейсов Озон и Wildberries.</p>
@@ -300,4 +263,41 @@ var e=Object.defineProperty,t=(t,n)=>{let r={};for(var i in t)e(r,i,{get:t[i],en
           </a>
         </div>
       </div>
-    `}];function v(){document.querySelectorAll(`#modal .carousel`).forEach(e=>{if(e.hasAttribute(`data-initialized`))return;e.setAttribute(`data-initialized`,`true`);let t=e.querySelector(`.carousel-slides`),n=e.querySelector(`.carousel-prev`),r=e.querySelector(`.carousel-next`),i=e.querySelector(`.carousel-dots`);if(!t||!n||!r||!i){console.warn(`Carousel elements not found`);return}let a=0,o=t.children.length;if(o===0)return;i.innerHTML=``;for(let e=0;e<o;e++){let t=document.createElement(`div`);t.classList.add(`dot`),t.addEventListener(`click`,()=>l(e)),i.appendChild(t)}let s=i.querySelectorAll(`.dot`);function c(){t.style.transform=`translateX(-${a*100}%)`,s.forEach((e,t)=>{e.classList.toggle(`active`,t===a)})}function l(e){a=(e+o)%o,c()}n.addEventListener(`click`,()=>l(a-1)),r.addEventListener(`click`,()=>l(a+1)),c()})}function y(e){let t=_.find(t=>t.id===e);if(!t)return;let n=document.getElementById(`modal`),r=document.getElementById(`modal-content`);r.innerHTML=t.fullContent,n.classList.remove(`hidden`),n.classList.add(`flex`),document.body.style.overflow=`hidden`,v()}function b(){let e=document.getElementById(`modal`);e.classList.add(`hidden`),e.classList.remove(`flex`),document.body.style.overflow=``}document.addEventListener(`DOMContentLoaded`,()=>{n(),u(),m(`all`),document.addEventListener(`keydown`,e=>{e.key===`Escape`&&b()})}),window.filterProjects=m,window.switchTab=h,window.openProject=y,window.closeModal=b;
+    `}];function i(e){return{Figma:`figma-logo`,"IntelliJ IDEA":`code`,"Adobe Photoshop":`image`,"Adobe After Effects":`film-strip`,"Adobe Premiere":`video`,"Adobe Audition":`waveform`,Capcut:`scissors`,"Excel / Google docs":`table`}[e]||`gear`}function a(){let e=document.getElementById(`skills`);e&&(e.innerHTML=`
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+      ${t.map(e=>`
+        <div class="skill-card">
+          <i class="ph-${e.icon} text-2xl text-[#FF337D] flex-shrink-0"></i>
+          <span class="font-medium text-gray-200 text-sm md:text-base">${e.name}</span>
+        </div>
+      `).join(``)}
+    </div>
+  `)}function o(){let e=document.getElementById(`skills`);e&&(e.innerHTML=`
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+      ${n.map(e=>`
+        <div class="bg-[#1a1a1a] rounded-xl p-4 flex items-center gap-3 hover:bg-[#222] transition-all duration-300 border border-white/5 hover:border-[#FF337D]/50">
+          <i class="ph-${i(e)} text-2xl text-[#FF337D] flex-shrink-0"></i>
+          <span class="font-medium text-gray-200">${e}</span>
+        </div>
+      `).join(``)}
+    </div>
+  `)}function s(e){return[...e].sort((e,t)=>e.starred&&!t.starred?-1:!e.starred&&t.starred?1:e.id-t.id)}function c(e){let t=document.getElementById(`projects-grid`);if(!t)return;let n=s(e);if(n.length===0){t.innerHTML=`<div class="col-span-full text-center text-gray-400 py-12">Проектов пока нет</div>`;return}t.innerHTML=n.map(e=>`
+    <div onclick="openProject(${e.id})" 
+         class="group bg-[#121212] rounded-3xl overflow-hidden cursor-pointer hover:scale-[1.02] transition-all duration-300 border border-white/5 hover:border-white/10 relative">
+      ${e.starred?`
+        <div class="absolute top-3 right-3 z-10">
+          <i class="ph-fill ph-star text-[#FF337D] text-xl drop-shadow-md"></i>
+        </div>
+      `:``}
+      <div class="relative aspect-video bg-zinc-900">
+        <img src="${e.image}" alt="${e.title}" 
+             class="w-full h-full object-cover transition-transform group-hover:scale-105"
+             onerror="this.src='https://via.placeholder.com/1280x720?text=No+Image'">
+      </div>
+      <div class="p-5">
+        <div class="text-sm text-gray-400 mb-1">${e.subtitle}</div>
+        <h3 class="text-xl font-bold mb-2">${e.title}</h3>
+        <p class="text-gray-400 text-sm line-clamp-2">${e.shortDesc}</p>
+      </div>
+    </div>
+  `).join(``)}function l(e){document.querySelectorAll(`.filter-btn`).forEach(t=>{let n=t.getAttribute(`data-filter`)===e;t.classList.toggle(`active`,n),t.setAttribute(`aria-pressed`,n?`true`:`false`)});let t;t=e===`all`?r:e===`starred`?r.filter(e=>e.starred===!0):r.filter(t=>t.category.includes(e)),c(t)}function u(e){document.querySelectorAll(`.tab-btn`).forEach((t,n)=>{t.classList.toggle(`active`,n===e),t.setAttribute(`aria-selected`,n===e?`true`:`false`)}),e===0?a():o()}function d(){document.querySelectorAll(`#modal .carousel`).forEach(e=>{if(e.hasAttribute(`data-initialized`))return;e.setAttribute(`data-initialized`,`true`);let t=e.querySelector(`.carousel-slides`),n=e.querySelector(`.carousel-prev`),r=e.querySelector(`.carousel-next`),i=e.querySelector(`.carousel-dots`);if(!t||!n||!r||!i){console.warn(`Carousel elements not found`);return}let a=0,o=t.children.length;if(o===0)return;i.innerHTML=``;for(let e=0;e<o;e++){let t=document.createElement(`div`);t.classList.add(`dot`),t.addEventListener(`click`,()=>l(e)),i.appendChild(t)}let s=i.querySelectorAll(`.dot`);function c(){t.style.transform=`translateX(-${a*100}%)`,s.forEach((e,t)=>{e.classList.toggle(`active`,t===a)})}function l(e){a=(e+o)%o,c()}n.addEventListener(`click`,()=>l(a-1)),r.addEventListener(`click`,()=>l(a+1)),c()})}function f(e){let t=r.find(t=>t.id===e);if(!t)return;let n=document.getElementById(`modal`),i=document.getElementById(`modal-content`);i.innerHTML=t.fullContent,n.classList.remove(`hidden`),n.classList.add(`flex`),document.body.style.overflow=`hidden`,d()}function p(){let e=document.getElementById(`modal`);e.classList.add(`hidden`),e.classList.remove(`flex`),document.body.style.overflow=``}document.addEventListener(`DOMContentLoaded`,()=>{e(),a(),l(`all`),document.addEventListener(`keydown`,e=>{e.key===`Escape`&&p()})}),window.filterProjects=l,window.switchTab=u,window.openProject=f,window.closeModal=p;
