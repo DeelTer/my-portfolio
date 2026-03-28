@@ -1,0 +1,148 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-[#111111] text-white font-sans;
+    overflow-x: hidden;
+  }
+}
+
+@layer components {
+  .tab-btn {
+    @apply px-6 py-2 rounded-full font-medium transition-all duration-200 
+           bg-[#1a1a1a] text-gray-400 hover:text-white hover:bg-[#252525];
+  }
+  
+  .tab-btn.active {
+    background-color: #FF337D;
+    @apply text-white hover:bg-[#e62e6e];
+  }
+  
+  .filter-btn {
+    @apply px-4 py-1.5 rounded-full text-sm font-medium transition-all duration-200
+           bg-[#1a1a1a] text-gray-400 hover:text-white hover:bg-[#252525];
+  }
+  
+  .filter-btn.active {
+    background-color: #FF337D;
+    @apply text-white hover:bg-[#e62e6e];
+  }
+
+  .skill-card {
+    @apply bg-[#1a1a1a] rounded-xl p-4 flex items-center gap-3 
+           transition-all duration-300 border border-white/5
+           hover:border-[#FF337D]/50 hover:scale-[1.02] hover:bg-[#222];
+  }
+}
+
+/* Карусель (общие стили) */
+.carousel {
+  position: relative;
+  max-width: 100%;
+  margin: 1rem 0;
+  overflow: hidden;
+}
+.carousel-slides {
+  display: flex;
+  transition: transform 0.3s ease-in-out;
+}
+.carousel-slide {
+  flex: 0 0 100%;
+  scroll-snap-align: start;
+}
+.carousel-slide img {
+  width: 100%;
+  height: auto;
+  border-radius: 1rem;
+  display: block;
+}
+.carousel-prev, .carousel-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0,0,0,0.5);
+  border: none;
+  color: white;
+  font-size: 1.5rem;
+  padding: 0.5rem;
+  cursor: pointer;
+  border-radius: 50%;
+  transition: background 0.2s;
+}
+.carousel-prev:hover, .carousel-next:hover {
+  background: rgba(0,0,0,0.8);
+}
+.carousel-prev { left: 0.5rem; }
+.carousel-next { right: 0.5rem; }
+.carousel-dots {
+  text-align: center;
+  margin-top: 0.5rem;
+}
+.dot {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #666;
+  margin: 0 4px;
+  cursor: pointer;
+}
+.dot.active {
+  background: #FF337D;
+}
+
+/* Адаптивные виджеты Discord */
+.discord-widget {
+  width: 100%;
+}
+.discord-widget iframe {
+  width: 100% !important;
+  height: auto !important;
+  min-height: 400px;
+}
+
+/* Кнопка закрытия модалки */
+.modal-close {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: rgba(0,0,0,0.5);
+  border: none;
+  color: white;
+  font-size: 1.5rem;
+  padding: 0.5rem;
+  cursor: pointer;
+  border-radius: 50%;
+  transition: background 0.2s;
+  line-height: 1;
+}
+.modal-close:hover {
+  background: rgba(0,0,0,0.8);
+}
+
+/* Музыкальный плеер */
+#audio-player {
+  animation: fadeInUp 0.3s ease-out;
+}
+
+#audio-toggle {
+  backdrop-filter: blur(8px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+#audio-toggle:hover {
+  transform: scale(1.1);
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
