@@ -1,4 +1,4 @@
-(function(){let e=document.createElement(`link`).relList;if(e&&e.supports&&e.supports(`modulepreload`))return;for(let e of document.querySelectorAll(`link[rel="modulepreload"]`))n(e);new MutationObserver(e=>{for(let t of e)if(t.type===`childList`)for(let e of t.addedNodes)e.tagName===`LINK`&&e.rel===`modulepreload`&&n(e)}).observe(document,{childList:!0,subtree:!0});function t(e){let t={};return e.integrity&&(t.integrity=e.integrity),e.referrerPolicy&&(t.referrerPolicy=e.referrerPolicy),e.crossOrigin===`use-credentials`?t.credentials=`include`:e.crossOrigin===`anonymous`?t.credentials=`omit`:t.credentials=`same-origin`,t}function n(e){if(e.ep)return;e.ep=!0;let n=t(e);fetch(e.href,n)}})();function e(){let e=document.getElementById(`bubbles-canvas`);if(!e)return;let t=e.getContext(`2d`);if(!t)return;let n=window.innerWidth,r=window.innerHeight;e.width=n,e.height=r;let i=[],a=window.innerWidth<768?12:20,o=.12;function s(){i=[];for(let e=0;e<a;e++)i.push({x:Math.random()*n,y:Math.random()*r,radius:Math.random()*80+40,vx:(Math.random()-.5)*.2,vy:(Math.random()-.5)*.1,alpha:Math.random()*o,alphaSpeed:(Math.random()-.5)*.005})}s();let c,l=!0;function u(){!t||!l||(t.clearRect(0,0,n,r),i.forEach(e=>{e.x+=e.vx,e.y+=e.vy,e.x<-e.radius&&(e.x=n+e.radius),e.x>n+e.radius&&(e.x=-e.radius),e.y<-e.radius&&(e.y=r+e.radius),e.y>r+e.radius&&(e.y=-e.radius),e.alpha+=e.alphaSpeed,e.alpha>o?(e.alpha=o,e.alphaSpeed=-e.alphaSpeed):e.alpha<.02&&(e.alpha=.02,e.alphaSpeed=-e.alphaSpeed);let i=t.createRadialGradient(e.x,e.y,e.radius*.2,e.x,e.y,e.radius);i.addColorStop(0,`rgba(255, 51, 125, ${e.alpha*.6})`),i.addColorStop(1,`rgba(255, 51, 125, 0)`),t.beginPath(),t.arc(e.x,e.y,e.radius,0,Math.PI*2),t.fillStyle=i,t.fill()}),c=requestAnimationFrame(u))}function d(){n=window.innerWidth,r=window.innerHeight,e.width=n,e.height=r,s()}function f(){l=!document.hidden,l&&!c&&(c=requestAnimationFrame(u))}return u(),window.addEventListener(`resize`,d),document.addEventListener(`visibilitychange`,f),()=>{window.removeEventListener(`resize`,d),document.removeEventListener(`visibilitychange`,f),c&&cancelAnimationFrame(c)}}var t=[{name:`Управление сообществами`,icon:`users`,category:`Навыки`},{name:`Разработка и автоматизация`,icon:`code`,category:`Навыки`},{name:`SMM-Менеджмент`,icon:`megaphone`,category:`Навыки`},{name:`Брендинг сообществ`,icon:`palette`,category:`Навыки`},{name:`Техническое продюсирование`,icon:`monitor`,category:`Навыки`},{name:`Дизайн`,icon:`pencil`,category:`Навыки`}],n=[`Figma`,`IntelliJ IDEA`,`Adobe Photoshop`,`Adobe After Effects`,`Adobe Premiere`,`Adobe Audition`,`Capcut`,`Excel / Google docs`],r=[{id:1,title:`MILKSHAKE`,subtitle:`Discord`,image:`/images/milkshake/cover.png`,category:[`discord`],starred:!0,shortDesc:`12 800+ участников • Активное игровое комьюнити`,fullContent:`
+(function(){let e=document.createElement(`link`).relList;if(e&&e.supports&&e.supports(`modulepreload`))return;for(let e of document.querySelectorAll(`link[rel="modulepreload"]`))n(e);new MutationObserver(e=>{for(let t of e)if(t.type===`childList`)for(let e of t.addedNodes)e.tagName===`LINK`&&e.rel===`modulepreload`&&n(e)}).observe(document,{childList:!0,subtree:!0});function t(e){let t={};return e.integrity&&(t.integrity=e.integrity),e.referrerPolicy&&(t.referrerPolicy=e.referrerPolicy),e.crossOrigin===`use-credentials`?t.credentials=`include`:e.crossOrigin===`anonymous`?t.credentials=`omit`:t.credentials=`same-origin`,t}function n(e){if(e.ep)return;e.ep=!0;let n=t(e);fetch(e.href,n)}})();function e(){let e=document.getElementById(`bubbles-canvas`);if(!e)return;let t=e.getContext(`2d`);if(!t)return;let n=window.innerWidth,r=window.innerHeight;e.width=n,e.height=r;let i=[],a=window.innerWidth<768?12:20,o=.12;function s(){i=[];for(let e=0;e<a;e++)i.push({x:Math.random()*n,y:Math.random()*r,radius:Math.random()*80+40,vx:(Math.random()-.5)*.2,vy:(Math.random()-.5)*.1,alpha:Math.random()*o,alphaSpeed:(Math.random()-.5)*.005})}s();let c,l=!0;function u(){!t||!l||(t.clearRect(0,0,n,r),i.forEach(e=>{e.x+=e.vx,e.y+=e.vy,e.x<-e.radius&&(e.x=n+e.radius),e.x>n+e.radius&&(e.x=-e.radius),e.y<-e.radius&&(e.y=r+e.radius),e.y>r+e.radius&&(e.y=-e.radius),e.alpha+=e.alphaSpeed,e.alpha>o?(e.alpha=o,e.alphaSpeed=-e.alphaSpeed):e.alpha<.02&&(e.alpha=.02,e.alphaSpeed=-e.alphaSpeed);let i=t.createRadialGradient(e.x,e.y,e.radius*.2,e.x,e.y,e.radius);i.addColorStop(0,`rgba(255, 51, 125, ${e.alpha*.6})`),i.addColorStop(1,`rgba(255, 51, 125, 0)`),t.beginPath(),t.arc(e.x,e.y,e.radius,0,Math.PI*2),t.fillStyle=i,t.fill()}),c=requestAnimationFrame(u))}function d(){n=window.innerWidth,r=window.innerHeight,e.width=n,e.height=r,s()}function f(){l=!document.hidden,l&&!c&&(c=requestAnimationFrame(u))}return u(),window.addEventListener(`resize`,d),document.addEventListener(`visibilitychange`,f),()=>{window.removeEventListener(`resize`,d),document.removeEventListener(`visibilitychange`,f),c&&cancelAnimationFrame(c)}}var t=[{name:`Управление сообществами`,icon:`users`,category:`Навыки`},{name:`Разработка и автоматизация`,icon:`code`,category:`Навыки`},{name:`SMM-Менеджмент`,icon:`megaphone`,category:`Навыки`},{name:`Брендинг сообществ`,icon:`palette`,category:`Навыки`},{name:`Техническое продюсирование`,icon:`monitor`,category:`Навыки`},{name:`Дизайн`,icon:`pencil`,category:`Навыки`}],n=[`Figma`,`IntelliJ IDEA`,`Adobe Photoshop`,`Adobe After Effects`,`Adobe Premiere`,`Adobe Audition`,`Capcut`,`Excel / Google docs`],r=[{id:1,title:`MILKSHAKE`,subtitle:`Discord`,image:`./images/milkshake/cover.png`,category:[`discord`],starred:!0,shortDesc:`12 800+ участников • Активное игровое комьюнити`,fullContent:`
       <div class="space-y-6">
         <h1 class="text-4xl font-bold">Milkshake</h1>
         <p class="text-xl text-gray-300">Discord-сообщество по играм и общению, основанное в 2022 году. Сейчас насчитывает <strong class="text-[#FF337D]">12 800+ участников</strong>.</p>
@@ -51,7 +51,7 @@
           </div>
         </div>
       </div>
-    `},{id:2,title:`BetBoom Esports`,subtitle:`Discord + Организация`,image:`/images/betboom_esports/cover.jpg`,category:[`discord`],starred:!0,shortDesc:`Официальный Discord BetBoom Esports`,fullContent:`
+    `},{id:2,title:`BetBoom Esports`,subtitle:`Discord + Организация`,image:`./images/betboom_esports/cover.jpg`,category:[`discord`],starred:!0,shortDesc:`Официальный Discord BetBoom Esports`,fullContent:`
       <div class="space-y-6">
         <!-- ... предыдущий контент без изменений ... -->
         
@@ -90,7 +90,7 @@
           </div>
         </div>
       </div>
-    `},{id:3,title:`GIF Discord`,subtitle:`Telegram`,image:`/images/artpix/cover.jpg`,category:[`telegram`],starred:!0,shortDesc:`Структурный гиф-контент канал`,fullContent:`
+    `},{id:3,title:`GIF Discord`,subtitle:`Telegram`,image:`./images/artpix/cover.jpg`,category:[`telegram`],starred:!0,shortDesc:`Структурный гиф-контент канал`,fullContent:`
       <div class="space-y-6">
         <!-- ... предыдущий контент без изменений ... -->
         
@@ -115,7 +115,7 @@
         
         <!-- ... остальной контент без изменений ... -->
       </div>
-    `},{id:4,title:`Bad Bunnies`,subtitle:`Discord`,image:`/images/badbunnies/cover.jpg`,category:[`discord`,`new`],starred:!0,shortDesc:`Свободное взрослое общение`,fullContent:`
+    `},{id:4,title:`Bad Bunnies`,subtitle:`Discord`,image:`./images/badbunnies/cover.jpg`,category:[`discord`,`new`],starred:!0,shortDesc:`Свободное взрослое общение`,fullContent:`
       <div class="space-y-6">
         <h1 class="text-4xl font-bold">Bad Bunnies</h1>
         <p class="text-xl text-gray-300">Относительно новый сервер, продвигающий свободное общение и совместное времяпровождение с возрастной меткой <strong>16+</strong>.</p>
@@ -167,7 +167,7 @@
           </a>
         </div>
       </div>
-    `},{id:5,title:`Daily Furina`,subtitle:`Telegram`,image:`/images/dailyfurina/cover.png`,category:[`telegram`],starred:!1,shortDesc:`Творчество по Фурине из Genshin Impact`,fullContent:`
+    `},{id:5,title:`Daily Furina`,subtitle:`Telegram`,image:`./images/dailyfurina/cover.png`,category:[`telegram`],starred:!1,shortDesc:`Творчество по Фурине из Genshin Impact`,fullContent:`
       <div class="space-y-6">
         <h1 class="text-4xl font-bold">Daily Furina</h1>
         <p class="text-xl text-gray-300">Телеграм-канал, посвящённый творчеству по одному персонажу из игры Genshin Impact — Фурине.</p>
@@ -191,7 +191,7 @@
           </a>
         </div>
       </div>
-    `},{id:6,title:`Genshin Forum`,subtitle:`Telegram`,image:`/images/genshinforum/cover.png`,category:[`telegram`],starred:!1,shortDesc:`Новости и находки по Genshin Impact`,fullContent:`
+    `},{id:6,title:`Genshin Forum`,subtitle:`Telegram`,image:`./images/genshinforum/cover.png`,category:[`telegram`],starred:!1,shortDesc:`Новости и находки по Genshin Impact`,fullContent:`
       <div class="space-y-6">
         <h1 class="text-4xl font-bold">Genshin Forum</h1>
         <p class="text-xl text-gray-300">Телеграм-канал по игре Genshin Impact, на котором постятся новости и находки с форумов Reddit, X (Twitter), TikTok.</p>
@@ -215,7 +215,7 @@
           </a>
         </div>
       </div>
-    `},{id:7,title:`Hoyozen`,subtitle:`Telegram`,image:`/images/hoyozen/cover.png`,category:[`telegram`],starred:!1,shortDesc:`Новости Zenless Zone Zero`,fullContent:`
+    `},{id:7,title:`Hoyozen`,subtitle:`Telegram`,image:`./images/hoyozen/cover.png`,category:[`telegram`],starred:!1,shortDesc:`Новости Zenless Zone Zero`,fullContent:`
       <div class="space-y-6">
         <h1 class="text-4xl font-bold">Hoyozen</h1>
         <p class="text-xl text-gray-300">Новостной телеграм-канал по игре Zenless Zone Zero от Hoyoverse.</p>
@@ -239,7 +239,7 @@
           </a>
         </div>
       </div>
-    `},{id:8,title:`WB BOMB`,subtitle:`Telegram`,image:`/images/wbbomb/cover.png`,category:[`telegram`],starred:!1,shortDesc:`Подборки с маркетплейсов`,fullContent:`
+    `},{id:8,title:`WB BOMB`,subtitle:`Telegram`,image:`./images/wbbomb/cover.png`,category:[`telegram`],starred:!1,shortDesc:`Подборки с маркетплейсов`,fullContent:`
       <div class="space-y-6">
         <h1 class="text-4xl font-bold">WB BOMB</h1>
         <p class="text-xl text-gray-300">Телеграм-канал по подборкам с маркетплейсов Озон и Wildberries.</p>
