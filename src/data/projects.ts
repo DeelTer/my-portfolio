@@ -5,7 +5,7 @@ export const projects: Project[] = [
     id: 1,
     title: "MILKSHAKE",
     subtitle: "Discord",
-    image: "https://i.imgur.com/rJeIc2S.jpeg",
+    image: "/images/milkshake/cover.png",
     category: ["discord"],
     starred: true,
     shortDesc: "12 800+ участников • Активное игровое комьюнити",
@@ -27,7 +27,7 @@ export const projects: Project[] = [
           </h2>
           <p class="text-gray-300 mb-4">Главный персонаж — девушка с кошачьими ушками по имени <strong>Милка</strong> (от названия «Милкшейк») с дурашливым характером. Её образ используется в эмодзи, дизайне и рекламных материалах.</p>
           <div class="bg-[#2a2a2a] rounded-xl p-4 text-center">
-            <img src="https://i.imgur.com/M5cN1Wm.png" 
+            <img src="/images/milkshake/emojies.png" 
                 alt="Эмодзи Милки" 
                 class="max-w-full h-auto mx-auto rounded-lg">
             <p class="text-gray-400 text-sm mt-2">Набор эмодзи с Милкой для Discord-сервера</p>
@@ -68,7 +68,7 @@ export const projects: Project[] = [
     id: 2,
     title: "BetBoom Esports",
     subtitle: "Discord + Организация",
-    image: "https://i.imgur.com/e1rE0lQ.png",
+    image: "/images/betboom_esports/cover.jpg",
     category: ["discord"],
     starred: true,
     shortDesc: "Официальный Discord BetBoom Esports",
@@ -85,9 +85,9 @@ export const projects: Project[] = [
           
           <div class="carousel" data-carousel>
             <div class="carousel-slides">
-              <div class="carousel-slide"><img src="https://i.imgur.com/bINn9l1.png" alt="Скриншот турнира 1"></div>
-              <div class="carousel-slide"><img src="https://i.imgur.com/uq7nuyG.jpeg" alt="Скриншот турнира 2"></div>
-              <div class="carousel-slide"><img src="https://i.imgur.com/JtQYdw6.jpeg" alt="Скриншот турнира 3"></div>
+              <div class="carousel-slide"><img src="/images/betboom_esports/tournament-1.png" alt="Скриншот турнира 1"></div>
+              <div class="carousel-slide"><img src="/images/betboom_esports/tournament-2.jpg" alt="Скриншот турнира 2"></div>
+              <div class="carousel-slide"><img src="/images/betboom_esports/tournament-3.jpg" alt="Скриншот турнира 3"></div>
             </div>
             <button class="carousel-prev" aria-label="Назад"><i class="ph-bold ph-caret-left"></i></button>
             <button class="carousel-next" aria-label="Вперёд"><i class="ph-bold ph-caret-right"></i></button>
@@ -117,7 +117,7 @@ export const projects: Project[] = [
     id: 3,
     title: "GIF Discord",
     subtitle: "Telegram",
-    image: "https://i.imgur.com/sN9cFdR.jpeg",
+    image: "/images/artpix/cover.jpg",
     category: ["telegram"],
     starred: true,
     shortDesc: "Структурный гиф-контент канал",
@@ -134,9 +134,9 @@ export const projects: Project[] = [
           
           <div class="carousel" data-carousel>
             <div class="carousel-slides">
-              <div class="carousel-slide"><img src="https://i.imgur.com/DCPUJGy.png" alt="Скриншот работы бота 1"></div>
-              <div class="carousel-slide"><img src="https://i.imgur.com/dxf5lli.png" alt="Скриншот работы бота 2"></div>
-              <div class="carousel-slide"><img src="https://i.imgur.com/b8aASJ2.png" alt="Скриншот работы бота 3"></div>
+              <div class="carousel-slide"><img src="/images/artpix/post-production-1.png" alt="Скриншот работы бота 1"></div>
+              <div class="carousel-slide"><img src="/images/artpix/post-production-2.png" alt="Скриншот работы бота 2"></div>
+              <div class="carousel-slide"><img src="/images/artpix/post-production-2.png" alt="Скриншот работы бота 3"></div>
             </div>
             <button class="carousel-prev" aria-label="Назад"><i class="ph-bold ph-caret-left"></i></button>
             <button class="carousel-next" aria-label="Вперёд"><i class="ph-bold ph-caret-right"></i></button>
@@ -152,7 +152,7 @@ export const projects: Project[] = [
     id: 4,
     title: "Bad Bunnies",
     subtitle: "Discord",
-    image: "https://i.imgur.com/3pTxpyY.jpeg",
+    image: "/images/badbunnies/cover.jpg",
     category: ["discord", "new"],
     starred: true,
     shortDesc: "Свободное взрослое общение",
@@ -176,7 +176,7 @@ export const projects: Project[] = [
           </div>
           <p class="text-gray-300 mb-4">В качестве главного персонажа был выбран кролик с выбитым глазом. Оформлен в чуть менее дружелюбном, местами токсичном стиле.</p>
           <div class="bg-[#2a2a2a] rounded-xl p-4 text-center">
-            <img src="https://i.imgur.com/ZhCscT3.png" 
+            <img src="/images/badbunnies/emojies.png" 
                 alt="Эмодзи Bad Bunnies" 
                 class="max-w-full h-auto mx-auto rounded-lg">
             <p class="text-gray-400 text-sm mt-2">Набор эмодзи с кроликом</p>
@@ -190,7 +190,7 @@ export const projects: Project[] = [
           </div>
           <p class="text-gray-300 mb-4">Мы взяли лучшее от Milkshake, чтобы учесть все ошибки разработки и вдохнуть свежести в старый код. Система стала гибкой, послушной и удобной.</p>
           <div class="bg-[#2a2a2a] rounded-xl p-4 text-center">
-            <img src="https://i.imgur.com/8ggiYs2.png" 
+            <img src="/images/badbunnies/stats.png" 
                 alt="Скриншот бота" 
                 class="max-w-full h-auto mx-auto rounded-lg">
             <p class="text-gray-400 text-sm mt-2">Интерфейс бота Bad Bunnies</p>
@@ -214,7 +214,7 @@ export const projects: Project[] = [
     id: 5,
     title: "Daily Furina",
     subtitle: "Telegram",
-    image: "https://i.imgur.com/hFALq2V.png",
+    image: "/images/dailyfurina/cover.png",
     category: ["telegram"],
     starred: false,
     shortDesc: "Творчество по Фурине из Genshin Impact",
@@ -248,7 +248,7 @@ export const projects: Project[] = [
     id: 6,
     title: "Genshin Forum",
     subtitle: "Telegram",
-    image: "https://i.imgur.com/FLJIeYj.png",
+    image: "/images/genshinforum/cover.png",
     category: ["telegram"],
     starred: false,
     shortDesc: "Новости и находки по Genshin Impact",
@@ -282,7 +282,7 @@ export const projects: Project[] = [
     id: 7,
     title: "Hoyozen",
     subtitle: "Telegram",
-    image: "https://i.imgur.com/dzdMGJb.png",
+    image: "/images/hoyozen/cover.png",
     category: ["telegram"],
     starred: false,
     shortDesc: "Новости Zenless Zone Zero",
@@ -316,7 +316,7 @@ export const projects: Project[] = [
     id: 8,
     title: "WB BOMB",
     subtitle: "Telegram",
-    image: "https://i.imgur.com/sy3g7Cu.png",
+    image: "/images/wbbomb/cover.png",
     category: ["telegram"],
     starred: false,
     shortDesc: "Подборки с маркетплейсов",

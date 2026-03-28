@@ -1,4 +1,5 @@
 import { skillsData, toolsData } from '../data/skills';
+import { projects } from '../data/projects'; // Импортируем напрямую
 import type { Project } from '../types';
 
 function getToolIcon(tool: string): string {
@@ -16,7 +17,7 @@ function getToolIcon(tool: string): string {
 }
 
 export function renderSkills() {
-  const container = document.getElementById("skills") as HTMLDivElement;
+  const container = document.getElementById("skills");
   if (!container) return;
   
   container.innerHTML = `
@@ -32,7 +33,7 @@ export function renderSkills() {
 }
 
 export function renderTools() {
-  const container = document.getElementById("skills") as HTMLDivElement;
+  const container = document.getElementById("skills");
   if (!container) return;
   
   container.innerHTML = `
@@ -56,7 +57,7 @@ function sortProjects(projectsToSort: Project[]): Project[] {
 }
 
 export function renderProjects(filteredProjects: Project[]) {
-  const grid = document.getElementById("projects-grid") as HTMLDivElement;
+  const grid = document.getElementById("projects-grid");
   if (!grid) return;
   
   const sortedProjects = sortProjects(filteredProjects);
@@ -89,28 +90,22 @@ export function renderProjects(filteredProjects: Project[]) {
 }
 
 export function filterProjects(category: string) {
-  // Нужно импортировать projects внутри функции, чтобы избежать циклической зависимости
-  import('../data/projects').then(({ projects }) => {
-    document.querySelectorAll('.filter-btn').forEach(btn => {
-      btn.classList.toggle('active', btn.getAttribute('data-filter') === category);
-      if (btn.getAttribute('data-filter') === category) {
-        btn.setAttribute('aria-pressed', 'true');
-      } else {
-        btn.setAttribute('aria-pressed', 'false');
-      }
-    });
-
-    let filtered: Project[];
-    if (category === 'all') {
-      filtered = projects;
-    } else if (category === 'starred') {
-      filtered = projects.filter(p => p.starred === true);
-    } else {
-      filtered = projects.filter(p => p.category.includes(category));
-    }
-
-    renderProjects(filtered);
+  document.querySelectorAll('.filter-btn').forEach(btn => {
+    const isActive = btn.getAttribute('data-filter') === category;
+    btn.classList.toggle('active', isActive);
+    btn.setAttribute('aria-pressed', isActive ? 'true' : 'false');
   });
+
+  let filtered: Project[];
+  if (category === 'all') {
+    filtered = projects;
+  } else if (category === 'starred') {
+    filtered = projects.filter(p => p.starred === true);
+  } else {
+    filtered = projects.filter(p => p.category.includes(category));
+  }
+
+  renderProjects(filtered);
 }
 
 export function switchTab(tab: number) {

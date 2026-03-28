@@ -1,6 +1,11 @@
-import { defineConfig } from 'vite';
-
-export default defineConfig({
-  base: '/my-portfolio/', // замени на название репозитория
-  plugins: [], // плагины не нужны, Tailwind через PostCSS
-});
+/** @type {import('tailwindcss').Config} */
+export default {
+  content: [
+    "./index.html",
+    "./src/**/*.{ts,js,tsx,jsx}",
+  ],
+  theme: {
+    extend: {},
+  },
+  plugins: [],
+}
