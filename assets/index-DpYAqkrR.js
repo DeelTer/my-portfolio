@@ -16,7 +16,7 @@
           </h2>
           <p class="text-gray-300 mb-4">Главный персонаж — девушка с кошачьими ушками по имени <strong>Милка</strong> (от названия «Милкшейк») с дурашливым характером. Её образ используется в эмодзи, дизайне и рекламных материалах.</p>
           <div class="bg-[#2a2a2a] rounded-xl p-4 text-center">
-            <img src="/images/milkshake/emojies.png" 
+            <img src="./images/milkshake/emojies.png" 
                 alt="Эмодзи Милки" 
                 class="max-w-full h-auto mx-auto rounded-lg">
             <p class="text-gray-400 text-sm mt-2">Набор эмодзи с Милкой для Discord-сервера</p>
@@ -64,9 +64,9 @@
           
           <div class="carousel" data-carousel>
             <div class="carousel-slides">
-              <div class="carousel-slide"><img src="/images/betboom_esports/tournament-1.png" alt="Скриншот турнира 1"></div>
-              <div class="carousel-slide"><img src="/images/betboom_esports/tournament-2.jpg" alt="Скриншот турнира 2"></div>
-              <div class="carousel-slide"><img src="/images/betboom_esports/tournament-3.jpg" alt="Скриншот турнира 3"></div>
+              <div class="carousel-slide"><img src="./images/betboom_esports/tournament-1.png" alt="Скриншот турнира 1"></div>
+              <div class="carousel-slide"><img src="./images/betboom_esports/tournament-2.jpg" alt="Скриншот турнира 2"></div>
+              <div class="carousel-slide"><img src="./images/betboom_esports/tournament-3.jpg" alt="Скриншот турнира 3"></div>
             </div>
             <button class="carousel-prev" aria-label="Назад"><i class="ph-bold ph-caret-left"></i></button>
             <button class="carousel-next" aria-label="Вперёд"><i class="ph-bold ph-caret-right"></i></button>
@@ -103,9 +103,9 @@
           
           <div class="carousel" data-carousel>
             <div class="carousel-slides">
-              <div class="carousel-slide"><img src="/images/artpix/post-production-1.png" alt="Скриншот работы бота 1"></div>
-              <div class="carousel-slide"><img src="/images/artpix/post-production-2.png" alt="Скриншот работы бота 2"></div>
-              <div class="carousel-slide"><img src="/images/artpix/post-production-2.png" alt="Скриншот работы бота 3"></div>
+              <div class="carousel-slide"><img src="./images/artpix/post-production-1.png" alt="Скриншот работы бота 1"></div>
+              <div class="carousel-slide"><img src="./images/artpix/post-production-2.png" alt="Скриншот работы бота 2"></div>
+              <div class="carousel-slide"><img src="./images/artpix/post-production-2.png" alt="Скриншот работы бота 3"></div>
             </div>
             <button class="carousel-prev" aria-label="Назад"><i class="ph-bold ph-caret-left"></i></button>
             <button class="carousel-next" aria-label="Вперёд"><i class="ph-bold ph-caret-right"></i></button>
@@ -135,7 +135,7 @@
           </div>
           <p class="text-gray-300 mb-4">В качестве главного персонажа был выбран кролик с выбитым глазом. Оформлен в чуть менее дружелюбном, местами токсичном стиле.</p>
           <div class="bg-[#2a2a2a] rounded-xl p-4 text-center">
-            <img src="/images/badbunnies/emojies.png" 
+            <img src="./images/badbunnies/emojies.png" 
                 alt="Эмодзи Bad Bunnies" 
                 class="max-w-full h-auto mx-auto rounded-lg">
             <p class="text-gray-400 text-sm mt-2">Набор эмодзи с кроликом</p>
@@ -149,7 +149,7 @@
           </div>
           <p class="text-gray-300 mb-4">Мы взяли лучшее от Milkshake, чтобы учесть все ошибки разработки и вдохнуть свежести в старый код. Система стала гибкой, послушной и удобной.</p>
           <div class="bg-[#2a2a2a] rounded-xl p-4 text-center">
-            <img src="/images/badbunnies/stats.png" 
+            <img src="./images/badbunnies/stats.png" 
                 alt="Скриншот бота" 
                 class="max-w-full h-auto mx-auto rounded-lg">
             <p class="text-gray-400 text-sm mt-2">Интерфейс бота Bad Bunnies</p>
