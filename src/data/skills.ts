@@ -1,4 +1,4 @@
-import type { Skill } from '../types';
+import type { Skill } from './types';
 
 export const skillsData: Skill[] = [
   { name: "Управление сообществами", icon: "users", category: "Навыки" },

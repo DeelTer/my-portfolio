@@ -1,6 +1,6 @@
 import { skillsData, toolsData } from '../data/skills';
 import { projects } from '../data/projects'; // Импортируем напрямую
-import type { Project } from '../types';
+import type { Project } from '../data/types';
 
 function getToolIcon(tool: string): string {
   const iconMap: Record<string, string> = {

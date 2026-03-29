@@ -1,4 +1,4 @@
-import type { Project } from '../types';
+import type { Project } from './types';
 
 export const projects: Project[] = [
   {
@@ -8,7 +8,7 @@ export const projects: Project[] = [
     image: "./images/milkshake/cover.png",
     category: ["discord"],
     starred: true,
-    shortDesc: "12 800+ участников • Активное игровое комьюнити",
+    shortDesc: "Сообщество для знакомств и совместных игр",
     fullContent: `
       <div class="space-y-6">
         <h1 class="text-4xl font-bold">Milkshake</h1>
@@ -63,7 +63,7 @@ export const projects: Project[] = [
   {
     id: 2,
     title: "BetBoom Esports",
-    subtitle: "Discord + Организация",
+    subtitle: "Discord, Организация",
     image: "./images/betboom_esports/cover.jpg",
     category: ["discord"],
     starred: true,
@@ -106,7 +106,7 @@ export const projects: Project[] = [
           </div>
           <p class="text-gray-300 mb-4">Периодически анонсируем сезоны, в течение которых участники могут заработать ценные призы при помощи активности. Еженедельные турниры и задания.</p>
           <div class="bg-[#2a2a2a] rounded-xl p-4 text-center">
-            <img src="./images/betboom_esports/season.png" 
+            <img src="./images/betboom_esports/seasons.png" 
                 alt="Сезонные активности" 
                 class="max-w-full h-auto mx-auto rounded-lg">
             <p class="text-gray-400 text-sm mt-2">Пример визуального оформления сезона</p>
@@ -128,7 +128,7 @@ export const projects: Project[] = [
           </div>
           <p class="text-gray-300 mb-4">На праздники организовываем ивенты, ограниченные по времени. Например, на 14 февраля участники могли писать друг другу валентинки с персонажами Dota 2.</p>
           <div class="bg-[#2a2a2a] rounded-xl p-4 text-center">
-            <img src="./images/betboom_esports/valentine.jpeg" 
+            <img src="./images/betboom_esports/valentine.jpg" 
                 alt="Валентинки" 
                 class="max-w-full h-auto mx-auto rounded-lg">
             <p class="text-gray-400 text-sm mt-2">Ивент ко Дню святого Валентина</p>
@@ -146,7 +146,6 @@ export const projects: Project[] = [
             <div class="carousel-slides">
               <div class="carousel-slide"><img src="./images/betboom_esports/tournament-1.png" alt="Скриншот турнира 1"></div>
               <div class="carousel-slide"><img src="./images/betboom_esports/tournament-2.jpg" alt="Скриншот турнира 2"></div>
-              <div class="carousel-slide"><img src="./images/betboom_esports/tournament-3.jpg" alt="Скриншот турнира 3"></div>
             </div>
             <button class="carousel-prev" aria-label="Назад"><i class="ph-bold ph-caret-left"></i></button>
             <button class="carousel-next" aria-label="Вперёд"><i class="ph-bold ph-caret-right"></i></button>
@@ -175,7 +174,7 @@ export const projects: Project[] = [
     image: "./images/artpix/cover.jpg",
     category: ["telegram"],
     starred: true,
-    shortDesc: "Структурный гиф-контент канал",
+    shortDesc: "Готовые анимированные оформления для профиля",
     fullContent: `
       <div class="space-y-6">
         <h1 class="text-4xl font-bold">GIF Discord</h1>
@@ -188,7 +187,7 @@ export const projects: Project[] = [
           </div>
           <p class="text-gray-300 mb-4">Сделать так, чтобы люди оставляли свои запросы в комментариях под постами, а мы делали по ним готовые профили.</p>
           <div class="bg-[#2a2a2a] rounded-xl p-4 text-center">
-            <img src="./images/artpix/example.png" 
+            <img src="./images/artpix/post-example.png" 
                 alt="Пример поста" 
                 class="max-w-full h-auto mx-auto rounded-lg">
             <p class="text-gray-400 text-sm mt-2">Пример поста с запросами подписчиков</p>
@@ -204,9 +203,9 @@ export const projects: Project[] = [
           
           <div class="carousel" data-carousel>
             <div class="carousel-slides">
-              <div class="carousel-slide"><img src="./images/artpix/bot-1.png" alt="Скриншот работы бота 1"></div>
-              <div class="carousel-slide"><img src="./images/artpix/bot-2.png" alt="Скриншот работы бота 2"></div>
-              <div class="carousel-slide"><img src="./images/artpix/bot-3.png" alt="Скриншот работы бота 3"></div>
+              <div class="carousel-slide"><img src="./images/artpix/post-production-1.png" alt="Скриншот работы бота 1"></div>
+              <div class="carousel-slide"><img src="./images/artpix/post-production-2.png" alt="Скриншот работы бота 2"></div>
+              <div class="carousel-slide"><img src="./images/artpix/post-production-3.png" alt="Скриншот работы бота 3"></div>
             </div>
             <button class="carousel-prev" aria-label="Назад"><i class="ph-bold ph-caret-left"></i></button>
             <button class="carousel-next" aria-label="Вперёд"><i class="ph-bold ph-caret-right"></i></button>
@@ -242,7 +241,7 @@ export const projects: Project[] = [
     image: "./images/badbunnies/cover.jpg",
     category: ["discord", "new"],
     starred: true,
-    shortDesc: "Свободное взрослое общение",
+    shortDesc: "Пространство для свободного общения",
     fullContent: `
       <div class="space-y-6">
         <h1 class="text-4xl font-bold">Bad Bunnies</h1>
@@ -300,7 +299,7 @@ export const projects: Project[] = [
     image: "./images/dailyfurina/cover.png",
     category: ["telegram"],
     starred: false,
-    shortDesc: "Творчество по Фурине из Genshin Impact",
+    shortDesc: "Творческий канал по персонажу из Genshin Impact",
     fullContent: `
       <div class="space-y-6">
         <h1 class="text-4xl font-bold">Daily Furina</h1>
@@ -412,5 +411,61 @@ export const projects: Project[] = [
         </div>
       </div>
     `
+  },
+  { 
+    id: 9, 
+    title: "СП — сервера Пятёрки", 
+    subtitle: "Minecraft", 
+    image: "./images/spworlds/cover.png", 
+    category: ["minecraft", "other"], 
+    starred: true, 
+    shortDesc: "Администрирование и разработка серверов у стримера Пятёрки", 
+    fullContent: ` 
+      <div class="space-y-6">
+        <h1 class="text-4xl font-bold">СП — сервера Пятёрки</h1>
+        <p class="text-xl text-gray-300">Приватные Minecraft-сервера Пятёрки (SpWorlds) — одна из самых известных вселенных в русскоязычном Minecraft-комьюнити. Я работал там с 2018 по 2022 год как администратор и разработчик.</p>
+
+        <div class="bg-[#1f1f1f] rounded-2xl p-6">
+          <div class="flex items-center gap-2 mb-3">
+            <i class="ph-fill ph-crown text-[#FF337D] text-2xl"></i>
+            <h2 class="text-2xl font-semibold">Моя роль</h2>
+          </div>
+          <p class="text-gray-300">Технический администратор и комьюнити-менеджер. Настраивал и поддерживал серверы, разрабатывал плагины, проектировал игровые режимы, следил за порядком и развивал комьюнити. Игроки запомнили меня как «хорошего админа».</p>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-4">
+            <div class="bg-[#2a2a2a] p-4 rounded-xl">
+              <p class="text-sm text-gray-400">Техническое</p>
+              <p class="font-medium">Настройка серверов, портов, OVH-машин, Java-плагинов</p>
+            </div>
+            <div class="bg-[#2a2a2a] p-4 rounded-xl">
+              <p class="text-sm text-gray-400">Комьюнити</p>
+              <p class="font-medium">Модерация, общение с игроками, проектирование режимов и интерактивного лобби</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-[#1f1f1f] rounded-2xl p-6">
+          <div class="flex items-center gap-2 mb-3">
+            <i class="ph-fill ph-robot text-[#FF337D] text-2xl"></i>
+            <h2 class="text-2xl font-semibold">Что делал</h2>
+          </div>
+          <p class="text-gray-300 mb-4">Обеспечивал стабильную работу серверов, настраивал выделенные сервера, открывал порты и настраивал прокси. Также разрабатывал плагины для серверов на языке Java.</p>
+          <ul class="space-y-2 text-gray-300">
+            <li class="flex gap-2"><span class="text-[#FF337D]">✓</span> Разработка и поддержка плагинов</li>
+            <li class="flex gap-2"><span class="text-[#FF337D]">✓</span> Проектирование игровых режимов</li>
+            <li class="flex gap-2"><span class="text-[#FF337D]">✓</span> Создание интерактивного лобби</li>
+            <li class="flex gap-2"><span class="text-[#FF337D]">✓</span> Синхронизация сайта spworlds.ru с игровыми серверами</li>
+            <li class="flex gap-2"><span class="text-[#FF337D]">✓</span> Полная техническая поддержка и администрирование</li>
+          </ul>
+        </div>
+
+        <div class="bg-[#1f1f1f] rounded-2xl p-6">
+          <div class="flex items-center gap-2 mb-3">
+            <i class="ph-fill ph-users text-[#FF337D] text-2xl"></i>
+            <h2 class="text-2xl font-semibold">Результат и влияние</h2>
+          </div>
+          <p class="text-gray-300">Благодаря работе на СП у меня появились сильные связи в Minecraft-комьюнити. Многие до сих пор помнят меня как админа СП-мини и SpWorlds. Этот опыт стал фундаментом для последующих проектов.</p>
+        </div>
+      </div>
+    ` 
   }
 ];
