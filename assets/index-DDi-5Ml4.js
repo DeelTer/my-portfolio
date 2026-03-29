@@ -1,4 +1,4 @@
-(function(){let e=document.createElement(`link`).relList;if(e&&e.supports&&e.supports(`modulepreload`))return;for(let e of document.querySelectorAll(`link[rel="modulepreload"]`))n(e);new MutationObserver(e=>{for(let t of e)if(t.type===`childList`)for(let e of t.addedNodes)e.tagName===`LINK`&&e.rel===`modulepreload`&&n(e)}).observe(document,{childList:!0,subtree:!0});function t(e){let t={};return e.integrity&&(t.integrity=e.integrity),e.referrerPolicy&&(t.referrerPolicy=e.referrerPolicy),e.crossOrigin===`use-credentials`?t.credentials=`include`:e.crossOrigin===`anonymous`?t.credentials=`omit`:t.credentials=`same-origin`,t}function n(e){if(e.ep)return;e.ep=!0;let n=t(e);fetch(e.href,n)}})();function e(){let e=document.getElementById(`bubbles-canvas`);if(!e)return;let t=e.getContext(`2d`);if(!t)return;let n=window.innerWidth,r=window.innerHeight;e.width=n,e.height=r;let i=[],a=window.innerWidth<768?12:20,o=.12;function s(){i=[];for(let e=0;e<a;e++)i.push({x:Math.random()*n,y:Math.random()*r,radius:Math.random()*80+40,vx:(Math.random()-.5)*.2,vy:(Math.random()-.5)*.1,alpha:Math.random()*o,alphaSpeed:(Math.random()-.5)*.005})}s();let c,l=!0;function u(){!t||!l||(t.clearRect(0,0,n,r),i.forEach(e=>{e.x+=e.vx,e.y+=e.vy,e.x<-e.radius&&(e.x=n+e.radius),e.x>n+e.radius&&(e.x=-e.radius),e.y<-e.radius&&(e.y=r+e.radius),e.y>r+e.radius&&(e.y=-e.radius),e.alpha+=e.alphaSpeed,e.alpha>o?(e.alpha=o,e.alphaSpeed=-e.alphaSpeed):e.alpha<.02&&(e.alpha=.02,e.alphaSpeed=-e.alphaSpeed);let i=t.createRadialGradient(e.x,e.y,e.radius*.2,e.x,e.y,e.radius);i.addColorStop(0,`rgba(255, 51, 125, ${e.alpha*.6})`),i.addColorStop(1,`rgba(255, 51, 125, 0)`),t.beginPath(),t.arc(e.x,e.y,e.radius,0,Math.PI*2),t.fillStyle=i,t.fill()}),c=requestAnimationFrame(u))}function d(){n=window.innerWidth,r=window.innerHeight,e.width=n,e.height=r,s()}function f(){l=!document.hidden,l&&!c&&(c=requestAnimationFrame(u))}return u(),window.addEventListener(`resize`,d),document.addEventListener(`visibilitychange`,f),()=>{window.removeEventListener(`resize`,d),document.removeEventListener(`visibilitychange`,f),c&&cancelAnimationFrame(c)}}var t=[{name:`Управление сообществами`,icon:`users`,category:`Навыки`},{name:`Разработка и автоматизация`,icon:`code`,category:`Навыки`},{name:`SMM-Менеджмент`,icon:`megaphone`,category:`Навыки`},{name:`Брендинг сообществ`,icon:`palette`,category:`Навыки`},{name:`Техническое продюсирование`,icon:`monitor`,category:`Навыки`},{name:`Дизайн`,icon:`pencil`,category:`Навыки`}],n=[`Figma`,`IntelliJ IDEA`,`Adobe Photoshop`,`Adobe After Effects`,`Adobe Premiere`,`Adobe Audition`,`Capcut`,`Excel / Google docs`],r=[{id:1,title:`MILKSHAKE`,subtitle:`Discord`,image:`./images/milkshake/cover.png`,category:[`discord`],starred:!0,shortDesc:`12 800+ участников • Активное игровое комьюнити`,fullContent:`
+(function(){let e=document.createElement(`link`).relList;if(e&&e.supports&&e.supports(`modulepreload`))return;for(let e of document.querySelectorAll(`link[rel="modulepreload"]`))n(e);new MutationObserver(e=>{for(let t of e)if(t.type===`childList`)for(let e of t.addedNodes)e.tagName===`LINK`&&e.rel===`modulepreload`&&n(e)}).observe(document,{childList:!0,subtree:!0});function t(e){let t={};return e.integrity&&(t.integrity=e.integrity),e.referrerPolicy&&(t.referrerPolicy=e.referrerPolicy),e.crossOrigin===`use-credentials`?t.credentials=`include`:e.crossOrigin===`anonymous`?t.credentials=`omit`:t.credentials=`same-origin`,t}function n(e){if(e.ep)return;e.ep=!0;let n=t(e);fetch(e.href,n)}})();function e(){let e=document.getElementById(`bubbles-canvas`);if(!e)return;let t=e.getContext(`2d`);if(!t)return;let n=window.innerWidth,r=window.innerHeight;e.width=n,e.height=r;let i=[],a=window.innerWidth<768?12:20,o=.12;function s(){i=[];for(let e=0;e<a;e++)i.push({x:Math.random()*n,y:Math.random()*r,radius:Math.random()*80+40,vx:(Math.random()-.5)*.2,vy:(Math.random()-.5)*.1,alpha:Math.random()*o,alphaSpeed:(Math.random()-.5)*.005})}s();let c,l=!0;function u(){!t||!l||(t.clearRect(0,0,n,r),i.forEach(e=>{e.x+=e.vx,e.y+=e.vy,e.x<-e.radius&&(e.x=n+e.radius),e.x>n+e.radius&&(e.x=-e.radius),e.y<-e.radius&&(e.y=r+e.radius),e.y>r+e.radius&&(e.y=-e.radius),e.alpha+=e.alphaSpeed,e.alpha>o?(e.alpha=o,e.alphaSpeed=-e.alphaSpeed):e.alpha<.02&&(e.alpha=.02,e.alphaSpeed=-e.alphaSpeed);let i=t.createRadialGradient(e.x,e.y,e.radius*.2,e.x,e.y,e.radius);i.addColorStop(0,`rgba(255, 51, 125, ${e.alpha*.6})`),i.addColorStop(1,`rgba(255, 51, 125, 0)`),t.beginPath(),t.arc(e.x,e.y,e.radius,0,Math.PI*2),t.fillStyle=i,t.fill()}),c=requestAnimationFrame(u))}function d(){n=window.innerWidth,r=window.innerHeight,e.width=n,e.height=r,s()}function f(){l=!document.hidden,l&&!c&&(c=requestAnimationFrame(u))}return u(),window.addEventListener(`resize`,d),document.addEventListener(`visibilitychange`,f),()=>{window.removeEventListener(`resize`,d),document.removeEventListener(`visibilitychange`,f),c&&cancelAnimationFrame(c)}}var t=[{name:`Управление сообществами`,icon:`users`,category:`Навыки`},{name:`Разработка и автоматизация`,icon:`code`,category:`Навыки`},{name:`SMM-Менеджмент`,icon:`megaphone`,category:`Навыки`},{name:`Брендинг сообществ`,icon:`palette`,category:`Навыки`},{name:`Техническое продюсирование`,icon:`monitor`,category:`Навыки`},{name:`Дизайн`,icon:`pencil`,category:`Навыки`}],n=[`Figma`,`IntelliJ IDEA`,`Adobe Photoshop`,`Adobe After Effects`,`Adobe Premiere`,`Adobe Audition`,`Capcut`,`Excel / Google docs`],r=[{id:1,title:`MILKSHAKE`,subtitle:`Discord`,image:`./images/milkshake/cover.png`,category:[`discord`],starred:!0,shortDesc:`Сообщество для знакомств и совместных игр`,fullContent:`
       <div class="space-y-6">
         <h1 class="text-4xl font-bold">Milkshake</h1>
         <p class="text-xl text-gray-300">Discord-сообщество по играм и общению, основанное в 2022 году. Сейчас насчитывает <strong class="text-[#FF337D]">12 800+ участников</strong>.</p>
@@ -47,7 +47,7 @@
           </div>
         </div>
       </div>
-    `},{id:2,title:`BetBoom Esports`,subtitle:`Discord + Организация`,image:`./images/betboom_esports/cover.jpg`,category:[`discord`],starred:!0,shortDesc:`Официальный Discord BetBoom Esports`,fullContent:`
+    `},{id:2,title:`BetBoom Esports`,subtitle:`Discord, Организация`,image:`./images/betboom_esports/cover.jpg`,category:[`discord`],starred:!0,shortDesc:`Официальный Discord BetBoom Esports`,fullContent:`
       <div class="space-y-6">
         <h1 class="text-4xl font-bold">BetBoom Esports</h1>
         <p class="text-xl text-gray-300">Дискорд-сервер для любителей киберспорта и азартных игр. Здесь часто проводятся ивенты, включая клозы, турниры и розыгрыши с ценными призами для участников.</p>
@@ -85,7 +85,7 @@
           </div>
           <p class="text-gray-300 mb-4">Периодически анонсируем сезоны, в течение которых участники могут заработать ценные призы при помощи активности. Еженедельные турниры и задания.</p>
           <div class="bg-[#2a2a2a] rounded-xl p-4 text-center">
-            <img src="./images/betboom_esports/season.png" 
+            <img src="./images/betboom_esports/seasons.png" 
                 alt="Сезонные активности" 
                 class="max-w-full h-auto mx-auto rounded-lg">
             <p class="text-gray-400 text-sm mt-2">Пример визуального оформления сезона</p>
@@ -107,7 +107,7 @@
           </div>
           <p class="text-gray-300 mb-4">На праздники организовываем ивенты, ограниченные по времени. Например, на 14 февраля участники могли писать друг другу валентинки с персонажами Dota 2.</p>
           <div class="bg-[#2a2a2a] rounded-xl p-4 text-center">
-            <img src="./images/betboom_esports/valentine.jpeg" 
+            <img src="./images/betboom_esports/valentine.jpg" 
                 alt="Валентинки" 
                 class="max-w-full h-auto mx-auto rounded-lg">
             <p class="text-gray-400 text-sm mt-2">Ивент ко Дню святого Валентина</p>
@@ -125,7 +125,6 @@
             <div class="carousel-slides">
               <div class="carousel-slide"><img src="./images/betboom_esports/tournament-1.png" alt="Скриншот турнира 1"></div>
               <div class="carousel-slide"><img src="./images/betboom_esports/tournament-2.jpg" alt="Скриншот турнира 2"></div>
-              <div class="carousel-slide"><img src="./images/betboom_esports/tournament-3.jpg" alt="Скриншот турнира 3"></div>
             </div>
             <button class="carousel-prev" aria-label="Назад"><i class="ph-bold ph-caret-left"></i></button>
             <button class="carousel-next" aria-label="Вперёд"><i class="ph-bold ph-caret-right"></i></button>
@@ -145,7 +144,7 @@
           </div>
         </div>
       </div>
-    `},{id:3,title:`GIF Discord`,subtitle:`Telegram`,image:`./images/artpix/cover.jpg`,category:[`telegram`],starred:!0,shortDesc:`Структурный гиф-контент канал`,fullContent:`
+    `},{id:3,title:`GIF Discord`,subtitle:`Telegram`,image:`./images/artpix/cover.jpg`,category:[`telegram`],starred:!0,shortDesc:`Готовые анимированные оформления для профиля`,fullContent:`
       <div class="space-y-6">
         <h1 class="text-4xl font-bold">GIF Discord</h1>
         <p class="text-xl text-gray-300">Телеграм-канал, предоставляющий готовые оформления для Дискорда с лёгким копированием цветов и превью.</p>
@@ -157,7 +156,7 @@
           </div>
           <p class="text-gray-300 mb-4">Сделать так, чтобы люди оставляли свои запросы в комментариях под постами, а мы делали по ним готовые профили.</p>
           <div class="bg-[#2a2a2a] rounded-xl p-4 text-center">
-            <img src="./images/artpix/example.png" 
+            <img src="./images/artpix/post-example.png" 
                 alt="Пример поста" 
                 class="max-w-full h-auto mx-auto rounded-lg">
             <p class="text-gray-400 text-sm mt-2">Пример поста с запросами подписчиков</p>
@@ -173,9 +172,9 @@
           
           <div class="carousel" data-carousel>
             <div class="carousel-slides">
-              <div class="carousel-slide"><img src="./images/artpix/bot-1.png" alt="Скриншот работы бота 1"></div>
-              <div class="carousel-slide"><img src="./images/artpix/bot-2.png" alt="Скриншот работы бота 2"></div>
-              <div class="carousel-slide"><img src="./images/artpix/bot-3.png" alt="Скриншот работы бота 3"></div>
+              <div class="carousel-slide"><img src="./images/artpix/post-production-1.png" alt="Скриншот работы бота 1"></div>
+              <div class="carousel-slide"><img src="./images/artpix/post-production-2.png" alt="Скриншот работы бота 2"></div>
+              <div class="carousel-slide"><img src="./images/artpix/post-production-3.png" alt="Скриншот работы бота 3"></div>
             </div>
             <button class="carousel-prev" aria-label="Назад"><i class="ph-bold ph-caret-left"></i></button>
             <button class="carousel-next" aria-label="Вперёд"><i class="ph-bold ph-caret-right"></i></button>
@@ -202,7 +201,7 @@
           </a>
         </div>
       </div>
-    `},{id:4,title:`Bad Bunnies`,subtitle:`Discord`,image:`./images/badbunnies/cover.jpg`,category:[`discord`,`new`],starred:!0,shortDesc:`Свободное взрослое общение`,fullContent:`
+    `},{id:4,title:`Bad Bunnies`,subtitle:`Discord`,image:`./images/badbunnies/cover.jpg`,category:[`discord`,`new`],starred:!0,shortDesc:`Пространство для свободного общения`,fullContent:`
       <div class="space-y-6">
         <h1 class="text-4xl font-bold">Bad Bunnies</h1>
         <p class="text-xl text-gray-300">Относительно новый сервер, продвигающий свободное общение и совместное времяпровождение с возрастной меткой <strong>16+</strong>.</p>
@@ -250,7 +249,7 @@
           </a>
         </div>
       </div>
-    `},{id:5,title:`Daily Furina`,subtitle:`Telegram`,image:`./images/dailyfurina/cover.png`,category:[`telegram`],starred:!1,shortDesc:`Творчество по Фурине из Genshin Impact`,fullContent:`
+    `},{id:5,title:`Daily Furina`,subtitle:`Telegram`,image:`./images/dailyfurina/cover.png`,category:[`telegram`],starred:!1,shortDesc:`Творческий канал по персонажу из Genshin Impact`,fullContent:`
       <div class="space-y-6">
         <h1 class="text-4xl font-bold">Daily Furina</h1>
         <p class="text-xl text-gray-300">Телеграм-канал, посвящённый творчеству по одному персонажу из игры Genshin Impact — Фурине.</p>
@@ -328,6 +327,52 @@
              class="inline-flex items-center gap-2 bg-[#FF337D] px-6 py-3 rounded-xl font-medium hover:bg-[#e62e6e] transition">
             <i class="ph-fill ph-telegram-logo"></i> Перейти в канал
           </a>
+        </div>
+      </div>
+    `},{id:9,title:`СП — сервера Пятёрки`,subtitle:`Minecraft`,image:`./images/spworlds/cover.png`,category:[`minecraft`,`other`],starred:!0,shortDesc:`Администрирование и разработка серверов у стримера Пятёрки`,fullContent:` 
+      <div class="space-y-6">
+        <h1 class="text-4xl font-bold">СП — сервера Пятёрки</h1>
+        <p class="text-xl text-gray-300">Приватные Minecraft-сервера Пятёрки (SpWorlds) — одна из самых известных вселенных в русскоязычном Minecraft-комьюнити. Я работал там с 2018 по 2022 год как администратор и разработчик.</p>
+
+        <div class="bg-[#1f1f1f] rounded-2xl p-6">
+          <div class="flex items-center gap-2 mb-3">
+            <i class="ph-fill ph-crown text-[#FF337D] text-2xl"></i>
+            <h2 class="text-2xl font-semibold">Моя роль</h2>
+          </div>
+          <p class="text-gray-300">Технический администратор и комьюнити-менеджер. Настраивал и поддерживал серверы, разрабатывал плагины, проектировал игровые режимы, следил за порядком и развивал комьюнити. Игроки запомнили меня как «хорошего админа».</p>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-4">
+            <div class="bg-[#2a2a2a] p-4 rounded-xl">
+              <p class="text-sm text-gray-400">Техническое</p>
+              <p class="font-medium">Настройка серверов, портов, OVH-машин, Java-плагинов</p>
+            </div>
+            <div class="bg-[#2a2a2a] p-4 rounded-xl">
+              <p class="text-sm text-gray-400">Комьюнити</p>
+              <p class="font-medium">Модерация, общение с игроками, проектирование режимов и интерактивного лобби</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-[#1f1f1f] rounded-2xl p-6">
+          <div class="flex items-center gap-2 mb-3">
+            <i class="ph-fill ph-robot text-[#FF337D] text-2xl"></i>
+            <h2 class="text-2xl font-semibold">Что делал</h2>
+          </div>
+          <p class="text-gray-300 mb-4">Обеспечивал стабильную работу серверов, настраивал выделенные сервера, открывал порты и настраивал прокси. Также разрабатывал плагины для серверов на языке Java.</p>
+          <ul class="space-y-2 text-gray-300">
+            <li class="flex gap-2"><span class="text-[#FF337D]">✓</span> Разработка и поддержка плагинов</li>
+            <li class="flex gap-2"><span class="text-[#FF337D]">✓</span> Проектирование игровых режимов</li>
+            <li class="flex gap-2"><span class="text-[#FF337D]">✓</span> Создание интерактивного лобби</li>
+            <li class="flex gap-2"><span class="text-[#FF337D]">✓</span> Синхронизация сайта spworlds.ru с игровыми серверами</li>
+            <li class="flex gap-2"><span class="text-[#FF337D]">✓</span> Полная техническая поддержка и администрирование</li>
+          </ul>
+        </div>
+
+        <div class="bg-[#1f1f1f] rounded-2xl p-6">
+          <div class="flex items-center gap-2 mb-3">
+            <i class="ph-fill ph-users text-[#FF337D] text-2xl"></i>
+            <h2 class="text-2xl font-semibold">Результат и влияние</h2>
+          </div>
+          <p class="text-gray-300">Благодаря работе на СП у меня появились сильные связи в Minecraft-комьюнити. Многие до сих пор помнят меня как админа СП-мини и SpWorlds. Этот опыт стал фундаментом для последующих проектов.</p>
         </div>
       </div>
     `}];function i(e){return{Figma:`figma-logo`,"IntelliJ IDEA":`code`,"Adobe Photoshop":`image`,"Adobe After Effects":`film-strip`,"Adobe Premiere":`video`,"Adobe Audition":`waveform`,Capcut:`scissors`,"Excel / Google docs":`table`}[e]||`gear`}function a(){let e=document.getElementById(`skills`);e&&(e.innerHTML=`
