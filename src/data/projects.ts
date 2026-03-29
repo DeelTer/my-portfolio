@@ -431,16 +431,6 @@ export const projects: Project[] = [
             <h2 class="text-2xl font-semibold">Моя роль</h2>
           </div>
           <p class="text-gray-300">Технический администратор и комьюнити-менеджер. Настраивал и поддерживал серверы, разрабатывал плагины, проектировал игровые режимы, следил за порядком и развивал комьюнити. Игроки запомнили меня как «хорошего админа».</p>
-          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-4">
-            <div class="bg-[#2a2a2a] p-4 rounded-xl">
-              <p class="text-sm text-gray-400">Техническое</p>
-              <p class="font-medium">Настройка серверов, портов, OVH-машин, Java-плагинов</p>
-            </div>
-            <div class="bg-[#2a2a2a] p-4 rounded-xl">
-              <p class="text-sm text-gray-400">Комьюнити</p>
-              <p class="font-medium">Модерация, общение с игроками, проектирование режимов и интерактивного лобби</p>
-            </div>
-          </div>
         </div>
 
         <div class="bg-[#1f1f1f] rounded-2xl p-6">
