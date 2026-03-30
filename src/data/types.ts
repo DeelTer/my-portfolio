@@ -14,3 +14,8 @@ export interface Skill {
   icon: string;
   category: string;
 }
+
+export interface Tool {
+  name: string;
+  icon: string;
+}

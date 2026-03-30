@@ -11,14 +11,10 @@ function initCarousel() {
     const nextBtn = carousel.querySelector('.carousel-next') as HTMLElement;
     const dotsContainer = carousel.querySelector('.carousel-dots') as HTMLElement;
     
-    if (!slides || !prevBtn || !nextBtn || !dotsContainer) {
-      console.warn('Carousel elements not found');
-      return;
-    }
+    if (!slides || !prevBtn || !nextBtn || !dotsContainer) return;
 
     let currentIndex = 0;
     const totalSlides = slides.children.length;
-
     if (totalSlides === 0) return;
 
     dotsContainer.innerHTML = '';
@@ -32,9 +28,7 @@ function initCarousel() {
 
     function updateCarousel() {
       slides.style.transform = `translateX(-${currentIndex * 100}%)`;
-      dots.forEach((dot, i) => {
-        dot.classList.toggle('active', i === currentIndex);
-      });
+      dots.forEach((dot, i) => dot.classList.toggle('active', i === currentIndex));
     }
 
     function goToSlide(index: number) {
@@ -61,7 +55,7 @@ export function openProject(id: number) {
   modal.classList.add("flex");
   document.body.style.overflow = "hidden";
 
-  initCarousel();
+  setTimeout(initCarousel, 50);
 }
 
 export function closeModal() {

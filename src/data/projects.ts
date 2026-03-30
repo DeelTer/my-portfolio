@@ -3,7 +3,7 @@ import type { Project } from './types';
 export const projects: Project[] = [
   {
     id: 1,
-    title: "MILKSHAKE",
+    title: "Milkshake",
     subtitle: "Discord",
     image: "./images/milkshake/cover.png",
     category: ["discord"],
@@ -359,7 +359,7 @@ export const projects: Project[] = [
     image: "./images/hoyozen/cover.png",
     category: ["telegram"],
     starred: false,
-    shortDesc: "Новости Zenless Zone Zero",
+    shortDesc: "Новости по игре Zenless Zone Zero",
     fullContent: `
       <div class="space-y-6">
         <h1 class="text-4xl font-bold">Hoyozen</h1>
@@ -414,7 +414,7 @@ export const projects: Project[] = [
   },
   { 
     id: 9, 
-    title: "СП — сервера Пятёрки", 
+    title: "#СП сервера", 
     subtitle: "Minecraft", 
     image: "./images/spworlds/cover.png", 
     category: ["minecraft", "other"], 

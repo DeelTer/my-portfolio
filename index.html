@@ -24,8 +24,8 @@
 
   <link rel="icon" type="image/svg+xml" href="/favicon.svg">
   <link rel="alternate icon" href="/favicon.ico">
-  
-  <script src="https://unpkg.com/@phosphor-icons/web"></script>
+
+  <script src="https://unpkg.com/@phosphor-icons/web@2.1.2"></script>
 </head>
 <body class="min-h-screen pb-12 relative">
 
@@ -46,22 +46,22 @@
           <h1 class="text-4xl font-bold">Привет, я Роман</h1>
         </div>
         <p class="text-lg text-gray-300 mb-4">
-          С 2018 года строю цифровые сообщества и системы. Люблю творить и делать сложное простым.
+          С 2018 года создаю и развиваю цифровые сообщества и автоматизированные системы. Специализируюсь на росте аудитории, повышении вовлечённости и технической реализации проектов.
         </p>
         <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-6 text-gray-400 text-sm border border-white/5 rounded-2xl p-4 bg-white/5">
-          <div class="flex items-center gap-2"><i class="ph-fill ph-crown text-[#FF337D]"></i> <span>Работа с топ-стримерами</span></div>
+          <div class="flex items-center gap-2"><i class="ph-fill ph-crown text-[#FF337D]"></i> <span>Работа со стримерами</span></div>
           <div class="flex items-center gap-2"><i class="ph-fill ph-trophy text-[#FF337D]"></i> <span>SMM контент-менеджмент</span></div>
           <div class="flex items-center gap-2"><i class="ph-fill ph-code text-[#FF337D]"></i> <span>Java-разработка с 2018</span></div>
           <div class="flex items-center gap-2"><i class="ph-fill ph-users text-[#FF337D]"></i> <span>Управление командами до 30 человек</span></div>
           <div class="flex items-center gap-2"><i class="ph-fill ph-chart-line text-[#FF337D]"></i> <span>Аналитика, ведение статистики</span></div>
-          <div class="flex items-center gap-2"><i class="ph-fill ph-video text-[#FF337D]"></i> <span>Видеомонтаж</span></div>
+          <div class="flex items-center gap-2"><i class="ph-fill ph-video text-[#FF337D]"></i> <span>Видеомонтаж и брендинг</span></div>
         </div>
         <p class="text-gray-300 mb-6">
-          Работал с крупными стримерами (Пятёрка), BetBoom Esports, разрабатывал плагины для Minecraft серверов, развивал сообщества и технически продюсировал проекты.</p>
+          Работал с крупными стримерами (Пятёрка), компаниями, разрабатывал плагины для Minecraft серверов, развивал сообщества и технически продюсировал проекты.</p>
         <button onclick="window.location.href='https://t.me/deelter'" 
                 class="flex items-center gap-2 bg-white text-black px-6 py-3 rounded-2xl font-medium hover:bg-gray-200 transition">
           <i class="ph-fill ph-chat-teardrop-dots text-xl"></i>
-          Написать мне
+          Написать в Telegram
         </button>
       </div>
     </div>
@@ -113,13 +113,18 @@
 
   <!-- МОДАЛЬНОЕ ОКНО -->
   <div id="modal" onclick="if(event.target===this) closeModal()" 
-       class="hidden fixed inset-0 bg-black/80 flex items-center justify-center z-50">
+      class="hidden fixed inset-0 bg-black/80 flex items-center justify-center z-50 backdrop-blur-sm">
+
     <div onclick="event.stopPropagation()" 
-         class="bg-[#1a1a1a] rounded-3xl max-w-2xl w-full mx-4 max-h-[90vh] overflow-auto relative">
-      <button class="modal-close" onclick="closeModal()" aria-label="Закрыть">
-        <i class="ph-fill ph-x"></i>
+        class="bg-[#1a1a1a] rounded-3xl max-w-2xl w-full mx-4 max-h-[92vh] overflow-auto relative border border-white/10 shadow-2xl">
+
+      <!-- Красивый крестик -->
+      <button onclick="closeModal()" 
+              class="modal-close absolute top-5 right-5 z-50 w-10 h-10 flex items-center justify-center rounded-2xl bg-black/60 hover:bg-[#FF337D] hover:text-white transition-all duration-200 group">
+        <i class="ph-fill ph-x text-2xl text-gray-300 group-hover:text-white"></i>
       </button>
-      <div id="modal-content" class="p-8"></div>
+
+      <div id="modal-content" class="p-8 md:p-10"></div>
     </div>
   </div>
 
