@@ -365,7 +365,7 @@
           <p class="text-gray-300">Благодаря работе на СП у меня появились сильные связи в Minecraft-комьюнити. Многие до сих пор помнят меня как админа СП-мини и SpWorlds. Этот опыт стал фундаментом для последующих проектов.</p>
         </div>
       </div>
-    `}];function i(e){return{Figma:`figma-logo`,"IntelliJ IDEA":`code`,"Adobe Photoshop":`image`,"Adobe After Effects":`film-strip`,"Adobe Premiere":`video`,"Adobe Audition":`waveform`,Capcut:`scissors`,"Excel / Google docs":`table`}[e]||`gear`}function a(){window.PhosphorIcons&&window.PhosphorIcons.loadIcons?window.PhosphorIcons.loadIcons():console.warn(`PhosphorIcons not available`)}function o(){let e=document.getElementById(`skills`);e&&(e.innerHTML=`
+    `}];function i(e){return{Figma:`figma-logo`,"IntelliJ IDEA":`code`,"Adobe Photoshop":`image`,"Adobe After Effects":`film-strip`,"Adobe Premiere":`video`,"Adobe Audition":`waveform`,Capcut:`scissors`,"Excel / Google docs":`table`}[e]||`gear`}function a(){window.PhosphorIcons?.loadIcons?window.PhosphorIcons.loadIcons():setTimeout(()=>{window.PhosphorIcons?.loadIcons&&window.PhosphorIcons.loadIcons()},100)}function o(){let e=document.getElementById(`skills`);e&&(e.innerHTML=`
     <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
       ${t.map(e=>`
         <div class="skill-card">
