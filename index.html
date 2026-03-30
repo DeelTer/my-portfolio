@@ -25,8 +25,8 @@
   <link rel="alternate icon" href="/favicon.ico">
 
   <script src="https://unpkg.com/@phosphor-icons/web@2.1.2"></script>
-  <script type="module" crossorigin src="./assets/index-DVQ2FRVr.js"></script>
-  <link rel="stylesheet" crossorigin href="./assets/index-BzMGJZ17.css">
+  <script type="module" crossorigin src="./assets/index-C-AFf8zX.js"></script>
+  <link rel="stylesheet" crossorigin href="./assets/index-DlynqLvb.css">
 </head>
 <body class="min-h-screen pb-12 relative">
 
@@ -35,37 +35,79 @@
 
   <div class="max-w-5xl mx-auto px-6 pt-8 relative z-10">
 
-    <!-- Обо мне (расширенная версия) -->
-    <div class="flex flex-col md:flex-row items-start gap-8 mb-16">
-      <div class="w-full md:w-64 flex-shrink-0">
-        <img src="./images/deelter.png" alt="Роман" 
-             class="w-full rounded-2xl border border-white/10">
+  <!-- Обо мне -->
+  <div class="flex flex-col md:flex-row items-start gap-8 mb-16">
+    <div class="w-full md:w-64 flex-shrink-0">
+      <img src="./images/deelter.png" alt="Роман" 
+          class="w-full rounded-2xl border border-white/10"
+          loading="lazy">
+    </div>
+    <div class="flex-1">
+      <div class="flex items-center gap-3 mb-4">
+        <i class="ph-fill ph-hand-waving text-3xl text-[#FF337D]"></i>
+        <h1 class="text-4xl font-bold">Привет, я Роман</h1>
       </div>
-      <div>
-        <div class="flex items-center gap-3 mb-4">
-          <i class="ph-fill ph-hand-waving text-3xl text-[#FF337D]"></i>
-          <h1 class="text-4xl font-bold">Привет, я Роман</h1>
-        </div>
-        <p class="text-lg text-gray-300 mb-4">
-          С 2018 года создаю и развиваю цифровые сообщества и автоматизированные системы. Специализируюсь на росте аудитории, повышении вовлечённости и технической реализации проектов.
-        </p>
-        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-6 text-gray-400 text-sm border border-white/5 rounded-2xl p-4 bg-white/5">
-          <div class="flex items-center gap-2"><i class="ph-fill ph-crown text-[#FF337D]"></i> <span>Работа со стримерами</span></div>
-          <div class="flex items-center gap-2"><i class="ph-fill ph-trophy text-[#FF337D]"></i> <span>SMM контент-менеджмент</span></div>
-          <div class="flex items-center gap-2"><i class="ph-fill ph-code text-[#FF337D]"></i> <span>Java-разработка с 2018</span></div>
-          <div class="flex items-center gap-2"><i class="ph-fill ph-users text-[#FF337D]"></i> <span>Управление командами до 30 человек</span></div>
-          <div class="flex items-center gap-2"><i class="ph-fill ph-chart-line text-[#FF337D]"></i> <span>Аналитика, ведение статистики</span></div>
-          <div class="flex items-center gap-2"><i class="ph-fill ph-video text-[#FF337D]"></i> <span>Видеомонтаж и брендинг</span></div>
-        </div>
-        <p class="text-gray-300 mb-6">
-          Работал с крупными стримерами (Пятёрка), компаниями, разрабатывал плагины для Minecraft серверов, развивал сообщества и технически продюсировал проекты.</p>
-        <button onclick="window.location.href='https://t.me/deelter'" 
-                class="flex items-center gap-2 bg-white text-black px-6 py-3 rounded-2xl font-medium hover:bg-gray-200 transition">
+      <p class="text-lg text-gray-300 mb-6">
+        С 2018 года создаю и развиваю цифровые сообщества и автоматизированные системы. 
+        Специализируюсь на росте аудитории, повышении вовлечённости и технической реализации проектов.
+      </p>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8 text-gray-400 text-sm border border-white/5 rounded-2xl p-5 bg-white/5">
+        <div class="flex items-center gap-2"><i class="ph-fill ph-crown text-[#FF337D]"></i> <span>Работа со стримерами</span></div>
+        <div class="flex items-center gap-2"><i class="ph-fill ph-trophy text-[#FF337D]"></i> <span>SMM контент-менеджмент</span></div>
+        <div class="flex items-center gap-2"><i class="ph-fill ph-code text-[#FF337D]"></i> <span>Java-разработка с 2018</span></div>
+        <div class="flex items-center gap-2"><i class="ph-fill ph-users text-[#FF337D]"></i> <span>Управление командами до 30 человек</span></div>
+        <div class="flex items-center gap-2"><i class="ph-fill ph-chart-line text-[#FF337D]"></i> <span>Аналитика и статистика</span></div>
+        <div class="flex items-center gap-2"><i class="ph-fill ph-video text-[#FF337D]"></i> <span>Видеомонтаж и брендинг</span></div>
+      </div>
+
+      <!-- НОВАЯ КНОПКА -->
+      <div class="relative inline-block">
+        <button onclick="toggleContactMenu(event)" 
+                id="contact-btn"
+                class="flex items-center gap-3 bg-white text-black px-7 py-3.5 rounded-2xl font-medium hover:bg-gray-100 transition-all active:scale-95">
           <i class="ph-fill ph-chat-teardrop-dots text-xl"></i>
-          Написать в Telegram
+          <span>Связаться со мной</span>
         </button>
+
+        <div id="contact-menu" class="hidden absolute top-full left-0 mt-3 w-72 bg-[#1a1a1a] border border-white/10 rounded-2xl py-2 shadow-2xl z-50">
+          <a href="https://t.me/deelter" target="_blank" 
+            class="flex items-center gap-3 px-5 py-3 hover:bg-white/5 transition">
+            <i class="ph-fill ph-telegram-logo text-[#FF337D] text-2xl"></i>
+            <div>
+              <div class="font-medium">Telegram</div>
+              <div class="text-xs text-gray-400">t.me/deelter</div>
+            </div>
+          </a>
+          <a href="https://vk.com/deelter" target="_blank" 
+            class="flex items-center gap-3 px-5 py-3 hover:bg-white/5 transition">
+            <!-- Для VK нет иконки в Phosphor, используем скрепку -->
+            <i class="ph-fill ph-paperclip text-[#FF337D] text-2xl"></i>
+            <div>
+              <div class="font-medium">ВКонтакте</div>
+              <div class="text-xs text-gray-400">vk.com/deelter</div>
+            </div>
+          </a>
+          <a href="https://wa.me/qr/ZFCI6AIDSIQWH1" target="_blank" 
+            class="flex items-center gap-3 px-5 py-3 hover:bg-white/5 transition">
+            <i class="ph-fill ph-whatsapp-logo text-[#FF337D] text-2xl"></i>
+            <div>
+              <div class="font-medium">WhatsApp</div>
+              <div class="text-xs text-gray-400">Написать мне</div>
+            </div>
+          </a>
+          <a href="mailto:deelter@gmail.com" 
+            class="flex items-center gap-3 px-5 py-3 hover:bg-white/5 transition">
+            <i class="ph-fill ph-envelope text-[#FF337D] text-2xl"></i>
+            <div>
+              <div class="font-medium">Email</div>
+              <div class="text-xs text-gray-400">deelter@gmail.com</div>
+            </div>
+          </a>
+        </div>
       </div>
     </div>
+  </div>
 
     <!-- Навыки и Инструменты -->
     <div class="flex gap-3 mb-6" role="tablist">
@@ -82,6 +124,7 @@
       <button onclick="filterProjects('starred')" class="filter-btn" data-filter="starred" aria-pressed="false">Избранное</button>
       <button onclick="filterProjects('discord')" class="filter-btn" data-filter="discord" aria-pressed="false">Дискорд</button>
       <button onclick="filterProjects('telegram')" class="filter-btn" data-filter="telegram" aria-pressed="false">Телеграм</button>
+      <button onclick="filterProjects('tiktok')" class="filter-btn" data-filter="tiktok" aria-pressed="false">Тикток/Shorts</button>
       <button onclick="filterProjects('other')" class="filter-btn" data-filter="other" aria-pressed="false">Другое</button>
     </div>
     
@@ -119,7 +162,6 @@
     <div onclick="event.stopPropagation()" 
         class="bg-[#1a1a1a] rounded-3xl max-w-2xl w-full mx-4 max-h-[92vh] overflow-auto relative border border-white/10 shadow-2xl">
 
-      <!-- Красивый крестик -->
       <button onclick="closeModal()" 
               class="modal-close absolute top-5 right-5 z-50 w-10 h-10 flex items-center justify-center rounded-2xl bg-black/60 hover:bg-[#FF337D] hover:text-white transition-all duration-200 group">
         <i class="ph-fill ph-x text-2xl text-gray-300 group-hover:text-white"></i>

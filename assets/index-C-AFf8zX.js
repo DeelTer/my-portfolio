@@ -1,4 +1,4 @@
-(function(){let e=document.createElement(`link`).relList;if(e&&e.supports&&e.supports(`modulepreload`))return;for(let e of document.querySelectorAll(`link[rel="modulepreload"]`))n(e);new MutationObserver(e=>{for(let t of e)if(t.type===`childList`)for(let e of t.addedNodes)e.tagName===`LINK`&&e.rel===`modulepreload`&&n(e)}).observe(document,{childList:!0,subtree:!0});function t(e){let t={};return e.integrity&&(t.integrity=e.integrity),e.referrerPolicy&&(t.referrerPolicy=e.referrerPolicy),e.crossOrigin===`use-credentials`?t.credentials=`include`:e.crossOrigin===`anonymous`?t.credentials=`omit`:t.credentials=`same-origin`,t}function n(e){if(e.ep)return;e.ep=!0;let n=t(e);fetch(e.href,n)}})();function e(){let e=document.getElementById(`bubbles-canvas`);if(!e)return;let t=e.getContext(`2d`);if(!t)return;let n=window.innerWidth,r=window.innerHeight;e.width=n,e.height=r;let i=[],a=window.innerWidth<768?12:20,o=.12;function s(){i=[];for(let e=0;e<a;e++)i.push({x:Math.random()*n,y:Math.random()*r,radius:Math.random()*80+40,vx:(Math.random()-.5)*.2,vy:(Math.random()-.5)*.1,alpha:Math.random()*o,alphaSpeed:(Math.random()-.5)*.005})}s();let c,l=!0;function u(){!t||!l||(t.clearRect(0,0,n,r),i.forEach(e=>{e.x+=e.vx,e.y+=e.vy,e.x<-e.radius&&(e.x=n+e.radius),e.x>n+e.radius&&(e.x=-e.radius),e.y<-e.radius&&(e.y=r+e.radius),e.y>r+e.radius&&(e.y=-e.radius),e.alpha+=e.alphaSpeed,e.alpha>o?(e.alpha=o,e.alphaSpeed=-e.alphaSpeed):e.alpha<.02&&(e.alpha=.02,e.alphaSpeed=-e.alphaSpeed);let i=t.createRadialGradient(e.x,e.y,e.radius*.2,e.x,e.y,e.radius);i.addColorStop(0,`rgba(255, 51, 125, ${e.alpha*.6})`),i.addColorStop(1,`rgba(255, 51, 125, 0)`),t.beginPath(),t.arc(e.x,e.y,e.radius,0,Math.PI*2),t.fillStyle=i,t.fill()}),c=requestAnimationFrame(u))}function d(){n=window.innerWidth,r=window.innerHeight,e.width=n,e.height=r,s()}function f(){l=!document.hidden,l&&!c&&(c=requestAnimationFrame(u))}return u(),window.addEventListener(`resize`,d),document.addEventListener(`visibilitychange`,f),()=>{window.removeEventListener(`resize`,d),document.removeEventListener(`visibilitychange`,f),c&&cancelAnimationFrame(c)}}var t=[{name:`Управление сообществами`,icon:`users`,category:`Навыки`},{name:`Программирование на Java`,icon:`code`,category:`Навыки`},{name:`AI Промпт-инженер`,icon:`brain`,category:`Навыки`},{name:`SMM-Менеджмент`,icon:`megaphone`,category:`Навыки`},{name:`Брендинг сообществ`,icon:`palette`,category:`Навыки`},{name:`Видеомонтаж`,icon:`monitor`,category:`Навыки`},{name:`Дизайн`,icon:`pencil`,category:`Навыки`}],n=[{name:`Figma`,icon:`figma-logo`},{name:`IntelliJ IDEA`,icon:`code`},{name:`Adobe Photoshop`,icon:`image-square`},{name:`Adobe After Effects`,icon:`film-strip`},{name:`Adobe Premiere`,icon:`video`},{name:`Adobe Audition`,icon:`waveform`},{name:`Capcut`,icon:`scissors`},{name:`Excel / Google docs`,icon:`table`},{name:`Grok / DeepSeek / ChatGPT`,icon:`sparkle`}],r=[{id:1,title:`Milkshake`,subtitle:`Discord`,image:`./images/milkshake/cover.png`,category:[`discord`],starred:!0,shortDesc:`Сообщество для знакомств и совместных игр`,fullContent:`
+(function(){let e=document.createElement(`link`).relList;if(e&&e.supports&&e.supports(`modulepreload`))return;for(let e of document.querySelectorAll(`link[rel="modulepreload"]`))n(e);new MutationObserver(e=>{for(let t of e)if(t.type===`childList`)for(let e of t.addedNodes)e.tagName===`LINK`&&e.rel===`modulepreload`&&n(e)}).observe(document,{childList:!0,subtree:!0});function t(e){let t={};return e.integrity&&(t.integrity=e.integrity),e.referrerPolicy&&(t.referrerPolicy=e.referrerPolicy),e.crossOrigin===`use-credentials`?t.credentials=`include`:e.crossOrigin===`anonymous`?t.credentials=`omit`:t.credentials=`same-origin`,t}function n(e){if(e.ep)return;e.ep=!0;let n=t(e);fetch(e.href,n)}})();function e(){let e=document.getElementById(`bubbles-canvas`);if(!e)return;let t=e.getContext(`2d`);if(!t)return;let n=window.innerWidth,r=window.innerHeight;e.width=n,e.height=r;let i=[],a=window.innerWidth<768?12:20,o=.12;function s(){i=[];for(let e=0;e<a;e++)i.push({x:Math.random()*n,y:Math.random()*r,radius:Math.random()*80+40,vx:(Math.random()-.5)*.2,vy:(Math.random()-.5)*.1,alpha:Math.random()*o,alphaSpeed:(Math.random()-.5)*.005})}s();let c,l=!0;function u(){!t||!l||(t.clearRect(0,0,n,r),i.forEach(e=>{e.x+=e.vx,e.y+=e.vy,e.x<-e.radius&&(e.x=n+e.radius),e.x>n+e.radius&&(e.x=-e.radius),e.y<-e.radius&&(e.y=r+e.radius),e.y>r+e.radius&&(e.y=-e.radius),e.alpha+=e.alphaSpeed,e.alpha>o?(e.alpha=o,e.alphaSpeed=-e.alphaSpeed):e.alpha<.02&&(e.alpha=.02,e.alphaSpeed=-e.alphaSpeed);let i=t.createRadialGradient(e.x,e.y,e.radius*.2,e.x,e.y,e.radius);i.addColorStop(0,`rgba(255, 51, 125, ${e.alpha*.6})`),i.addColorStop(1,`rgba(255, 51, 125, 0)`),t.beginPath(),t.arc(e.x,e.y,e.radius,0,Math.PI*2),t.fillStyle=i,t.fill()}),c=requestAnimationFrame(u))}function d(){n=window.innerWidth,r=window.innerHeight,e.width=n,e.height=r,s()}function f(){l=!document.hidden,l&&!c&&(c=requestAnimationFrame(u))}return u(),window.addEventListener(`resize`,d),document.addEventListener(`visibilitychange`,f),()=>{window.removeEventListener(`resize`,d),document.removeEventListener(`visibilitychange`,f),c&&cancelAnimationFrame(c)}}var t=[{name:`Управление сообществами`,icon:`users`,category:`Навыки`},{name:`Программирование на Java`,icon:`code`,category:`Навыки`},{name:`AI Промпт-инженер`,icon:`brain`,category:`Навыки`},{name:`SMM-Менеджмент`,icon:`megaphone`,category:`Навыки`},{name:`Брендинг сообществ`,icon:`palette`,category:`Навыки`},{name:`Видеомонтаж`,icon:`monitor`,category:`Навыки`},{name:`Дизайн`,icon:`pencil`,category:`Навыки`}],n=[{name:`Figma`,icon:`figma-logo`},{name:`IntelliJ IDEA`,icon:`code`},{name:`Adobe Photoshop`,icon:`image-square`},{name:`Adobe After Effects`,icon:`film-strip`},{name:`Adobe Premiere`,icon:`video`},{name:`Adobe Audition`,icon:`waveform`},{name:`Capcut`,icon:`scissors`},{name:`Excel / Google docs`,icon:`table`},{name:`Grok / DeepSeek / ChatGPT`,icon:`brain`}],r=[{id:1,title:`Milkshake`,subtitle:`Discord`,image:`./images/milkshake/cover.png`,category:[`discord`],starred:!0,shortDesc:`Сообщество для знакомств и совместных игр`,fullContent:`
       <div class="space-y-6">
         <h1 class="text-4xl font-bold">Milkshake</h1>
         <p class="text-xl text-gray-300">Discord-сообщество по играм и общению, основанное в 2022 году. Сейчас насчитывает <strong class="text-[#FF337D]">12 800+ участников</strong>.</p>
@@ -364,6 +364,7 @@
             <li class="flex gap-2"><span class="text-[#FF337D]">✓</span> Разработка и поддержка плагинов</li>
             <li class="flex gap-2"><span class="text-[#FF337D]">✓</span> Проектирование игровых режимов</li>
             <li class="flex gap-2"><span class="text-[#FF337D]">✓</span> Создание интерактивного лобби</li>
+            <li class="flex gap-2"><span class="text-[#FF337D]">✓</span> Помощь в организации крупных ивентов</li>
             <li class="flex gap-2"><span class="text-[#FF337D]">✓</span> Синхронизация сайта spworlds.ru с игровыми серверами</li>
             <li class="flex gap-2"><span class="text-[#FF337D]">✓</span> Полная техническая поддержка и администрирование</li>
           </ul>
@@ -375,6 +376,108 @@
             <h2 class="text-2xl font-semibold">Результат и влияние</h2>
           </div>
           <p class="text-gray-300">Благодаря работе на СП у меня появились сильные связи в Minecraft-комьюнити. Многие до сих пор помнят меня как админа СП-мини и SpWorlds. Этот опыт стал фундаментом для последующих проектов.</p>
+        </div>
+      </div>
+    `},{id:11,title:`Пляжный`,subtitle:`TikTok`,image:`./images/tiktok/deelter/cover.jpg`,category:[`tiktok`,`other`],starred:!0,shortDesc:`Контент по игре Minecraft, инструкции для VR`,fullContent:`
+      <div class="space-y-6">
+        <h1 class="text-4xl font-bold">Пляжный</h1>
+        <p class="text-xl text-gray-300">Тикток-канал, где я помогаю людям разобраться с VR-версией Minecraft, настройкой шлемов, даю советы по игре и создаю полезные инструкции.</p>
+
+        <div class="bg-[#1f1f1f] rounded-2xl p-6">
+          <div class="flex items-center gap-2 mb-3">
+            <i class="ph-fill ph-video text-[#FF337D] text-2xl"></i>
+            <h2 class="text-2xl font-semibold">Концепция канала</h2>
+          </div>
+          <p class="text-gray-300">Цель — сделать VR-гейминг в Minecraft доступным и понятным. Я рассказываю, какой шлем выбрать, как его настроить, как избежать ошибок, а также делюсь лайфхаками и показываю моменты из игр. Видео строятся по принципу «вопрос — ответ» или пошаговые инструкции.</p>
+        </div>
+
+        <div class="bg-[#1f1f1f] rounded-2xl p-6">
+          <div class="flex items-center gap-2 mb-3">
+            <i class="ph-fill ph-scissors text-[#FF337D] text-2xl"></i>
+            <h2 class="text-2xl font-semibold">Процесс создания</h2>
+          </div>
+          <p class="text-gray-300 mb-4">Сначала я пишу сценарий, стараясь сделать его полезным и интересным. Затем снимаю футажи в игре (иногда с помощью захвата экрана шлема). Монтаж делаю в CapCut — это быстро и позволяет эффективно добавлять субтитры, музыку и эффекты.</p>
+          <ul class="space-y-2 text-gray-300">
+            <li class="flex gap-2"><span class="text-[#FF337D]">✓</span> Написание сценария с чёткой структурой</li>
+            <li class="flex gap-2"><span class="text-[#FF337D]">✓</span> Запись игрового процесса в VR</li>
+            <li class="flex gap-2"><span class="text-[#FF337D]">✓</span> Монтаж в CapCut с акцентами на ключевые моменты</li>
+            <li class="flex gap-2"><span class="text-[#FF337D]">✓</span> Оформление текстом, звуком, динамичной нарезкой</li>
+          </ul>
+        </div>
+
+        <div class="bg-[#1f1f1f] rounded-2xl p-6">
+          <div class="flex items-center gap-2 mb-3">
+            <i class="ph-fill ph-lightbulb text-[#FF337D] text-2xl"></i>
+            <h2 class="text-2xl font-semibold">Для кого это</h2>
+          </div>
+          <p class="text-gray-300">Начинающие пользователи VR, которые хотят попробовать Minecraft в виртуальной реальности, но не знают, с чего начать. А также опытные игроки, ищущие лайфхаки и вдохновение для новых проектов в VR.</p>
+        </div>
+
+        <div class="bg-[#1f1f1f] rounded-2xl p-6">
+          <div class="flex items-center gap-2 mb-3">
+            <i class="ph-fill ph-image text-[#FF337D] text-2xl"></i>
+            <h2 class="text-2xl font-semibold">Примеры видео</h2>
+          </div>
+          <div class="carousel" data-carousel>
+            <div class="carousel-slides">
+              <div class="carousel-slide">
+                <a href="https://vt.tiktok.com/ZSHLm15oy/" target="_blank" class="block relative group">
+                  <img src="./images/tiktok/deelter/thumbnail-1.jpg" alt="Превью видео 1" class="w-full h-auto rounded-lg">
+                  <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition flex items-center justify-center rounded-lg">
+                    <span class="text-white text-sm font-medium px-3 py-1 bg-[#FF337D] rounded-full">Смотреть →</span>
+                  </div>
+                </a>
+              </div>
+              <div class="carousel-slide">
+                <a href="https://vt.tiktok.com/ZSHLmN1rX/" target="_blank" class="block relative group">
+                  <img src="./images/tiktok/deelter/thumbnail-2.jpg" alt="Превью видео 2" class="w-full h-auto rounded-lg">
+                  <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition flex items-center justify-center rounded-lg">
+                    <span class="text-white text-sm font-medium px-3 py-1 bg-[#FF337D] rounded-full">Смотреть →</span>
+                  </div>
+                </a>
+              </div>
+              <div class="carousel-slide">
+                <a href="https://vt.tiktok.com/ZSHLasLQ3/" target="_blank" class="block relative group">
+                  <img src="./images/tiktok/deelter/thumbnail-3.jpg" alt="Превью видео 3" class="w-full h-auto rounded-lg">
+                  <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition flex items-center justify-center rounded-lg">
+                    <span class="text-white text-sm font-medium px-3 py-1 bg-[#FF337D] rounded-full">Смотреть →</span>
+                  </div>
+                </a>
+              </div>
+            </div>
+            <button class="carousel-prev" aria-label="Назад"><i class="ph-bold ph-caret-left"></i></button>
+            <button class="carousel-next" aria-label="Вперёд"><i class="ph-bold ph-caret-right"></i></button>
+            <div class="carousel-dots"></div>
+          </div>
+          <p class="text-gray-400 text-sm text-center mt-2">Нажмите на превью, чтобы посмотреть видео</p>
+        </div>
+
+        <div class="bg-[#1f1f1f] rounded-2xl p-6">
+          <div class="flex items-center gap-2 mb-3">
+            <i class="ph-fill ph-chart-line text-[#FF337D] text-2xl"></i>
+            <h2 class="text-2xl font-semibold">Статистика канала</h2>
+          </div>
+          <div class="carousel" data-carousel>
+            <div class="carousel-slides">
+              <div class="carousel-slide">
+                <img src="./images/tiktok/deelter/stats-1.jpg" alt="Аналитика канала 1" class="w-full h-auto rounded-lg">
+              </div>
+              <div class="carousel-slide">
+                <img src="./images/tiktok/deelter/stats-2.jpg" alt="Аналитика канала 2" class="w-full h-auto rounded-lg">
+              </div>
+            </div>
+            <button class="carousel-prev" aria-label="Назад"><i class="ph-bold ph-caret-left"></i></button>
+            <button class="carousel-next" aria-label="Вперёд"><i class="ph-bold ph-caret-right"></i></button>
+            <div class="carousel-dots"></div>
+          </div>
+          <p class="text-gray-400 text-sm text-center mt-2">Скриншоты аналитики канала</p>
+        </div>
+
+        <div class="bg-[#1f1f1f] rounded-2xl p-6">
+          <a href="https://tiktok.com/@deelter" target="_blank" 
+            class="inline-flex items-center gap-2 bg-[#FF337D] px-6 py-3 rounded-xl font-medium hover:bg-[#e62e6e] transition">
+            <i class="ph-fill ph-tiktok-logo"></i> Перейти в TikTok
+          </a>
         </div>
       </div>
     `}];function i(){setTimeout(()=>{window.PhosphorIcons&&typeof window.PhosphorIcons.loadIcons==`function`&&window.PhosphorIcons.loadIcons()},10)}function a(){let e=document.getElementById(`skills`);e&&(e.innerHTML=`
@@ -429,4 +532,4 @@
           <i id="audio-icon" class="ph-fill ph-music-note text-2xl"></i>
         </button>
       </div>
-    `);let e=null,t=null,n=!1,r=!1,i=document.getElementById(`audio-toggle`),a=document.getElementById(`audio-icon`);function o(){if(!r)try{t=new Audio,t.src=`/music/lofi.mp3`,t.loop=!0,t.volume=.15,e=new(window.AudioContext||window.webkitAudioContext),t.addEventListener(`error`,()=>{console.error(`Не удалось загрузить музыку`),a&&(a.className=`ph-fill ph-warning text-xl`)}),r=!0}catch(e){console.error(`Ошибка инициализации аудио:`,e)}}async function s(){if(!(!t&&(o(),!t)))try{n?(t.pause(),a.className=`ph-fill ph-music-note text-xl`,n=!1):(e?.state===`suspended`&&await e.resume(),await t.play(),a.className=`ph-fill ph-pause text-xl`,n=!0)}catch(e){console.error(`Ошибка воспроизведения:`,e)}}return o(),i?.addEventListener(`click`,s),document.addEventListener(`visibilitychange`,()=>{document.hidden&&n&&t?t.pause():!document.hidden&&n&&t&&t.play().catch(()=>{})}),()=>{t&&t.pause()}}document.addEventListener(`DOMContentLoaded`,()=>{e(),a(),l(`all`),m(),document.addEventListener(`keydown`,e=>{e.key===`Escape`&&p()})}),window.filterProjects=l,window.switchTab=u,window.openProject=f,window.closeModal=p;
+    `);let e=null,t=null,n=!1,r=!1,i=document.getElementById(`audio-toggle`),a=document.getElementById(`audio-icon`);function o(){if(!r)try{t=new Audio,t.src=`/music/lofi.mp3`,t.loop=!0,t.volume=.15,e=new(window.AudioContext||window.webkitAudioContext),t.addEventListener(`error`,()=>{console.error(`Не удалось загрузить музыку`),a&&(a.className=`ph-fill ph-warning text-xl`)}),r=!0}catch(e){console.error(`Ошибка инициализации аудио:`,e)}}async function s(){if(!(!t&&(o(),!t)))try{n?(t.pause(),a.className=`ph-fill ph-music-note text-xl`,n=!1):(e?.state===`suspended`&&await e.resume(),await t.play(),a.className=`ph-fill ph-pause text-xl`,n=!0)}catch(e){console.error(`Ошибка воспроизведения:`,e)}}return o(),i?.addEventListener(`click`,s),document.addEventListener(`visibilitychange`,()=>{document.hidden&&n&&t?t.pause():!document.hidden&&n&&t&&t.play().catch(()=>{})}),()=>{t&&t.pause()}}document.addEventListener(`DOMContentLoaded`,()=>{e(),a(),l(`all`),m(),document.addEventListener(`keydown`,e=>{e.key===`Escape`&&p()})}),window.filterProjects=l,window.switchTab=u,window.openProject=f,window.closeModal=p,window.toggleContactMenu=e=>{e.stopImmediatePropagation();let t=document.getElementById(`contact-menu`),n=document.getElementById(`contact-btn`);!t||!n||(t.classList.contains(`hidden`)?(t.classList.remove(`hidden`),n.classList.add(`!bg-gray-200`,`shadow-md`)):(t.classList.add(`hidden`),n.classList.remove(`!bg-gray-200`,`shadow-md`)))},document.addEventListener(`click`,e=>{let t=document.getElementById(`contact-menu`),n=document.getElementById(`contact-btn`);if(t&&n){let r=e.target;!t.contains(r)&&r!==n&&!n.contains(r)&&(t.classList.add(`hidden`),n.classList.remove(`!bg-gray-200`,`shadow-md`))}});
