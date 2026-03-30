@@ -1,1 +1,5 @@
-declare module '@phosphor-icons/web';
+interface Window {
+  PhosphorIcons?: {
+    loadIcons: () => void;
+  };
+}

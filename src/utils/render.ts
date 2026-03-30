@@ -1,5 +1,5 @@
 import { skillsData, toolsData } from '../data/skills';
-import { projects } from '../data/projects'; // Импортируем напрямую
+import { projects } from '../data/projects';
 import type { Project } from '../data/types';
 
 function getToolIcon(tool: string): string {
@@ -16,6 +16,14 @@ function getToolIcon(tool: string): string {
   return iconMap[tool] || "gear";
 }
 
+function updateIcons() {
+  if (window.PhosphorIcons && window.PhosphorIcons.loadIcons) {
+    window.PhosphorIcons.loadIcons();
+  } else {
+    console.warn('PhosphorIcons not available');
+  }
+}
+
 export function renderSkills() {
   const container = document.getElementById("skills");
   if (!container) return;
@@ -30,6 +38,7 @@ export function renderSkills() {
       `).join('')}
     </div>
   `;
+  updateIcons();
 }
 
 export function renderTools() {
@@ -46,6 +55,7 @@ export function renderTools() {
       `).join('')}
     </div>
   `;
+  updateIcons();
 }
 
 function sortProjects(projectsToSort: Project[]): Project[] {
@@ -64,6 +74,7 @@ export function renderProjects(filteredProjects: Project[]) {
   
   if (sortedProjects.length === 0) {
     grid.innerHTML = '<div class="col-span-full text-center text-gray-400 py-12">Проектов пока нет</div>';
+    updateIcons();
     return;
   }
   
@@ -87,6 +98,7 @@ export function renderProjects(filteredProjects: Project[]) {
       </div>
     </div>
   `).join('');
+  updateIcons();
 }
 
 export function filterProjects(category: string) {
