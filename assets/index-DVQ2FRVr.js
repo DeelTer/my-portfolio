@@ -114,24 +114,29 @@
           </div>
         </div>
         
+        <!-- Карусель больших турниров -->
         <div class="bg-[#1f1f1f] rounded-2xl p-6">
           <div class="flex items-center gap-2 mb-3">
-            <i class="ph-fill ph-crown text-[#FF337D] text-2xl"></i>
+            <i class="ph-fill ph-trophy text-[#FF337D] text-2xl"></i>
             <h2 class="text-2xl font-semibold">Большие турниры</h2>
           </div>
           <p class="text-gray-300 mb-4">Пока проводились всего один раз, но было собрано много команд и зрителей, мероприятие прошло отлично.</p>
           
           <div class="carousel" data-carousel>
             <div class="carousel-slides">
-              <div class="carousel-slide"><img src="./images/betboom_esports/tournament-1.png" alt="Скриншот турнира 1"></div>
-              <div class="carousel-slide"><img src="./images/betboom_esports/tournament-2.jpg" alt="Скриншот турнира 2"></div>
+              <div class="carousel-slide">
+                <img src="./images/betboom_esports/tournament-1.png" alt="Турнир 1">
+              </div>
+              <div class="carousel-slide">
+                <img src="./images/betboom_esports/tournament-2.jpg" alt="Турнир 2">
+              </div>
             </div>
             <button class="carousel-prev" aria-label="Назад"><i class="ph-bold ph-caret-left"></i></button>
             <button class="carousel-next" aria-label="Вперёд"><i class="ph-bold ph-caret-right"></i></button>
             <div class="carousel-dots"></div>
           </div>
         </div>
-        
+
         <div class="bg-[#1f1f1f] rounded-2xl p-6">
           <div class="flex flex-col md:flex-row gap-6 items-start">
             <a href="https://discord.gg/betboom-esports" target="_blank" 
@@ -168,13 +173,20 @@
             <i class="ph-fill ph-robot text-[#FF337D] text-2xl"></i>
             <h2 class="text-2xl font-semibold">Разработка бота</h2>
           </div>
-          <p class="text-gray-300 mb-4">Для продажи оформлений «не для всех» был разработан бот, который отдаёт медиа-файлы по коду. Для хостинга картинок используется сам Telegram — бот пересылает их из канала‑архива.</p>
+          <p class="text-gray-300 mb-4">Для продажи оформлений «не для всех» был разработан бот, который отдаёт медиа-файлы по коду. Для хостинга картинок используется сам Telegram — бот пересылает их из канала-архива.</p>
           
+          <!-- Исправленная карусель -->
           <div class="carousel" data-carousel>
             <div class="carousel-slides">
-              <div class="carousel-slide"><img src="./images/artpix/post-production-1.png" alt="Скриншот работы бота 1"></div>
-              <div class="carousel-slide"><img src="./images/artpix/post-production-2.png" alt="Скриншот работы бота 2"></div>
-              <div class="carousel-slide"><img src="./images/artpix/post-production-3.png" alt="Скриншот работы бота 3"></div>
+              <div class="carousel-slide">
+                <img src="./images/artpix/post-production-1.png" alt="Скриншот работы бота 1">
+              </div>
+              <div class="carousel-slide">
+                <img src="./images/artpix/post-production-2.png" alt="Скриншот работы бота 2">
+              </div>
+              <div class="carousel-slide">
+                <img src="./images/artpix/post-production-3.png" alt="Скриншот работы бота 3">
+              </div>
             </div>
             <button class="carousel-prev" aria-label="Назад"><i class="ph-bold ph-caret-left"></i></button>
             <button class="carousel-next" aria-label="Вперёд"><i class="ph-bold ph-caret-right"></i></button>
@@ -410,7 +422,7 @@
         <p class="text-gray-400 text-sm line-clamp-2">${e.shortDesc}</p>
       </div>
     </div>
-  `).join(``),i(),setTimeout(()=>{t.querySelectorAll(`.opacity-0`).forEach(e=>{e.classList.add(`animate-fade-in-up`)})},10)}function c(e){return[...e].sort((e,t)=>e.starred&&!t.starred?-1:!e.starred&&t.starred?1:e.id-t.id)}function l(e){document.querySelectorAll(`.filter-btn`).forEach(t=>{let n=t.getAttribute(`data-filter`)===e;t.classList.toggle(`active`,n),t.setAttribute(`aria-pressed`,n?`true`:`false`)});let t;t=e===`all`?r:e===`starred`?r.filter(e=>e.starred===!0):r.filter(t=>t.category.includes(e)),s(t)}function u(e){document.querySelectorAll(`.tab-btn`).forEach((t,n)=>{t.classList.toggle(`active`,n===e),t.setAttribute(`aria-selected`,n===e?`true`:`false`)}),e===0?a():o()}function d(){document.querySelectorAll(`#modal .carousel`).forEach(e=>{if(e.hasAttribute(`data-initialized`))return;e.setAttribute(`data-initialized`,`true`);let t=e.querySelector(`.carousel-slides`),n=e.querySelector(`.carousel-prev`),r=e.querySelector(`.carousel-next`),i=e.querySelector(`.carousel-dots`);if(!t||!n||!r||!i)return;let a=0,o=t.children.length;if(o===0)return;i.innerHTML=``;for(let e=0;e<o;e++){let t=document.createElement(`div`);t.classList.add(`dot`),t.addEventListener(`click`,()=>l(e)),i.appendChild(t)}let s=i.querySelectorAll(`.dot`);function c(){t.style.transform=`translateX(-${a*100}%)`,s.forEach((e,t)=>e.classList.toggle(`active`,t===a))}function l(e){a=(e+o)%o,c()}n.addEventListener(`click`,()=>l(a-1)),r.addEventListener(`click`,()=>l(a+1)),c()})}function f(e){let t=r.find(t=>t.id===e);if(!t)return;let n=document.getElementById(`modal`),i=document.getElementById(`modal-content`);i.innerHTML=t.fullContent,n.classList.remove(`hidden`),n.classList.add(`flex`),document.body.style.overflow=`hidden`,setTimeout(d,50)}function p(){let e=document.getElementById(`modal`);e.classList.add(`hidden`),e.classList.remove(`flex`),document.body.style.overflow=``}function m(){document.body.insertAdjacentHTML(`beforeend`,`
+  `).join(``),i(),setTimeout(()=>{t.querySelectorAll(`.opacity-0`).forEach(e=>{e.classList.add(`animate-fade-in-up`)})},10)}function c(e){return[...e].sort((e,t)=>e.starred&&!t.starred?-1:!e.starred&&t.starred?1:e.id-t.id)}function l(e){document.querySelectorAll(`.filter-btn`).forEach(t=>{let n=t.getAttribute(`data-filter`)===e;t.classList.toggle(`active`,n),t.setAttribute(`aria-pressed`,n?`true`:`false`)});let t;t=e===`all`?r:e===`starred`?r.filter(e=>e.starred===!0):r.filter(t=>t.category.includes(e)),s(t)}function u(e){document.querySelectorAll(`.tab-btn`).forEach((t,n)=>{t.classList.toggle(`active`,n===e),t.setAttribute(`aria-selected`,n===e?`true`:`false`)}),e===0?a():o()}function d(){document.querySelectorAll(`#modal .carousel`).forEach(e=>{if(e.hasAttribute(`data-initialized`))return;e.setAttribute(`data-initialized`,`true`);let t=e.querySelector(`.carousel-slides`),n=e.querySelector(`.carousel-prev`),r=e.querySelector(`.carousel-next`),i=e.querySelector(`.carousel-dots`);if(!t||!n||!r||!i)return;let a=0,o=t.children.length;if(o<=1){n.style.display=`none`,r.style.display=`none`;return}i.innerHTML=``;for(let e=0;e<o;e++){let t=document.createElement(`div`);t.classList.add(`dot`),e===0&&t.classList.add(`active`),t.addEventListener(`click`,()=>l(e)),i.appendChild(t)}let s=i.querySelectorAll(`.dot`);function c(){t.style.transform=`translateX(-${a*100}%)`,s.forEach((e,t)=>{e.classList.toggle(`active`,t===a)})}function l(e){a=(e+o)%o,c()}n.addEventListener(`click`,()=>l(a-1)),r.addEventListener(`click`,()=>l(a+1)),c()})}function f(e){let t=r.find(t=>t.id===e);if(!t)return;let n=document.getElementById(`modal`),i=document.getElementById(`modal-content`);i.innerHTML=t.fullContent,n.classList.remove(`hidden`),n.classList.add(`flex`),document.body.style.overflow=`hidden`,setTimeout(()=>{d()},100)}function p(){let e=document.getElementById(`modal`);e.classList.add(`hidden`),e.classList.remove(`flex`),document.body.style.overflow=``}function m(){document.body.insertAdjacentHTML(`beforeend`,`
       <div id="audio-player" class="fixed bottom-4 right-4 z-50">
         <button id="audio-toggle"
                 class="bg-[#1a1a1a] hover:bg-[#FF337D] w-14 h-14 flex items-center justify-center rounded-2xl shadow-lg transition-all duration-300 hover:scale-105 border border-white/10 hover:border-[#FF337D]/50">
