@@ -5,7 +5,7 @@ export const skillsData: Skill[] = [
   { name: "Разработка и автоматизация", icon: "code", category: "Навыки" },
   { name: "SMM-Менеджмент", icon: "megaphone", category: "Навыки" },
   { name: "Брендинг сообществ", icon: "palette", category: "Навыки" },
-  { name: "Техническое продюсирование", icon: "monitor", category: "Навыки" },
+  { name: "Видеомонтаж", icon: "monitor", category: "Навыки" },
   { name: "Дизайн", icon: "pencil", category: "Навыки" }
 ];
 

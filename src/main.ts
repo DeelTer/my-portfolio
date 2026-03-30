@@ -3,6 +3,7 @@ import { renderSkills, filterProjects, switchTab } from './utils/render';
 import { openProject, closeModal } from './utils/modal';
 import './style.css';
 
+
 // Инициализация
 document.addEventListener('DOMContentLoaded', () => {
   initCanvasBubbles();
