@@ -19,5 +19,5 @@ export const toolsData: Tool[] = [
   { name: "Adobe Audition",         icon: "waveform" },
   { name: "Capcut",                 icon: "scissors" },
   { name: "Excel / Google docs",    icon: "table" },
-  { name: "Grok / DeepSeek / ChatGPT", icon: "sparkle" }   // или "brain", "robot" — как больше нравится
+  { name: "Grok / DeepSeek / ChatGPT", icon: "brain" }   
 ];

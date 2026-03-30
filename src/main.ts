@@ -21,3 +21,33 @@ document.addEventListener('DOMContentLoaded', () => {
 (window as any).switchTab = switchTab;
 (window as any).openProject = openProject;
 (window as any).closeModal = closeModal;
+
+// === МЕНЮ КОНТАКТОВ ===
+(window as any).toggleContactMenu = (e: Event) => {
+  e.stopImmediatePropagation();
+  const menu = document.getElementById('contact-menu') as HTMLDivElement;
+  const btn = document.getElementById('contact-btn') as HTMLButtonElement;
+  if (!menu || !btn) return;
+
+  const isOpen = !menu.classList.contains('hidden');
+  if (isOpen) {
+    menu.classList.add('hidden');
+    btn.classList.remove('!bg-gray-200', 'shadow-md');
+  } else {
+    menu.classList.remove('hidden');
+    btn.classList.add('!bg-gray-200', 'shadow-md');
+  }
+};
+
+// Закрытие меню при клике вне его
+document.addEventListener('click', (e) => {
+  const menu = document.getElementById('contact-menu');
+  const btn = document.getElementById('contact-btn');
+  if (menu && btn) {
+    const target = e.target as HTMLElement;
+    if (!menu.contains(target) && target !== btn && !btn.contains(target)) {
+      menu.classList.add('hidden');
+      btn.classList.remove('!bg-gray-200', 'shadow-md');
+    }
+  }
+});

@@ -169,3 +169,37 @@
 .modal-close:hover i {
   transform: scale(1.15);
 }
+
+#contact-menu i {
+  color: #FF337D !important;
+}
+
+
+#contact-btn {
+  position: relative;
+  overflow: hidden;
+  background-color: white;
+  color: black;
+  transition: color 0.3s ease;
+  z-index: 1;
+}
+
+#contact-btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0%;
+  height: 100%;
+  background-color: #FF337D;
+  transition: width 0.4s ease-out;
+  z-index: -1;
+}
+
+#contact-btn:hover::before {
+  width: 100%;
+}
+
+#contact-btn:hover {
+  color: white;
+}
