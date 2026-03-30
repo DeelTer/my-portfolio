@@ -1,7 +1,7 @@
 import type { Project } from './types';
 
 export const projects: Project[] = [
-  {
+ {
     id: 1,
     title: "Milkshake",
     subtitle: "Discord",
@@ -135,24 +135,29 @@ export const projects: Project[] = [
           </div>
         </div>
         
+        <!-- Карусель больших турниров -->
         <div class="bg-[#1f1f1f] rounded-2xl p-6">
           <div class="flex items-center gap-2 mb-3">
-            <i class="ph-fill ph-crown text-[#FF337D] text-2xl"></i>
+            <i class="ph-fill ph-trophy text-[#FF337D] text-2xl"></i>
             <h2 class="text-2xl font-semibold">Большие турниры</h2>
           </div>
           <p class="text-gray-300 mb-4">Пока проводились всего один раз, но было собрано много команд и зрителей, мероприятие прошло отлично.</p>
           
           <div class="carousel" data-carousel>
             <div class="carousel-slides">
-              <div class="carousel-slide"><img src="./images/betboom_esports/tournament-1.png" alt="Скриншот турнира 1"></div>
-              <div class="carousel-slide"><img src="./images/betboom_esports/tournament-2.jpg" alt="Скриншот турнира 2"></div>
+              <div class="carousel-slide">
+                <img src="./images/betboom_esports/tournament-1.png" alt="Турнир 1">
+              </div>
+              <div class="carousel-slide">
+                <img src="./images/betboom_esports/tournament-2.jpg" alt="Турнир 2">
+              </div>
             </div>
             <button class="carousel-prev" aria-label="Назад"><i class="ph-bold ph-caret-left"></i></button>
             <button class="carousel-next" aria-label="Вперёд"><i class="ph-bold ph-caret-right"></i></button>
             <div class="carousel-dots"></div>
           </div>
         </div>
-        
+
         <div class="bg-[#1f1f1f] rounded-2xl p-6">
           <div class="flex flex-col md:flex-row gap-6 items-start">
             <a href="https://discord.gg/betboom-esports" target="_blank" 
@@ -199,13 +204,20 @@ export const projects: Project[] = [
             <i class="ph-fill ph-robot text-[#FF337D] text-2xl"></i>
             <h2 class="text-2xl font-semibold">Разработка бота</h2>
           </div>
-          <p class="text-gray-300 mb-4">Для продажи оформлений «не для всех» был разработан бот, который отдаёт медиа-файлы по коду. Для хостинга картинок используется сам Telegram — бот пересылает их из канала‑архива.</p>
+          <p class="text-gray-300 mb-4">Для продажи оформлений «не для всех» был разработан бот, который отдаёт медиа-файлы по коду. Для хостинга картинок используется сам Telegram — бот пересылает их из канала-архива.</p>
           
+          <!-- Исправленная карусель -->
           <div class="carousel" data-carousel>
             <div class="carousel-slides">
-              <div class="carousel-slide"><img src="./images/artpix/post-production-1.png" alt="Скриншот работы бота 1"></div>
-              <div class="carousel-slide"><img src="./images/artpix/post-production-2.png" alt="Скриншот работы бота 2"></div>
-              <div class="carousel-slide"><img src="./images/artpix/post-production-3.png" alt="Скриншот работы бота 3"></div>
+              <div class="carousel-slide">
+                <img src="./images/artpix/post-production-1.png" alt="Скриншот работы бота 1">
+              </div>
+              <div class="carousel-slide">
+                <img src="./images/artpix/post-production-2.png" alt="Скриншот работы бота 2">
+              </div>
+              <div class="carousel-slide">
+                <img src="./images/artpix/post-production-3.png" alt="Скриншот работы бота 3">
+              </div>
             </div>
             <button class="carousel-prev" aria-label="Назад"><i class="ph-bold ph-caret-left"></i></button>
             <button class="carousel-next" aria-label="Вперёд"><i class="ph-bold ph-caret-right"></i></button>

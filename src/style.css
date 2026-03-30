@@ -69,40 +69,90 @@
   }
 }
 
-/* Остальные стили оставляем как были */
+/* ==================== КАРУСЕЛЬ ==================== */
 .carousel {
   position: relative;
   max-width: 100%;
   margin: 1rem 0;
   overflow: hidden;
+  border-radius: 12px;
 }
 
 .carousel-slides {
   display: flex;
-  transition: transform 0.4s cubic-bezier(0.32, 0.72, 0, 1);
+  transition: transform 0.45s cubic-bezier(0.32, 0.72, 0, 1);
+  width: 100%;
+}
+
+.carousel-slide {
+  flex: 0 0 100%;
+  min-width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 8px;
 }
 
 .carousel-slide img {
   width: 100%;
+  max-width: 100%;
   height: auto;
-  border-radius: 1rem;
+  border-radius: 12px;
   object-fit: contain;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
 }
 
-/* Кнопки карусели и модалки — без изменений */
-.modal-close, .carousel-prev, .carousel-next {
-  background: rgba(0,0,0,0.6);
+/* Кнопки карусели */
+.carousel-prev, .carousel-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0,0,0,0.7);
   border: none;
   color: white;
-  padding: 0.5rem;
+  font-size: 1.8rem;
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.2s;
+  z-index: 10;
+}
+
+.carousel-prev:hover, .carousel-next:hover {
+  background: #FF337D;
+  transform: translateY(-50%) scale(1.1);
+}
+
+.carousel-prev { left: 12px; }
+.carousel-next { right: 12px; }
+
+/* Точки */
+.carousel-dots {
+  text-align: center;
+  margin-top: 12px;
+}
+
+.dot {
+  display: inline-block;
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: #555;
+  margin: 0 5px;
+  cursor: pointer;
   transition: all 0.2s;
 }
 
-.modal-close:hover, .carousel-prev:hover, .carousel-next:hover {
-  background: rgba(0,0,0,0.9);
+.dot.active {
+  background: #FF337D;
+  transform: scale(1.3);
 }
 
+/* Модальное окно */
 .modal-close {
   transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
 }
