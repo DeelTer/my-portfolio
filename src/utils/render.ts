@@ -17,17 +17,18 @@ function getToolIcon(tool: string): string {
 }
 
 function updateIcons() {
-  if (window.PhosphorIcons && window.PhosphorIcons.loadIcons) {
+  if (window.PhosphorIcons?.loadIcons) {
     window.PhosphorIcons.loadIcons();
   } else {
-    console.warn('PhosphorIcons not available');
+    setTimeout(() => {
+      if (window.PhosphorIcons?.loadIcons) window.PhosphorIcons.loadIcons();
+    }, 100);
   }
 }
 
 export function renderSkills() {
   const container = document.getElementById("skills");
   if (!container) return;
-  
   container.innerHTML = `
     <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
       ${skillsData.map(skill => `
@@ -44,7 +45,6 @@ export function renderSkills() {
 export function renderTools() {
   const container = document.getElementById("skills");
   if (!container) return;
-  
   container.innerHTML = `
     <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
       ${toolsData.map(tool => `
