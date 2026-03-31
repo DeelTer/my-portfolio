@@ -76,7 +76,17 @@ export function openProject(id: number) {
 
 export function closeModal() {
   const modal = document.getElementById("modal") as HTMLDivElement;
-  modal.classList.add("hidden");
-  modal.classList.remove("flex");
-  document.body.style.overflow = "";
+  const isOpen = modal && !modal.classList.contains("hidden");
+  
+  if (isOpen) {
+    modal.classList.add("hidden");
+    modal.classList.remove("flex");
+    document.body.style.overflow = "";
+    
+    // Очищаем URL, если он содержит slug проекта
+    const currentPath = window.location.pathname;
+    if (currentPath !== '/' && currentPath !== '') {
+      window.history.pushState({}, '', '/');
+    }
+  }
 }

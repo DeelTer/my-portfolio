@@ -7,6 +7,7 @@ export interface Project {
   starred?: boolean; 
   shortDesc: string;
   fullContent: string;
+  slug: string; 
 }
 
 export interface Skill {
