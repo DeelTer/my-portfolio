@@ -1,4 +1,4 @@
-(function(){let e=document.createElement(`link`).relList;if(e&&e.supports&&e.supports(`modulepreload`))return;for(let e of document.querySelectorAll(`link[rel="modulepreload"]`))n(e);new MutationObserver(e=>{for(let t of e)if(t.type===`childList`)for(let e of t.addedNodes)e.tagName===`LINK`&&e.rel===`modulepreload`&&n(e)}).observe(document,{childList:!0,subtree:!0});function t(e){let t={};return e.integrity&&(t.integrity=e.integrity),e.referrerPolicy&&(t.referrerPolicy=e.referrerPolicy),e.crossOrigin===`use-credentials`?t.credentials=`include`:e.crossOrigin===`anonymous`?t.credentials=`omit`:t.credentials=`same-origin`,t}function n(e){if(e.ep)return;e.ep=!0;let n=t(e);fetch(e.href,n)}})();function e(){let e=document.getElementById(`bubbles-canvas`);if(!e)return;let t=e.getContext(`2d`);if(!t)return;let n=window.innerWidth,r=window.innerHeight;e.width=n,e.height=r;let i=[],a=window.innerWidth<768?12:20,o=.12;function s(){i=[];for(let e=0;e<a;e++)i.push({x:Math.random()*n,y:Math.random()*r,radius:Math.random()*80+40,vx:(Math.random()-.5)*.2,vy:(Math.random()-.5)*.1,alpha:Math.random()*o,alphaSpeed:(Math.random()-.5)*.005})}s();let c,l=!0;function u(){!t||!l||(t.clearRect(0,0,n,r),i.forEach(e=>{e.x+=e.vx,e.y+=e.vy,e.x<-e.radius&&(e.x=n+e.radius),e.x>n+e.radius&&(e.x=-e.radius),e.y<-e.radius&&(e.y=r+e.radius),e.y>r+e.radius&&(e.y=-e.radius),e.alpha+=e.alphaSpeed,e.alpha>o?(e.alpha=o,e.alphaSpeed=-e.alphaSpeed):e.alpha<.02&&(e.alpha=.02,e.alphaSpeed=-e.alphaSpeed);let i=t.createRadialGradient(e.x,e.y,e.radius*.2,e.x,e.y,e.radius);i.addColorStop(0,`rgba(255, 51, 125, ${e.alpha*.6})`),i.addColorStop(1,`rgba(255, 51, 125, 0)`),t.beginPath(),t.arc(e.x,e.y,e.radius,0,Math.PI*2),t.fillStyle=i,t.fill()}),c=requestAnimationFrame(u))}function d(){n=window.innerWidth,r=window.innerHeight,e.width=n,e.height=r,s()}function f(){l=!document.hidden,l&&!c&&(c=requestAnimationFrame(u))}return u(),window.addEventListener(`resize`,d),document.addEventListener(`visibilitychange`,f),()=>{window.removeEventListener(`resize`,d),document.removeEventListener(`visibilitychange`,f),c&&cancelAnimationFrame(c)}}var t=[{name:`Управление сообществами`,icon:`users`,category:`Навыки`},{name:`Программирование на Java`,icon:`code`,category:`Навыки`},{name:`AI Промпт-инженеринг`,icon:`brain`,category:`Навыки`},{name:`Контент-Менеджмент`,icon:`megaphone`,category:`Навыки`},{name:`Брендинг сообществ`,icon:`palette`,category:`Навыки`},{name:`Видеомонтаж`,icon:`monitor`,category:`Навыки`},{name:`Дизайн`,icon:`pencil`,category:`Навыки`}],n=[{name:`Figma`,icon:`figma-logo`},{name:`IntelliJ IDEA`,icon:`code`},{name:`Adobe Photoshop`,icon:`image-square`},{name:`Adobe After Effects`,icon:`film-strip`},{name:`Adobe Premiere`,icon:`video`},{name:`Adobe Audition`,icon:`waveform`},{name:`Capcut`,icon:`scissors`},{name:`Excel / Google docs`,icon:`table`},{name:`Grok / DeepSeek / ChatGPT`,icon:`brain`}],r=[{id:1,title:`Milkshake`,subtitle:`Discord`,image:`./images/milkshake/cover.png`,category:[`discord`],starred:!0,shortDesc:`Сообщество для знакомств и совместных игр`,fullContent:`
+(function(){let e=document.createElement(`link`).relList;if(e&&e.supports&&e.supports(`modulepreload`))return;for(let e of document.querySelectorAll(`link[rel="modulepreload"]`))n(e);new MutationObserver(e=>{for(let t of e)if(t.type===`childList`)for(let e of t.addedNodes)e.tagName===`LINK`&&e.rel===`modulepreload`&&n(e)}).observe(document,{childList:!0,subtree:!0});function t(e){let t={};return e.integrity&&(t.integrity=e.integrity),e.referrerPolicy&&(t.referrerPolicy=e.referrerPolicy),e.crossOrigin===`use-credentials`?t.credentials=`include`:e.crossOrigin===`anonymous`?t.credentials=`omit`:t.credentials=`same-origin`,t}function n(e){if(e.ep)return;e.ep=!0;let n=t(e);fetch(e.href,n)}})();function e(){let e=document.getElementById(`bubbles-canvas`);if(!e)return;let t=e.getContext(`2d`);if(!t)return;let n=window.innerWidth,r=window.innerHeight;e.width=n,e.height=r;let i=[],a=window.innerWidth<768?12:20,o=.12;function s(){i=[];for(let e=0;e<a;e++)i.push({x:Math.random()*n,y:Math.random()*r,radius:Math.random()*80+40,vx:(Math.random()-.5)*.2,vy:(Math.random()-.5)*.1,alpha:Math.random()*o,alphaSpeed:(Math.random()-.5)*.005})}s();let c,l=!0;function u(){!t||!l||(t.clearRect(0,0,n,r),i.forEach(e=>{e.x+=e.vx,e.y+=e.vy,e.x<-e.radius&&(e.x=n+e.radius),e.x>n+e.radius&&(e.x=-e.radius),e.y<-e.radius&&(e.y=r+e.radius),e.y>r+e.radius&&(e.y=-e.radius),e.alpha+=e.alphaSpeed,e.alpha>o?(e.alpha=o,e.alphaSpeed=-e.alphaSpeed):e.alpha<.02&&(e.alpha=.02,e.alphaSpeed=-e.alphaSpeed);let i=t.createRadialGradient(e.x,e.y,e.radius*.2,e.x,e.y,e.radius);i.addColorStop(0,`rgba(255, 51, 125, ${e.alpha*.6})`),i.addColorStop(1,`rgba(255, 51, 125, 0)`),t.beginPath(),t.arc(e.x,e.y,e.radius,0,Math.PI*2),t.fillStyle=i,t.fill()}),c=requestAnimationFrame(u))}function d(){n=window.innerWidth,r=window.innerHeight,e.width=n,e.height=r,s()}function f(){l=!document.hidden,l&&!c&&(c=requestAnimationFrame(u))}return u(),window.addEventListener(`resize`,d),document.addEventListener(`visibilitychange`,f),()=>{window.removeEventListener(`resize`,d),document.removeEventListener(`visibilitychange`,f),c&&cancelAnimationFrame(c)}}var t=[{name:`Управление сообществами`,icon:`users`,category:`Навыки`},{name:`Программирование на Java`,icon:`code`,category:`Навыки`},{name:`AI Промпт-инженеринг`,icon:`brain`,category:`Навыки`},{name:`Контент-Менеджмент`,icon:`megaphone`,category:`Навыки`},{name:`Брендинг сообществ`,icon:`palette`,category:`Навыки`},{name:`Видеомонтаж`,icon:`monitor`,category:`Навыки`},{name:`Дизайн`,icon:`pencil`,category:`Навыки`}],n=[{name:`Figma`,icon:`figma-logo`},{name:`IntelliJ IDEA`,icon:`code`},{name:`Adobe Photoshop`,icon:`image-square`},{name:`Adobe After Effects`,icon:`film-strip`},{name:`Adobe Premiere`,icon:`video`},{name:`Adobe Audition`,icon:`waveform`},{name:`Capcut`,icon:`scissors`},{name:`Excel / Google docs`,icon:`table`},{name:`Grok / DeepSeek / ChatGPT`,icon:`brain`}],r=[{id:1,title:`Milkshake`,slug:`milkshake`,subtitle:`Discord`,image:`./images/milkshake/cover.png`,category:[`discord`],starred:!0,shortDesc:`Сообщество для знакомств и совместных игр`,fullContent:`
       <div class="space-y-6">
         <h1 class="text-4xl font-bold">Milkshake</h1>
         <p class="text-xl text-gray-300">Discord-сообщество по играм и общению, основанное в 2022 году. Сейчас насчитывает <strong class="text-[#FF337D]">12 800+ участников</strong>.</p>
@@ -47,7 +47,7 @@
           </div>
         </div>
       </div>
-    `},{id:2,title:`BetBoom Esports`,subtitle:`Discord, Организация`,image:`./images/betboom/esports/cover.jpg`,category:[`discord`,`company`],starred:!0,shortDesc:`Официальный Discord BetBoom Esports`,fullContent:`
+    `},{id:2,title:`BetBoom Esports`,subtitle:`Discord, Организация`,slug:`betboom-esports`,image:`./images/betboom/esports/cover.jpg`,category:[`discord`,`company`],starred:!0,shortDesc:`Официальный Discord BetBoom Esports`,fullContent:`
       <div class="space-y-6">
         <h1 class="text-4xl font-bold">BetBoom Esports</h1>
         <p class="text-xl text-gray-300">Дискорд-сервер для любителей киберспорта и азартных игр. Здесь часто проводятся ивенты, включая клозы, турниры и розыгрыши с ценными призами для участников.</p>
@@ -139,7 +139,7 @@
           </div>
         </div>
       </div>
-    `},{id:3,title:`GIF Discord`,subtitle:`Telegram`,image:`./images/artpix/cover.jpg`,category:[`telegram`],starred:!0,shortDesc:`Готовые анимированные оформления для профиля`,fullContent:`
+    `},{id:3,title:`GIF Discord`,subtitle:`Telegram`,slug:`gif-discord`,image:`./images/artpix/cover.jpg`,category:[`telegram`],starred:!0,shortDesc:`Готовые анимированные оформления для профиля`,fullContent:`
       <div class="space-y-6">
         <h1 class="text-4xl font-bold">GIF Discord</h1>
         <p class="text-xl text-gray-300">Телеграм-канал, предоставляющий готовые оформления для Дискорда с лёгким копированием цветов и превью.</p>
@@ -203,7 +203,7 @@
           </a>
         </div>
       </div>
-    `},{id:4,title:`Bad Bunnies`,subtitle:`Discord`,image:`./images/badbunnies/cover.jpg`,category:[`discord`,`new`],starred:!0,shortDesc:`Пространство для свободного общения`,fullContent:`
+    `},{id:4,title:`Bad Bunnies`,subtitle:`Discord`,slug:`bad-bunnies`,image:`./images/badbunnies/cover.jpg`,category:[`discord`,`new`],starred:!0,shortDesc:`Пространство для свободного общения`,fullContent:`
       <div class="space-y-6">
         <h1 class="text-4xl font-bold">Bad Bunnies</h1>
         <p class="text-xl text-gray-300">Относительно новый сервер, продвигающий свободное общение и совместное времяпровождение с возрастной меткой <strong>16+</strong>.</p>
@@ -251,7 +251,7 @@
           </a>
         </div>
       </div>
-    `},{id:5,title:`Daily Furina`,subtitle:`Telegram`,image:`./images/dailyfurina/cover.png`,category:[`telegram`],starred:!1,shortDesc:`Творческий канал по персонажу из Genshin Impact`,fullContent:`
+    `},{id:5,title:`Daily Furina`,subtitle:`Telegram`,slug:`dailyfurina`,image:`./images/dailyfurina/cover.png`,category:[`telegram`],starred:!1,shortDesc:`Творческий канал по персонажу из Genshin Impact`,fullContent:`
       <div class="space-y-6">
         <h1 class="text-4xl font-bold">Daily Furina</h1>
         <p class="text-xl text-gray-300">Телеграм-канал, посвящённый творчеству по одному персонажу из игры Genshin Impact — Фурине.</p>
@@ -271,7 +271,7 @@
           </a>
         </div>
       </div>
-    `},{id:6,title:`Genshin Forum`,subtitle:`Telegram`,image:`./images/genshinforum/cover.png`,category:[`telegram`],starred:!1,shortDesc:`Новости и находки по Genshin Impact`,fullContent:`
+    `},{id:6,title:`Genshin Forum`,subtitle:`Telegram`,slug:`genshinforum`,image:`./images/genshinforum/cover.png`,category:[`telegram`],starred:!1,shortDesc:`Новости и находки по Genshin Impact`,fullContent:`
       <div class="space-y-6">
         <h1 class="text-4xl font-bold">Genshin Forum</h1>
         <p class="text-xl text-gray-300">Телеграм-канал по игре Genshin Impact, на котором постятся новости и находки с форумов Reddit, X (Twitter), TikTok.</p>
@@ -291,7 +291,7 @@
           </a>
         </div>
       </div>
-    `},{id:7,title:`Hoyozen`,subtitle:`Telegram`,image:`./images/hoyozen/cover.png`,category:[`telegram`],starred:!1,shortDesc:`Новости по игре Zenless Zone Zero`,fullContent:`
+    `},{id:7,title:`Hoyozen`,subtitle:`Telegram`,slug:`hoyozen`,image:`./images/hoyozen/cover.png`,category:[`telegram`],starred:!1,shortDesc:`Новости по игре Zenless Zone Zero`,fullContent:`
       <div class="space-y-6">
         <h1 class="text-4xl font-bold">Hoyozen</h1>
         <p class="text-xl text-gray-300">Новостной телеграм-канал по игре Zenless Zone Zero от Hoyoverse.</p>
@@ -311,7 +311,7 @@
           </a>
         </div>
       </div>
-    `},{id:8,title:`WB BOMB`,subtitle:`Telegram`,image:`./images/wbbomb/cover.png`,category:[`telegram`],starred:!1,shortDesc:`Подборки с маркетплейсов`,fullContent:`
+    `},{id:8,title:`WB BOMB`,subtitle:`Telegram`,slug:`wbbomb`,image:`./images/wbbomb/cover.png`,category:[`telegram`],starred:!1,shortDesc:`Подборки с маркетплейсов`,fullContent:`
       <div class="space-y-6">
         <h1 class="text-4xl font-bold">WB BOMB</h1>
         <p class="text-xl text-gray-300">Телеграм-канал по подборкам с маркетплейсов Озон и Wildberries.</p>
@@ -331,7 +331,7 @@
           </a>
         </div>
       </div>
-    `},{id:9,title:`#СП сервера`,subtitle:`Minecraft`,image:`./images/spworlds/cover.png`,category:[`minecraft`,`other`],starred:!0,shortDesc:`Администрирование и разработка серверов у стримера Пятёрки`,fullContent:` 
+    `},{id:9,title:`#СП сервера`,subtitle:`Minecraft`,slug:`spworlds`,image:`./images/spworlds/cover.png`,category:[`minecraft`,`other`],starred:!0,shortDesc:`Администрирование и разработка серверов у стримера Пятёрки`,fullContent:` 
       <div class="space-y-6">
         <h1 class="text-4xl font-bold">#СП — сервера Пятёрки</h1>
         <p class="text-xl text-gray-300">Приватные Minecraft-сервера Пятёрки (SpWorlds) — одна из самых известных вселенных в русскоязычном Minecraft-комьюнити. Я работал там с 2018 по 2022 год как администратор и разработчик.</p>
@@ -368,7 +368,7 @@
           <p class="text-gray-300">Благодаря работе на СП у меня появились сильные связи в Minecraft-комьюнити. Многие до сих пор помнят меня как админа СП-мини и SpWorlds. Этот опыт стал фундаментом для последующих проектов.</p>
         </div>
       </div>
-    `},{id:11,title:`Пляжный`,subtitle:`TikTok`,image:`./images/tiktok/deelter/cover.jpg`,category:[`tiktok`,`other`],starred:!0,shortDesc:`Контент по игре Minecraft, инструкции для VR`,fullContent:`
+    `},{id:11,title:`Пляжный`,subtitle:`TikTok`,slug:`plyazhni`,image:`./images/tiktok/deelter/cover.jpg`,category:[`tiktok`,`other`],starred:!0,shortDesc:`Контент по игре Minecraft, инструкции для VR`,fullContent:`
       <div class="space-y-6">
         <h1 class="text-4xl font-bold">Пляжный</h1>
         <p class="text-xl text-gray-300">Тикток-канал, где я помогаю людям разобраться с VR-версией Minecraft, настройкой шлемов, даю советы по игре и создаю полезные инструкции.</p>
@@ -470,7 +470,7 @@
           </a>
         </div>
       </div>
-    `},{id:10,title:`Fonbet Ивент`,subtitle:`Оффлайн, Организация`,image:`./images/fonbet/cover.png`,category:[`other`,`offline`,`company`],starred:!0,shortDesc:`Интерактив на куполе в планетарии`,fullContent:`
+    `},{id:10,title:`Fonbet Ивент`,subtitle:`Оффлайн, Организация`,slug:`fonbet-event`,image:`./images/fonbet/cover.png`,category:[`other`,`offline`,`company`],starred:!0,shortDesc:`Интерактив на куполе в планетарии`,fullContent:`
       <div class="space-y-6">
         <h1 class="text-4xl font-bold">Fonbet: Офлайн-ивент</h1>
         <p class="text-xl text-gray-300">Разработка программного обеспечения для мероприятия в Петербургском планетарии. Я выступал связующим звеном между заказчиком и командой разработки, тестировал продукт и презентовал результат клиенту.</p>
@@ -533,7 +533,7 @@
           </div>
         </div>
       </div>
-    `},{id:12,title:`BetBoom Кликер`,subtitle:`Telegram, Организация`,image:`./images/betboom/ns_clicker/cover.png`,category:[`telegram`,`company`],starred:!0,shortDesc:`Разработка мини-апп приложения`,fullContent:`
+    `},{id:12,title:`BetBoom Кликер`,subtitle:`Telegram, Организация`,slug:`ns-clicker`,image:`./images/betboom/ns_clicker/cover.png`,category:[`telegram`,`company`],starred:!0,shortDesc:`Разработка мини-апп приложения`,fullContent:`
       <div class="space-y-6">
         <h1 class="text-4xl font-bold">BetBoom Кликер</h1>
         <p class="text-xl text-gray-300">Аналог Hamster Kombat для прямого эфира BetBoom. Проект реализован в статусе субподрядчика через агенство</p>
@@ -629,11 +629,11 @@
         <p class="text-gray-400 text-sm line-clamp-2">${e.shortDesc}</p>
       </div>
     </div>
-  `).join(``),i(),setTimeout(()=>{t.querySelectorAll(`.opacity-0`).forEach(e=>{e.classList.add(`animate-fade-in-up`)})},10)}function c(e){return[...e].sort((e,t)=>e.starred&&!t.starred?-1:!e.starred&&t.starred?1:e.id-t.id)}function l(e){document.querySelectorAll(`.filter-btn`).forEach(t=>{let n=t.getAttribute(`data-filter`)===e;t.classList.toggle(`active`,n),t.setAttribute(`aria-pressed`,n?`true`:`false`)});let t;t=e===`all`?r:e===`starred`?r.filter(e=>e.starred===!0):r.filter(t=>t.category.includes(e)),s(t)}function u(e){document.querySelectorAll(`.tab-btn`).forEach((t,n)=>{t.classList.toggle(`active`,n===e),t.setAttribute(`aria-selected`,n===e?`true`:`false`)}),e===0?a():o()}function d(){document.querySelectorAll(`#modal .carousel`).forEach(e=>{if(e.hasAttribute(`data-initialized`))return;e.setAttribute(`data-initialized`,`true`);let t=e.querySelector(`.carousel-slides`),n=e.querySelector(`.carousel-prev`),r=e.querySelector(`.carousel-next`),i=e.querySelector(`.carousel-dots`);if(!t||!n||!r||!i)return;let a=0,o=t.children.length;if(o<=1){n.style.display=`none`,r.style.display=`none`;return}i.innerHTML=``;for(let e=0;e<o;e++){let t=document.createElement(`div`);t.classList.add(`dot`),e===0&&t.classList.add(`active`),t.addEventListener(`click`,()=>l(e)),i.appendChild(t)}let s=i.querySelectorAll(`.dot`);function c(){t.style.transform=`translateX(-${a*100}%)`,s.forEach((e,t)=>{e.classList.toggle(`active`,t===a)})}function l(e){a=(e+o)%o,c()}n.addEventListener(`click`,()=>l(a-1)),r.addEventListener(`click`,()=>l(a+1)),c()})}function f(e){let t=r.find(t=>t.id===e);if(!t)return;let n=document.getElementById(`modal`),i=document.getElementById(`modal-content`);i.innerHTML=t.fullContent,n.classList.remove(`hidden`),n.classList.add(`flex`),document.body.style.overflow=`hidden`,setTimeout(()=>{d()},100)}function p(){let e=document.getElementById(`modal`);e.classList.add(`hidden`),e.classList.remove(`flex`),document.body.style.overflow=``}function m(){document.body.insertAdjacentHTML(`beforeend`,`
+  `).join(``),i(),setTimeout(()=>{t.querySelectorAll(`.opacity-0`).forEach(e=>{e.classList.add(`animate-fade-in-up`)})},10)}function c(e){return[...e].sort((e,t)=>e.starred&&!t.starred?-1:!e.starred&&t.starred?1:e.id-t.id)}function l(e){document.querySelectorAll(`.filter-btn`).forEach(t=>{let n=t.getAttribute(`data-filter`)===e;t.classList.toggle(`active`,n),t.setAttribute(`aria-pressed`,n?`true`:`false`)});let t;t=e===`all`?r:e===`starred`?r.filter(e=>e.starred===!0):r.filter(t=>t.category.includes(e)),s(t)}function u(e){document.querySelectorAll(`.tab-btn`).forEach((t,n)=>{t.classList.toggle(`active`,n===e),t.setAttribute(`aria-selected`,n===e?`true`:`false`)}),e===0?a():o()}function d(){document.querySelectorAll(`#modal .carousel`).forEach(e=>{if(e.hasAttribute(`data-initialized`))return;e.setAttribute(`data-initialized`,`true`);let t=e.querySelector(`.carousel-slides`),n=e.querySelector(`.carousel-prev`),r=e.querySelector(`.carousel-next`),i=e.querySelector(`.carousel-dots`);if(!t||!n||!r||!i)return;let a=0,o=t.children.length;if(o<=1){n.style.display=`none`,r.style.display=`none`;return}i.innerHTML=``;for(let e=0;e<o;e++){let t=document.createElement(`div`);t.classList.add(`dot`),e===0&&t.classList.add(`active`),t.addEventListener(`click`,()=>l(e)),i.appendChild(t)}let s=i.querySelectorAll(`.dot`);function c(){t.style.transform=`translateX(-${a*100}%)`,s.forEach((e,t)=>{e.classList.toggle(`active`,t===a)})}function l(e){a=(e+o)%o,c()}n.addEventListener(`click`,()=>l(a-1)),r.addEventListener(`click`,()=>l(a+1)),c()})}function f(e){let t=r.find(t=>t.id===e);if(!t)return;let n=document.getElementById(`modal`),i=document.getElementById(`modal-content`);i.innerHTML=t.fullContent,n.classList.remove(`hidden`),n.classList.add(`flex`),document.body.style.overflow=`hidden`,setTimeout(()=>{d()},100)}function p(){let e=document.getElementById(`modal`);if(e&&!e.classList.contains(`hidden`)){e.classList.add(`hidden`),e.classList.remove(`flex`),document.body.style.overflow=``;let t=window.location.pathname;t!==`/`&&t!==``&&window.history.pushState({},``,`/`)}}function m(){document.body.insertAdjacentHTML(`beforeend`,`
       <div id="audio-player" class="fixed bottom-4 right-4 z-50">
         <button id="audio-toggle"
                 class="bg-[#1a1a1a] hover:bg-[#FF337D] w-14 h-14 flex items-center justify-center rounded-2xl shadow-lg transition-all duration-300 hover:scale-105 border border-white/10 hover:border-[#FF337D]/50">
           <i id="audio-icon" class="ph-fill ph-music-note text-2xl"></i>
         </button>
       </div>
-    `);let e=null,t=null,n=!1,r=!1,i=document.getElementById(`audio-toggle`),a=document.getElementById(`audio-icon`);function o(){if(!r)try{t=new Audio,t.src=`/music/lofi.mp3`,t.loop=!0,t.volume=.15,e=new(window.AudioContext||window.webkitAudioContext),t.addEventListener(`error`,()=>{console.error(`Не удалось загрузить музыку`),a&&(a.className=`ph-fill ph-warning text-xl`)}),r=!0}catch(e){console.error(`Ошибка инициализации аудио:`,e)}}async function s(){if(!(!t&&(o(),!t)))try{n?(t.pause(),a.className=`ph-fill ph-music-note text-xl`,n=!1):(e?.state===`suspended`&&await e.resume(),await t.play(),a.className=`ph-fill ph-pause text-xl`,n=!0)}catch(e){console.error(`Ошибка воспроизведения:`,e)}}return o(),i?.addEventListener(`click`,s),document.addEventListener(`visibilitychange`,()=>{document.hidden&&n&&t?t.pause():!document.hidden&&n&&t&&t.play().catch(()=>{})}),()=>{t&&t.pause()}}document.addEventListener(`DOMContentLoaded`,()=>{e(),a(),l(`all`),m(),document.addEventListener(`keydown`,e=>{e.key===`Escape`&&p()})}),window.filterProjects=l,window.switchTab=u,window.openProject=f,window.closeModal=p,window.toggleContactMenu=e=>{e.stopImmediatePropagation();let t=document.getElementById(`contact-menu`),n=document.getElementById(`contact-btn`);!t||!n||(t.classList.contains(`hidden`)?(t.classList.remove(`hidden`),n.classList.add(`!bg-gray-200`,`shadow-md`)):(t.classList.add(`hidden`),n.classList.remove(`!bg-gray-200`,`shadow-md`)))},document.addEventListener(`click`,e=>{let t=document.getElementById(`contact-menu`),n=document.getElementById(`contact-btn`);if(t&&n){let r=e.target;!t.contains(r)&&r!==n&&!n.contains(r)&&(t.classList.add(`hidden`),n.classList.remove(`!bg-gray-200`,`shadow-md`))}});
+    `);let e=null,t=null,n=!1,r=!1,i=document.getElementById(`audio-toggle`),a=document.getElementById(`audio-icon`);function o(){if(!r)try{t=new Audio,t.src=`/music/lofi.mp3`,t.loop=!0,t.volume=.15,e=new(window.AudioContext||window.webkitAudioContext),t.addEventListener(`error`,()=>{console.error(`Не удалось загрузить музыку`),a&&(a.className=`ph-fill ph-warning text-xl`)}),r=!0}catch(e){console.error(`Ошибка инициализации аудио:`,e)}}async function s(){if(!(!t&&(o(),!t)))try{n?(t.pause(),a.className=`ph-fill ph-music-note text-xl`,n=!1):(e?.state===`suspended`&&await e.resume(),await t.play(),a.className=`ph-fill ph-pause text-xl`,n=!0)}catch(e){console.error(`Ошибка воспроизведения:`,e)}}return o(),i?.addEventListener(`click`,s),document.addEventListener(`visibilitychange`,()=>{document.hidden&&n&&t?t.pause():!document.hidden&&n&&t&&t.play().catch(()=>{})}),()=>{t&&t.pause()}}function h(e){return r.find(t=>t.slug===e)}function g(e){let t=`${window.location.origin}/${e.slug}`;window.history.pushState({projectSlug:e.slug},``,t)}function _(){let e=window.location.pathname.slice(1);if(e){let t=h(e);t?f(t.id):p()}else p()}document.addEventListener(`DOMContentLoaded`,()=>{e(),a(),l(`all`),m(),_(),window.addEventListener(`popstate`,_),document.addEventListener(`keydown`,e=>{e.key===`Escape`&&p()})}),window.openProject=e=>{let t=r.find(t=>t.id===e);t&&(f(e),g(t))},window.closeModal=p,window.filterProjects=l,window.switchTab=u,window.toggleContactMenu=e=>{e.stopImmediatePropagation();let t=document.getElementById(`contact-menu`),n=document.getElementById(`contact-btn`);!t||!n||(t.classList.contains(`hidden`)?(t.classList.remove(`hidden`),n.classList.add(`!bg-gray-200`,`shadow-md`)):(t.classList.add(`hidden`),n.classList.remove(`!bg-gray-200`,`shadow-md`)))},document.addEventListener(`click`,e=>{let t=document.getElementById(`contact-menu`),n=document.getElementById(`contact-btn`);if(t&&n){let r=e.target;!t.contains(r)&&r!==n&&!n.contains(r)&&(t.classList.add(`hidden`),n.classList.remove(`!bg-gray-200`,`shadow-md`))}});
