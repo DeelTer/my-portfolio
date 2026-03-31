@@ -1,4 +1,4 @@
-(function(){let e=document.createElement(`link`).relList;if(e&&e.supports&&e.supports(`modulepreload`))return;for(let e of document.querySelectorAll(`link[rel="modulepreload"]`))n(e);new MutationObserver(e=>{for(let t of e)if(t.type===`childList`)for(let e of t.addedNodes)e.tagName===`LINK`&&e.rel===`modulepreload`&&n(e)}).observe(document,{childList:!0,subtree:!0});function t(e){let t={};return e.integrity&&(t.integrity=e.integrity),e.referrerPolicy&&(t.referrerPolicy=e.referrerPolicy),e.crossOrigin===`use-credentials`?t.credentials=`include`:e.crossOrigin===`anonymous`?t.credentials=`omit`:t.credentials=`same-origin`,t}function n(e){if(e.ep)return;e.ep=!0;let n=t(e);fetch(e.href,n)}})();function e(){let e=document.getElementById(`bubbles-canvas`);if(!e)return;let t=e.getContext(`2d`);if(!t)return;let n=window.innerWidth,r=window.innerHeight;e.width=n,e.height=r;let i=[],a=window.innerWidth<768?12:20,o=.12;function s(){i=[];for(let e=0;e<a;e++)i.push({x:Math.random()*n,y:Math.random()*r,radius:Math.random()*80+40,vx:(Math.random()-.5)*.2,vy:(Math.random()-.5)*.1,alpha:Math.random()*o,alphaSpeed:(Math.random()-.5)*.005})}s();let c,l=!0;function u(){!t||!l||(t.clearRect(0,0,n,r),i.forEach(e=>{e.x+=e.vx,e.y+=e.vy,e.x<-e.radius&&(e.x=n+e.radius),e.x>n+e.radius&&(e.x=-e.radius),e.y<-e.radius&&(e.y=r+e.radius),e.y>r+e.radius&&(e.y=-e.radius),e.alpha+=e.alphaSpeed,e.alpha>o?(e.alpha=o,e.alphaSpeed=-e.alphaSpeed):e.alpha<.02&&(e.alpha=.02,e.alphaSpeed=-e.alphaSpeed);let i=t.createRadialGradient(e.x,e.y,e.radius*.2,e.x,e.y,e.radius);i.addColorStop(0,`rgba(255, 51, 125, ${e.alpha*.6})`),i.addColorStop(1,`rgba(255, 51, 125, 0)`),t.beginPath(),t.arc(e.x,e.y,e.radius,0,Math.PI*2),t.fillStyle=i,t.fill()}),c=requestAnimationFrame(u))}function d(){n=window.innerWidth,r=window.innerHeight,e.width=n,e.height=r,s()}function f(){l=!document.hidden,l&&!c&&(c=requestAnimationFrame(u))}return u(),window.addEventListener(`resize`,d),document.addEventListener(`visibilitychange`,f),()=>{window.removeEventListener(`resize`,d),document.removeEventListener(`visibilitychange`,f),c&&cancelAnimationFrame(c)}}var t=[{name:`Управление сообществами`,icon:`users`,category:`Навыки`},{name:`Программирование на Java`,icon:`code`,category:`Навыки`},{name:`AI Промпт-инженер`,icon:`brain`,category:`Навыки`},{name:`SMM-Менеджмент`,icon:`megaphone`,category:`Навыки`},{name:`Брендинг сообществ`,icon:`palette`,category:`Навыки`},{name:`Видеомонтаж`,icon:`monitor`,category:`Навыки`},{name:`Дизайн`,icon:`pencil`,category:`Навыки`}],n=[{name:`Figma`,icon:`figma-logo`},{name:`IntelliJ IDEA`,icon:`code`},{name:`Adobe Photoshop`,icon:`image-square`},{name:`Adobe After Effects`,icon:`film-strip`},{name:`Adobe Premiere`,icon:`video`},{name:`Adobe Audition`,icon:`waveform`},{name:`Capcut`,icon:`scissors`},{name:`Excel / Google docs`,icon:`table`},{name:`Grok / DeepSeek / ChatGPT`,icon:`brain`}],r=[{id:1,title:`Milkshake`,subtitle:`Discord`,image:`./images/milkshake/cover.png`,category:[`discord`],starred:!0,shortDesc:`Сообщество для знакомств и совместных игр`,fullContent:`
+(function(){let e=document.createElement(`link`).relList;if(e&&e.supports&&e.supports(`modulepreload`))return;for(let e of document.querySelectorAll(`link[rel="modulepreload"]`))n(e);new MutationObserver(e=>{for(let t of e)if(t.type===`childList`)for(let e of t.addedNodes)e.tagName===`LINK`&&e.rel===`modulepreload`&&n(e)}).observe(document,{childList:!0,subtree:!0});function t(e){let t={};return e.integrity&&(t.integrity=e.integrity),e.referrerPolicy&&(t.referrerPolicy=e.referrerPolicy),e.crossOrigin===`use-credentials`?t.credentials=`include`:e.crossOrigin===`anonymous`?t.credentials=`omit`:t.credentials=`same-origin`,t}function n(e){if(e.ep)return;e.ep=!0;let n=t(e);fetch(e.href,n)}})();function e(){let e=document.getElementById(`bubbles-canvas`);if(!e)return;let t=e.getContext(`2d`);if(!t)return;let n=window.innerWidth,r=window.innerHeight;e.width=n,e.height=r;let i=[],a=window.innerWidth<768?12:20,o=.12;function s(){i=[];for(let e=0;e<a;e++)i.push({x:Math.random()*n,y:Math.random()*r,radius:Math.random()*80+40,vx:(Math.random()-.5)*.2,vy:(Math.random()-.5)*.1,alpha:Math.random()*o,alphaSpeed:(Math.random()-.5)*.005})}s();let c,l=!0;function u(){!t||!l||(t.clearRect(0,0,n,r),i.forEach(e=>{e.x+=e.vx,e.y+=e.vy,e.x<-e.radius&&(e.x=n+e.radius),e.x>n+e.radius&&(e.x=-e.radius),e.y<-e.radius&&(e.y=r+e.radius),e.y>r+e.radius&&(e.y=-e.radius),e.alpha+=e.alphaSpeed,e.alpha>o?(e.alpha=o,e.alphaSpeed=-e.alphaSpeed):e.alpha<.02&&(e.alpha=.02,e.alphaSpeed=-e.alphaSpeed);let i=t.createRadialGradient(e.x,e.y,e.radius*.2,e.x,e.y,e.radius);i.addColorStop(0,`rgba(255, 51, 125, ${e.alpha*.6})`),i.addColorStop(1,`rgba(255, 51, 125, 0)`),t.beginPath(),t.arc(e.x,e.y,e.radius,0,Math.PI*2),t.fillStyle=i,t.fill()}),c=requestAnimationFrame(u))}function d(){n=window.innerWidth,r=window.innerHeight,e.width=n,e.height=r,s()}function f(){l=!document.hidden,l&&!c&&(c=requestAnimationFrame(u))}return u(),window.addEventListener(`resize`,d),document.addEventListener(`visibilitychange`,f),()=>{window.removeEventListener(`resize`,d),document.removeEventListener(`visibilitychange`,f),c&&cancelAnimationFrame(c)}}var t=[{name:`Управление сообществами`,icon:`users`,category:`Навыки`},{name:`Программирование на Java`,icon:`code`,category:`Навыки`},{name:`AI Промпт-инженеринг`,icon:`brain`,category:`Навыки`},{name:`Контент-Менеджмент`,icon:`megaphone`,category:`Навыки`},{name:`Брендинг сообществ`,icon:`palette`,category:`Навыки`},{name:`Видеомонтаж`,icon:`monitor`,category:`Навыки`},{name:`Дизайн`,icon:`pencil`,category:`Навыки`}],n=[{name:`Figma`,icon:`figma-logo`},{name:`IntelliJ IDEA`,icon:`code`},{name:`Adobe Photoshop`,icon:`image-square`},{name:`Adobe After Effects`,icon:`film-strip`},{name:`Adobe Premiere`,icon:`video`},{name:`Adobe Audition`,icon:`waveform`},{name:`Capcut`,icon:`scissors`},{name:`Excel / Google docs`,icon:`table`},{name:`Grok / DeepSeek / ChatGPT`,icon:`brain`}],r=[{id:1,title:`Milkshake`,subtitle:`Discord`,image:`./images/milkshake/cover.png`,category:[`discord`],starred:!0,shortDesc:`Сообщество для знакомств и совместных игр`,fullContent:`
       <div class="space-y-6">
         <h1 class="text-4xl font-bold">Milkshake</h1>
         <p class="text-xl text-gray-300">Discord-сообщество по играм и общению, основанное в 2022 году. Сейчас насчитывает <strong class="text-[#FF337D]">12 800+ участников</strong>.</p>
@@ -47,7 +47,7 @@
           </div>
         </div>
       </div>
-    `},{id:2,title:`BetBoom Esports`,subtitle:`Discord, Организация`,image:`./images/betboom_esports/cover.jpg`,category:[`discord`,`company`],starred:!0,shortDesc:`Официальный Discord BetBoom Esports`,fullContent:`
+    `},{id:2,title:`BetBoom Esports`,subtitle:`Discord, Организация`,image:`./images/betboom/esports/cover.jpg`,category:[`discord`,`company`],starred:!0,shortDesc:`Официальный Discord BetBoom Esports`,fullContent:`
       <div class="space-y-6">
         <h1 class="text-4xl font-bold">BetBoom Esports</h1>
         <p class="text-xl text-gray-300">Дискорд-сервер для любителей киберспорта и азартных игр. Здесь часто проводятся ивенты, включая клозы, турниры и розыгрыши с ценными призами для участников.</p>
@@ -58,16 +58,6 @@
             <h2 class="text-2xl font-semibold">Моя роль</h2>
           </div>
           <p class="text-gray-300">Технический администратор и комьюнити-менеджер. Проектирую активности, сезоны и генерирую идеи для ивентов.</p>
-          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-4">
-            <div class="bg-[#2a2a2a] p-4 rounded-xl">
-              <p class="text-sm text-gray-400">Организация</p>
-              <p class="font-medium">Сезоны и турниры</p>
-            </div>
-            <div class="bg-[#2a2a2a] p-4 rounded-xl">
-              <p class="text-sm text-gray-400">Техническое</p>
-              <p class="font-medium">Экономика сезона, таблицы наград</p>
-            </div>
-          </div>
         </div>
         
         <div class="bg-[#1f1f1f] rounded-2xl p-6">
@@ -75,7 +65,7 @@
             <i class="ph-fill ph-lightbulb text-[#FF337D] text-2xl"></i>
             <h2 class="text-2xl font-semibold">Идея проекта</h2>
           </div>
-          <p class="text-gray-300">Формирование лояльности, организация пространства для совместных игр 5 на 5. Целевая аудитория — игроки <strong>Dota 2 / CS2 / MLBB</strong>.</p>
+          <p class="text-gray-300">Формирование лояльности, организация пространства для совместных игр 5 на 5. Целевая аудитория — игроки Dota 2 / CS2 / MLBB.</p>
         </div>
         
         <div class="bg-[#1f1f1f] rounded-2xl p-6">
@@ -85,7 +75,7 @@
           </div>
           <p class="text-gray-300 mb-4">Периодически анонсируем сезоны, в течение которых участники могут заработать ценные призы при помощи активности. Еженедельные турниры и задания.</p>
           <div class="bg-[#2a2a2a] rounded-xl p-4 text-center">
-            <img src="./images/betboom_esports/seasons.png" 
+            <img src="./images/betboom/esports/seasons.png" 
                 alt="Сезонные активности" 
                 class="max-w-full h-auto mx-auto rounded-lg">
             <p class="text-gray-400 text-sm mt-2">Пример визуального оформления сезона</p>
@@ -107,7 +97,7 @@
           </div>
           <p class="text-gray-300 mb-4">На праздники организовываем ивенты, ограниченные по времени. Например, на 14 февраля участники могли писать друг другу валентинки с персонажами Dota 2.</p>
           <div class="bg-[#2a2a2a] rounded-xl p-4 text-center">
-            <img src="./images/betboom_esports/valentine.png" 
+            <img src="./images/betboom/esports/valentine.png" 
                 alt="Валентинки" 
                 class="max-w-full h-auto mx-auto rounded-lg">
             <p class="text-gray-400 text-sm mt-2">Ивент ко Дню святого Валентина</p>
@@ -118,17 +108,17 @@
         <div class="bg-[#1f1f1f] rounded-2xl p-6">
           <div class="flex items-center gap-2 mb-3">
             <i class="ph-fill ph-trophy text-[#FF337D] text-2xl"></i>
-            <h2 class="text-2xl font-semibold">Большие турниры</h2>
+            <h2 class="text-2xl font-semibold">Крупные турниры</h2>
           </div>
           <p class="text-gray-300 mb-4">Пока проводились всего один раз, но было собрано много команд и зрителей, мероприятие прошло отлично.</p>
           
           <div class="carousel" data-carousel>
             <div class="carousel-slides">
               <div class="carousel-slide">
-                <img src="./images/betboom_esports/tournament-1.png" alt="Турнир 1">
+                <img src="./images/betboom/esports/tournament-1.png" alt="Турнир 1">
               </div>
               <div class="carousel-slide">
-                <img src="./images/betboom_esports/tournament-2.jpg" alt="Турнир 2">
+                <img src="./images/betboom/esports/tournament-2.jpg" alt="Турнир 2">
               </div>
             </div>
             <button class="carousel-prev" aria-label="Назад"><i class="ph-bold ph-caret-left"></i></button>
@@ -343,7 +333,7 @@
       </div>
     `},{id:9,title:`#СП сервера`,subtitle:`Minecraft`,image:`./images/spworlds/cover.png`,category:[`minecraft`,`other`],starred:!0,shortDesc:`Администрирование и разработка серверов у стримера Пятёрки`,fullContent:` 
       <div class="space-y-6">
-        <h1 class="text-4xl font-bold">СП — сервера Пятёрки</h1>
+        <h1 class="text-4xl font-bold">#СП — сервера Пятёрки</h1>
         <p class="text-xl text-gray-300">Приватные Minecraft-сервера Пятёрки (SpWorlds) — одна из самых известных вселенных в русскоязычном Minecraft-комьюнити. Я работал там с 2018 по 2022 год как администратор и разработчик.</p>
 
         <div class="bg-[#1f1f1f] rounded-2xl p-6">
@@ -535,6 +525,57 @@
               </div>
               <div class="carousel-slide">
                 <img src="./images/fonbet/event-screen-3.png" alt="Фотография с мероприятия #3">
+              </div>
+            </div>
+            <button class="carousel-prev" aria-label="Назад"><i class="ph-bold ph-caret-left"></i></button>
+            <button class="carousel-next" aria-label="Вперёд"><i class="ph-bold ph-caret-right"></i></button>
+            <div class="carousel-dots"></div>
+          </div>
+        </div>
+      </div>
+    `},{id:12,title:`BetBoom Кликер`,subtitle:`Telegram, Организация`,image:`./images/betboom/ns_clicker/cover.png`,category:[`telegram`,`company`],starred:!0,shortDesc:`Разработка мини-апп приложения`,fullContent:`
+      <div class="space-y-6">
+        <h1 class="text-4xl font-bold">BetBoom Кликер</h1>
+        <p class="text-xl text-gray-300">Аналог Hamster Kombat для прямого эфира BetBoom. Проект реализован в статусе субподрядчика через агенство</p>
+        
+        <div class="bg-[#1f1f1f] rounded-2xl p-6">
+          <div class="flex items-center gap-2 mb-3">
+            <i class="ph-fill ph-chats text-[#FF337D] text-2xl"></i>
+            <h2 class="text-2xl font-semibold">Моя роль</h2>
+          </div>
+          <ul class="space-y-2 text-gray-300">
+            <li class="flex gap-2"><span class="text-[#FF337D]">✓</span> Коммуникация с агентством</li>
+            <li class="flex gap-2"><span class="text-[#FF337D]">✓</span> Участие в созвонах, сбор и уточнение требований</li>
+            <li class="flex gap-2"><span class="text-[#FF337D]">✓</span> Формирование ТЗ для команды разработки</li>
+            <li class="flex gap-2"><span class="text-[#FF337D]">✓</span> Согласование брендинга, цветов, шрифтов с дизайнерами</li>
+            <li class="flex gap-2"><span class="text-[#FF337D]">✓</span> Уточнение сроков и условий оплаты (предоплата, постоплата)</li>
+            <li class="flex gap-2"><span class="text-[#FF337D]">✓</span> Координация между отделами</li>
+          </ul>
+        </div>
+        
+        <div class="bg-[#1f1f1f] rounded-2xl p-6">
+          <div class="flex items-center gap-2 mb-3">
+            <i class="ph-fill ph-check-circle text-[#FF337D] text-2xl"></i>
+            <h2 class="text-2xl font-semibold">Результат</h2>
+          </div>
+          <p class="text-gray-300">Кликер успешно запущен в срок. Заказчик получил полностью функционирующий инструмент для повышения вовлечённости аудитории.</p>
+        </div>
+        
+        <div class="bg-[#1f1f1f] rounded-2xl p-6">
+          <div class="flex items-center gap-2 mb-3">
+            <i class="ph-fill ph-camera text-[#FF337D] text-2xl"></i>
+            <h2 class="text-2xl font-semibold">Скриншоты кликера</h2>
+          </div>
+          <div class="carousel" data-carousel>
+            <div class="carousel-slides">
+              <div class="carousel-slide">
+                <img src="./images/betboom/ns_clicker/app-1.jpg" alt="Главный экран кликера">
+              </div>
+              <div class="carousel-slide">
+                <img src="./images/betboom/ns_clicker/app-2.png" alt="Бусты">
+              </div>
+              <div class="carousel-slide">
+                <img src="./images/betboom/ns_clicker/app-3.jpg" alt="Аукционы">
               </div>
             </div>
             <button class="carousel-prev" aria-label="Назад"><i class="ph-bold ph-caret-left"></i></button>
