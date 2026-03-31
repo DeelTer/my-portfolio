@@ -64,7 +64,7 @@ export const projects: Project[] = [
     id: 2,
     title: "BetBoom Esports",
     subtitle: "Discord, Организация",
-    image: "./images/betboom_esports/cover.jpg",
+    image: "./images/betboom/esports/cover.jpg",
     category: ["discord", "company"],
     starred: true,
     shortDesc: "Официальный Discord BetBoom Esports",
@@ -79,16 +79,6 @@ export const projects: Project[] = [
             <h2 class="text-2xl font-semibold">Моя роль</h2>
           </div>
           <p class="text-gray-300">Технический администратор и комьюнити-менеджер. Проектирую активности, сезоны и генерирую идеи для ивентов.</p>
-          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-4">
-            <div class="bg-[#2a2a2a] p-4 rounded-xl">
-              <p class="text-sm text-gray-400">Организация</p>
-              <p class="font-medium">Сезоны и турниры</p>
-            </div>
-            <div class="bg-[#2a2a2a] p-4 rounded-xl">
-              <p class="text-sm text-gray-400">Техническое</p>
-              <p class="font-medium">Экономика сезона, таблицы наград</p>
-            </div>
-          </div>
         </div>
         
         <div class="bg-[#1f1f1f] rounded-2xl p-6">
@@ -96,7 +86,7 @@ export const projects: Project[] = [
             <i class="ph-fill ph-lightbulb text-[#FF337D] text-2xl"></i>
             <h2 class="text-2xl font-semibold">Идея проекта</h2>
           </div>
-          <p class="text-gray-300">Формирование лояльности, организация пространства для совместных игр 5 на 5. Целевая аудитория — игроки <strong>Dota 2 / CS2 / MLBB</strong>.</p>
+          <p class="text-gray-300">Формирование лояльности, организация пространства для совместных игр 5 на 5. Целевая аудитория — игроки Dota 2 / CS2 / MLBB.</p>
         </div>
         
         <div class="bg-[#1f1f1f] rounded-2xl p-6">
@@ -106,7 +96,7 @@ export const projects: Project[] = [
           </div>
           <p class="text-gray-300 mb-4">Периодически анонсируем сезоны, в течение которых участники могут заработать ценные призы при помощи активности. Еженедельные турниры и задания.</p>
           <div class="bg-[#2a2a2a] rounded-xl p-4 text-center">
-            <img src="./images/betboom_esports/seasons.png" 
+            <img src="./images/betboom/esports/seasons.png" 
                 alt="Сезонные активности" 
                 class="max-w-full h-auto mx-auto rounded-lg">
             <p class="text-gray-400 text-sm mt-2">Пример визуального оформления сезона</p>
@@ -128,7 +118,7 @@ export const projects: Project[] = [
           </div>
           <p class="text-gray-300 mb-4">На праздники организовываем ивенты, ограниченные по времени. Например, на 14 февраля участники могли писать друг другу валентинки с персонажами Dota 2.</p>
           <div class="bg-[#2a2a2a] rounded-xl p-4 text-center">
-            <img src="./images/betboom_esports/valentine.png" 
+            <img src="./images/betboom/esports/valentine.png" 
                 alt="Валентинки" 
                 class="max-w-full h-auto mx-auto rounded-lg">
             <p class="text-gray-400 text-sm mt-2">Ивент ко Дню святого Валентина</p>
@@ -139,17 +129,17 @@ export const projects: Project[] = [
         <div class="bg-[#1f1f1f] rounded-2xl p-6">
           <div class="flex items-center gap-2 mb-3">
             <i class="ph-fill ph-trophy text-[#FF337D] text-2xl"></i>
-            <h2 class="text-2xl font-semibold">Большие турниры</h2>
+            <h2 class="text-2xl font-semibold">Крупные турниры</h2>
           </div>
           <p class="text-gray-300 mb-4">Пока проводились всего один раз, но было собрано много команд и зрителей, мероприятие прошло отлично.</p>
           
           <div class="carousel" data-carousel>
             <div class="carousel-slides">
               <div class="carousel-slide">
-                <img src="./images/betboom_esports/tournament-1.png" alt="Турнир 1">
+                <img src="./images/betboom/esports/tournament-1.png" alt="Турнир 1">
               </div>
               <div class="carousel-slide">
-                <img src="./images/betboom_esports/tournament-2.jpg" alt="Турнир 2">
+                <img src="./images/betboom/esports/tournament-2.jpg" alt="Турнир 2">
               </div>
             </div>
             <button class="carousel-prev" aria-label="Назад"><i class="ph-bold ph-caret-left"></i></button>
@@ -434,7 +424,7 @@ export const projects: Project[] = [
     shortDesc: "Администрирование и разработка серверов у стримера Пятёрки", 
     fullContent: ` 
       <div class="space-y-6">
-        <h1 class="text-4xl font-bold">СП — сервера Пятёрки</h1>
+        <h1 class="text-4xl font-bold">#СП — сервера Пятёрки</h1>
         <p class="text-xl text-gray-300">Приватные Minecraft-сервера Пятёрки (SpWorlds) — одна из самых известных вселенных в русскоязычном Minecraft-комьюнити. Я работал там с 2018 по 2022 год как администратор и разработчик.</p>
 
         <div class="bg-[#1f1f1f] rounded-2xl p-6">
@@ -646,6 +636,67 @@ export const projects: Project[] = [
               </div>
               <div class="carousel-slide">
                 <img src="./images/fonbet/event-screen-3.png" alt="Фотография с мероприятия #3">
+              </div>
+            </div>
+            <button class="carousel-prev" aria-label="Назад"><i class="ph-bold ph-caret-left"></i></button>
+            <button class="carousel-next" aria-label="Вперёд"><i class="ph-bold ph-caret-right"></i></button>
+            <div class="carousel-dots"></div>
+          </div>
+        </div>
+      </div>
+    `
+  },
+  {
+    id: 12,
+    title: "BetBoom Кликер",
+    subtitle: "Telegram, Организация",
+    image: "./images/betboom/ns_clicker/cover.png",
+    category: ["telegram", "company"],
+    starred: true,
+    shortDesc: "Разработка мини-апп приложения",
+    fullContent: `
+      <div class="space-y-6">
+        <h1 class="text-4xl font-bold">BetBoom Кликер</h1>
+        <p class="text-xl text-gray-300">Аналог Hamster Kombat для прямого эфира BetBoom. Проект реализован в статусе субподрядчика через агенство</p>
+        
+        <div class="bg-[#1f1f1f] rounded-2xl p-6">
+          <div class="flex items-center gap-2 mb-3">
+            <i class="ph-fill ph-chats text-[#FF337D] text-2xl"></i>
+            <h2 class="text-2xl font-semibold">Моя роль</h2>
+          </div>
+          <ul class="space-y-2 text-gray-300">
+            <li class="flex gap-2"><span class="text-[#FF337D]">✓</span> Коммуникация с агентством</li>
+            <li class="flex gap-2"><span class="text-[#FF337D]">✓</span> Участие в созвонах, сбор и уточнение требований</li>
+            <li class="flex gap-2"><span class="text-[#FF337D]">✓</span> Формирование ТЗ для команды разработки</li>
+            <li class="flex gap-2"><span class="text-[#FF337D]">✓</span> Согласование брендинга, цветов, шрифтов с дизайнерами</li>
+            <li class="flex gap-2"><span class="text-[#FF337D]">✓</span> Уточнение сроков и условий оплаты (предоплата, постоплата)</li>
+            <li class="flex gap-2"><span class="text-[#FF337D]">✓</span> Координация между отделами</li>
+          </ul>
+        </div>
+        
+        <div class="bg-[#1f1f1f] rounded-2xl p-6">
+          <div class="flex items-center gap-2 mb-3">
+            <i class="ph-fill ph-check-circle text-[#FF337D] text-2xl"></i>
+            <h2 class="text-2xl font-semibold">Результат</h2>
+          </div>
+          <p class="text-gray-300">Кликер успешно запущен в срок. Заказчик получил полностью функционирующий инструмент для повышения вовлечённости аудитории.</p>
+        </div>
+        
+        <div class="bg-[#1f1f1f] rounded-2xl p-6">
+          <div class="flex items-center gap-2 mb-3">
+            <i class="ph-fill ph-camera text-[#FF337D] text-2xl"></i>
+            <h2 class="text-2xl font-semibold">Скриншоты кликера</h2>
+          </div>
+          <div class="carousel" data-carousel>
+            <div class="carousel-slides">
+              <div class="carousel-slide">
+                <img src="./images/betboom/ns_clicker/app-1.jpg" alt="Главный экран кликера">
+              </div>
+              <div class="carousel-slide">
+                <img src="./images/betboom/ns_clicker/app-2.png" alt="Бусты">
+              </div>
+              <div class="carousel-slide">
+                <img src="./images/betboom/ns_clicker/app-3.jpg" alt="Аукционы">
               </div>
             </div>
             <button class="carousel-prev" aria-label="Назад"><i class="ph-bold ph-caret-left"></i></button>
