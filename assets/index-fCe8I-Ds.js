@@ -1,4 +1,4 @@
-(function(){let e=document.createElement(`link`).relList;if(e&&e.supports&&e.supports(`modulepreload`))return;for(let e of document.querySelectorAll(`link[rel="modulepreload"]`))n(e);new MutationObserver(e=>{for(let t of e)if(t.type===`childList`)for(let e of t.addedNodes)e.tagName===`LINK`&&e.rel===`modulepreload`&&n(e)}).observe(document,{childList:!0,subtree:!0});function t(e){let t={};return e.integrity&&(t.integrity=e.integrity),e.referrerPolicy&&(t.referrerPolicy=e.referrerPolicy),e.crossOrigin===`use-credentials`?t.credentials=`include`:e.crossOrigin===`anonymous`?t.credentials=`omit`:t.credentials=`same-origin`,t}function n(e){if(e.ep)return;e.ep=!0;let n=t(e);fetch(e.href,n)}})();function e(){let e=document.getElementById(`bubbles-canvas`);if(!e)return;let t=e.getContext(`2d`);if(!t)return;let n=window.innerWidth,r=window.innerHeight;e.width=n,e.height=r;let i=[],a=window.innerWidth<768?12:20,o=.12;function s(){i=[];for(let e=0;e<a;e++)i.push({x:Math.random()*n,y:Math.random()*r,radius:Math.random()*80+40,vx:(Math.random()-.5)*.2,vy:(Math.random()-.5)*.1,alpha:Math.random()*o,alphaSpeed:(Math.random()-.5)*.005})}s();let c,l=!0;function u(){!t||!l||(t.clearRect(0,0,n,r),i.forEach(e=>{e.x+=e.vx,e.y+=e.vy,e.x<-e.radius&&(e.x=n+e.radius),e.x>n+e.radius&&(e.x=-e.radius),e.y<-e.radius&&(e.y=r+e.radius),e.y>r+e.radius&&(e.y=-e.radius),e.alpha+=e.alphaSpeed,e.alpha>o?(e.alpha=o,e.alphaSpeed=-e.alphaSpeed):e.alpha<.02&&(e.alpha=.02,e.alphaSpeed=-e.alphaSpeed);let i=t.createRadialGradient(e.x,e.y,e.radius*.2,e.x,e.y,e.radius);i.addColorStop(0,`rgba(255, 51, 125, ${e.alpha*.6})`),i.addColorStop(1,`rgba(255, 51, 125, 0)`),t.beginPath(),t.arc(e.x,e.y,e.radius,0,Math.PI*2),t.fillStyle=i,t.fill()}),c=requestAnimationFrame(u))}function d(){n=window.innerWidth,r=window.innerHeight,e.width=n,e.height=r,s()}function f(){l=!document.hidden,l&&!c&&(c=requestAnimationFrame(u))}return u(),window.addEventListener(`resize`,d),document.addEventListener(`visibilitychange`,f),()=>{window.removeEventListener(`resize`,d),document.removeEventListener(`visibilitychange`,f),c&&cancelAnimationFrame(c)}}var t=[{name:`Управление сообществами`,icon:`users`,category:`Навыки`},{name:`Программирование на Java`,icon:`code`,category:`Навыки`},{name:`AI Промпт-инженеринг`,icon:`brain`,category:`Навыки`},{name:`Контент-Менеджмент`,icon:`megaphone`,category:`Навыки`},{name:`Брендинг сообществ`,icon:`palette`,category:`Навыки`},{name:`Видеомонтаж`,icon:`monitor`,category:`Навыки`},{name:`Дизайн`,icon:`pencil`,category:`Навыки`}],n=[{name:`Figma`,icon:`figma-logo`},{name:`IntelliJ IDEA`,icon:`code`},{name:`Adobe Photoshop`,icon:`image-square`},{name:`Adobe After Effects`,icon:`film-strip`},{name:`Adobe Premiere`,icon:`video`},{name:`Adobe Audition`,icon:`waveform`},{name:`Capcut`,icon:`scissors`},{name:`Excel / Google docs`,icon:`table`},{name:`Grok / DeepSeek / ChatGPT`,icon:`brain`}],r=[{id:1,title:`Milkshake`,slug:`milkshake`,subtitle:`Discord`,image:`./images/milkshake/cover.png`,category:[`discord`],starred:!0,shortDesc:`Сообщество для знакомств и совместных игр`,fullContent:`
+(function(){let e=document.createElement(`link`).relList;if(e&&e.supports&&e.supports(`modulepreload`))return;for(let e of document.querySelectorAll(`link[rel="modulepreload"]`))n(e);new MutationObserver(e=>{for(let t of e)if(t.type===`childList`)for(let e of t.addedNodes)e.tagName===`LINK`&&e.rel===`modulepreload`&&n(e)}).observe(document,{childList:!0,subtree:!0});function t(e){let t={};return e.integrity&&(t.integrity=e.integrity),e.referrerPolicy&&(t.referrerPolicy=e.referrerPolicy),e.crossOrigin===`use-credentials`?t.credentials=`include`:e.crossOrigin===`anonymous`?t.credentials=`omit`:t.credentials=`same-origin`,t}function n(e){if(e.ep)return;e.ep=!0;let n=t(e);fetch(e.href,n)}})();function e(){let e=document.getElementById(`bubbles-canvas`);if(!e)return;let t=e.getContext(`2d`);if(!t)return;let n=window.innerWidth,r=window.innerHeight;e.width=n,e.height=r;let i=[],a=window.innerWidth<768?12:20,o=.12;function s(){i=[];for(let e=0;e<a;e++)i.push({x:Math.random()*n,y:Math.random()*r,radius:Math.random()*80+40,vx:(Math.random()-.5)*.2,vy:(Math.random()-.5)*.1,alpha:Math.random()*o,alphaSpeed:(Math.random()-.5)*.005})}s();let c,l=!0;function u(){!t||!l||(t.clearRect(0,0,n,r),i.forEach(e=>{e.x+=e.vx,e.y+=e.vy,e.x<-e.radius&&(e.x=n+e.radius),e.x>n+e.radius&&(e.x=-e.radius),e.y<-e.radius&&(e.y=r+e.radius),e.y>r+e.radius&&(e.y=-e.radius),e.alpha+=e.alphaSpeed,e.alpha>o?(e.alpha=o,e.alphaSpeed=-e.alphaSpeed):e.alpha<.02&&(e.alpha=.02,e.alphaSpeed=-e.alphaSpeed);let i=t.createRadialGradient(e.x,e.y,e.radius*.2,e.x,e.y,e.radius);i.addColorStop(0,`rgba(255, 51, 125, ${e.alpha*.6})`),i.addColorStop(1,`rgba(255, 51, 125, 0)`),t.beginPath(),t.arc(e.x,e.y,e.radius,0,Math.PI*2),t.fillStyle=i,t.fill()}),c=requestAnimationFrame(u))}function d(){n=window.innerWidth,r=window.innerHeight,e.width=n,e.height=r,s()}function f(){l=!document.hidden,l&&!c&&(c=requestAnimationFrame(u))}return u(),window.addEventListener(`resize`,d),document.addEventListener(`visibilitychange`,f),()=>{window.removeEventListener(`resize`,d),document.removeEventListener(`visibilitychange`,f),c&&cancelAnimationFrame(c)}}var t=[{name:`Управление сообществами`,icon:`users`,category:`Навыки`},{name:`Программирование на Java`,icon:`code`,category:`Навыки`},{name:`AI Промпт-инженеринг`,icon:`brain`,category:`Навыки`},{name:`Контент-Менеджмент`,icon:`megaphone`,category:`Навыки`},{name:`Брендинг сообществ`,icon:`palette`,category:`Навыки`},{name:`Видеомонтаж`,icon:`monitor`,category:`Навыки`},{name:`Дизайн`,icon:`pencil`,category:`Навыки`}],n=[{name:`Figma`,icon:`figma-logo`},{name:`IntelliJ IDEA`,icon:`code`},{name:`Adobe Photoshop`,icon:`image-square`},{name:`Adobe After Effects`,icon:`film-strip`},{name:`Adobe Premiere`,icon:`video`},{name:`Adobe Audition`,icon:`waveform`},{name:`Capcut`,icon:`scissors`},{name:`Excel / Google docs`,icon:`table`},{name:`Grok / DeepSeek / ChatGPT`,icon:`brain`}],r=[{id:1,title:`Milkshake`,slug:`milkshake`,subtitle:`Discord`,image:`./images/milkshake/cover.png`,category:[`discord`,`code`],starred:!0,shortDesc:`Сообщество для знакомств и совместных игр`,fullContent:`
       <div class="space-y-6">
         <h1 class="text-4xl font-bold">Milkshake</h1>
         <p class="text-xl text-gray-300">Discord-сообщество по играм и общению, основанное в 2022 году. Сейчас насчитывает <strong class="text-[#FF337D]">12 800+ участников</strong>.</p>
@@ -47,7 +47,7 @@
           </div>
         </div>
       </div>
-    `},{id:2,title:`BetBoom Esports`,subtitle:`Discord, Организация`,slug:`betboom-esports`,image:`./images/betboom/esports/cover.jpg`,category:[`discord`,`company`],starred:!0,shortDesc:`Официальный Discord BetBoom Esports`,fullContent:`
+    `},{id:2,title:`BetBoom Esports`,subtitle:`Discord, Организация`,slug:`betboom-esports`,image:`./images/betboom/esports/cover.jpg`,category:[`discord`,`company`,`code`],starred:!0,shortDesc:`Официальный Discord BetBoom Esports`,fullContent:`
       <div class="space-y-6">
         <h1 class="text-4xl font-bold">BetBoom Esports</h1>
         <p class="text-xl text-gray-300">Дискорд-сервер для любителей киберспорта и азартных игр. Здесь часто проводятся ивенты, включая клозы, турниры и розыгрыши с ценными призами для участников.</p>
@@ -139,7 +139,7 @@
           </div>
         </div>
       </div>
-    `},{id:3,title:`GIF Discord`,subtitle:`Telegram`,slug:`gif-discord`,image:`./images/artpix/cover.jpg`,category:[`telegram`],starred:!0,shortDesc:`Готовые анимированные оформления для профиля`,fullContent:`
+    `},{id:3,title:`GIF Discord`,subtitle:`Telegram`,slug:`gif-discord`,image:`./images/artpix/cover.jpg`,category:[`telegram`,`code`],starred:!0,shortDesc:`Готовые анимированные оформления для профиля`,fullContent:`
       <div class="space-y-6">
         <h1 class="text-4xl font-bold">GIF Discord</h1>
         <p class="text-xl text-gray-300">Телеграм-канал, предоставляющий готовые оформления для Дискорда с лёгким копированием цветов и превью.</p>
@@ -165,7 +165,6 @@
           </div>
           <p class="text-gray-300 mb-4">Для продажи оформлений «не для всех» был разработан бот, который отдаёт медиа-файлы по коду. Для хостинга картинок используется сам Telegram — бот пересылает их из канала-архива.</p>
           
-          <!-- Исправленная карусель -->
           <div class="carousel" data-carousel>
             <div class="carousel-slides">
               <div class="carousel-slide">
@@ -203,7 +202,7 @@
           </a>
         </div>
       </div>
-    `},{id:4,title:`Bad Bunnies`,subtitle:`Discord`,slug:`bad-bunnies`,image:`./images/badbunnies/cover.jpg`,category:[`discord`,`new`],starred:!0,shortDesc:`Пространство для свободного общения`,fullContent:`
+    `},{id:4,title:`Bad Bunnies`,subtitle:`Discord`,slug:`bad-bunnies`,image:`./images/badbunnies/cover.jpg`,category:[`discord`,`new`,`code`],starred:!0,shortDesc:`Пространство для свободного общения`,fullContent:`
       <div class="space-y-6">
         <h1 class="text-4xl font-bold">Bad Bunnies</h1>
         <p class="text-xl text-gray-300">Относительно новый сервер, продвигающий свободное общение и совместное времяпровождение с возрастной меткой <strong>16+</strong>.</p>
@@ -331,7 +330,7 @@
           </a>
         </div>
       </div>
-    `},{id:9,title:`#СП сервера`,subtitle:`Minecraft`,slug:`spworlds`,image:`./images/spworlds/cover.png`,category:[`minecraft`,`other`],starred:!0,shortDesc:`Администрирование и разработка серверов у стримера Пятёрки`,fullContent:` 
+    `},{id:9,title:`#СП сервера`,subtitle:`Minecraft`,slug:`spworlds`,image:`./images/spworlds/cover.png`,category:[`minecraft`,`other`,`code`],starred:!0,shortDesc:`Администрирование и разработка серверов у стримера Пятёрки`,fullContent:` 
       <div class="space-y-6">
         <h1 class="text-4xl font-bold">#СП — сервера Пятёрки</h1>
         <p class="text-xl text-gray-300">Приватные Minecraft-сервера Пятёрки (SpWorlds) — одна из самых известных вселенных в русскоязычном Minecraft-комьюнити. Я работал там с 2018 по 2022 год как администратор и разработчик.</p>
@@ -584,7 +583,203 @@
           </div>
         </div>
       </div>
-    `}];function i(){setTimeout(()=>{window.PhosphorIcons&&typeof window.PhosphorIcons.loadIcons==`function`&&window.PhosphorIcons.loadIcons()},10)}function a(){let e=document.getElementById(`skills`);e&&(e.innerHTML=`
+    `},{id:13,title:`YooKassa Java SDK`,subtitle:`Open Source / Библиотека`,slug:`yookassa-java-sdk`,image:`./images/yookassa/cover.png`,category:[`opensource`,`java`,`code`,`company`],starred:!0,shortDesc:`Официально признанная SDK для интеграции`,fullContent:`
+    <div class="space-y-6">
+      <h1 class="text-4xl font-bold">YooKassa Java SDK</h1>
+      <p class="text-xl text-gray-300">Библиотека для создания умных платежей через сервис ЮKassa. Официально добавлена в <a href="https://yookassa.ru/developers/using-api/using-sdks#community" target="_blank" class="text-[#FF337D] hover:underline">список библиотек сообщества</a>.</p>
+
+      <div class="bg-[#1f1f1f] rounded-2xl p-6">
+        <div class="flex items-center gap-2 mb-3">
+          <i class="ph-fill ph-check-circle text-[#FF337D] text-2xl"></i>
+          <h2 class="text-2xl font-semibold">Официальное признание</h2>
+        </div>
+        <p class="text-gray-300 mb-4">Библиотека прошла проверку технических специалистов ЮKassa и была добавлена на <a href="https://yookassa.ru/developers/using-api/using-sdks#community" target="_blank" class="text-[#FF337D] hover:underline">страницу SDK сообщества</a>. Это подтверждает качество и безопасность кода, а также доверие со стороны платёжного сервиса.</p>
+        <div class="carousel" data-carousel>
+          <div class="carousel-slides">
+            <div class="carousel-slide">
+              <img src="./images/yookassa/official-1.jpg" alt="Письмо от ЮKassa" class="w-full h-auto rounded-lg">
+            </div>
+            <div class="carousel-slide">
+              <img src="./images/yookassa/official-2.jpg" alt="Страница сообщества ЮKassa" class="w-full h-auto rounded-lg">
+            </div>
+          </div>
+          <button class="carousel-prev" aria-label="Назад"><i class="ph-bold ph-caret-left"></i></button>
+          <button class="carousel-next" aria-label="Вперёд"><i class="ph-bold ph-caret-right"></i></button>
+          <div class="carousel-dots"></div>
+        </div>
+        <p class="text-gray-400 text-sm text-center mt-2">Письмо от ЮKassa и страница со списком библиотек сообщества</p>
+      </div>
+
+      <div class="bg-[#1f1f1f] rounded-2xl p-6">
+        <div class="flex items-center gap-2 mb-3">
+          <i class="ph-fill ph-code text-[#FF337D] text-2xl"></i>
+          <h2 class="text-2xl font-semibold">Пример использования</h2>
+        </div>
+        <p class="text-gray-300 mb-2"><strong>Инициализация API</strong></p>
+        <pre class="bg-black/40 p-3 rounded-lg overflow-x-auto text-sm text-gray-300"><code>private static final YooKassa YOO_KASSA = YooKassa.create(
+    10000,
+    "yourTokenHere"
+);</code></pre>
+        <p class="text-gray-300 mt-4 mb-2"><strong>Создание платежа</strong></p>
+        <pre class="bg-black/40 p-3 rounded-lg overflow-x-auto text-sm text-gray-300"><code>public static Payment createPayment() throws IOException {
+    return YOO_KASSA.createPayment(PaymentCreateData.builder()
+        .amount(Amount.from(100, Currency.RUB))
+        .description("Buy a coffee")
+        .redirect("https://github.com/deelter")
+        .capture(true)
+        .build()
+    );
+}</code></pre>
+        <p class="text-gray-300 mt-4 mb-2"><strong>Получение информации о платеже</strong></p>
+        <pre class="bg-black/40 p-3 rounded-lg overflow-x-auto text-sm text-gray-300"><code>public static Payment getPayment(UUID paymentId) throws IOException {
+    return YOO_KASSA.getPayment(paymentId);
+}</code></pre>
+        <p class="text-gray-300 mt-4"><strong>Работа с чеками (receipts)</strong> и <strong>возвратами (refunds)</strong> также поддерживается.</p>
+      </div>
+
+      <div class="bg-[#1f1f1f] rounded-2xl p-6">
+        <div class="flex items-center gap-2 mb-3">
+          <i class="ph-fill ph-download text-[#FF337D] text-2xl"></i>
+          <h2 class="text-2xl font-semibold">Установка</h2>
+        </div>
+        <p class="text-gray-300 mb-2"><strong>Maven</strong></p>
+        <pre class="bg-black/40 p-3 rounded-lg overflow-x-auto text-sm text-gray-300"><code>&lt;repository&gt;
+    &lt;id&gt;jitpack.io&lt;/id&gt;
+    &lt;url&gt;https://jitpack.io&lt;/url&gt;
+&lt;/repository&gt;
+
+&lt;dependency&gt;
+    &lt;groupId&gt;com.github.DeelTer&lt;/groupId&gt;
+    &lt;artifactId&gt;YooKassaSDK&lt;/artifactId&gt;
+    &lt;version&gt;1.0.5&lt;/version&gt;
+&lt;/dependency&gt;</code></pre>
+        <p class="text-gray-300 mt-4 mb-2"><strong>Gradle</strong></p>
+        <pre class="bg-black/40 p-3 rounded-lg overflow-x-auto text-sm text-gray-300"><code>dependencyResolutionManagement {
+    repositories {
+        mavenCentral()
+        maven { url 'https://jitpack.io' }
+    }
+}
+
+dependencies {
+    implementation 'com.github.DeelTer:YooKassaSDK:1.0.5'
+}</code></pre>
+      </div>
+
+      <div class="bg-[#1f1f1f] rounded-2xl p-6">
+        <a href="https://github.com/DeelTer/YooKassaSDK" target="_blank" 
+          class="inline-flex items-center gap-2 bg-[#FF337D] px-6 py-3 rounded-xl font-medium hover:bg-[#e62e6e] transition">
+          <i class="ph-fill ph-github-logo"></i> Перейти на GitHub
+        </a>
+      </div>
+    </div>
+  `},{id:14,title:`Cryptomus Java SDK`,subtitle:`Open Source / Библиотека`,slug:`cryptomus-java-sdk`,image:`./images/cryptomus/cover.png`,category:[`opensource`,`java`,`code`],starred:!1,shortDesc:`SDK для интеграции криптоплатежей`,fullContent:`
+    <div class="space-y-6">
+      <h1 class="text-4xl font-bold">Cryptomus Java SDK</h1>
+      <p class="text-xl text-gray-300">Библиотека для работы с платёжной системой Cryptomus. Позволяет создавать счета, проверять статусы платежей и интегрировать криптовалютные переводы в Java-приложения.</p>
+
+      <div class="bg-[#1f1f1f] rounded-2xl p-6">
+        <div class="flex items-center gap-2 mb-3">
+          <i class="ph-fill ph-code text-[#FF337D] text-2xl"></i>
+          <h2 class="text-2xl font-semibold">Реальное применение</h2>
+        </div>
+        <p class="text-gray-300 mb-4">Библиотека используется в боевом проекте <strong class="text-[#FF337D]">Milkshake</strong> для приёма донатов через криптовалюту. Вот фрагмент реального кода из модуля оплаты:</p>
+        <pre class="bg-black/40 p-3 rounded-lg overflow-x-auto text-sm text-gray-300"><code>public class CryptomusManager extends AbstractManager {
+
+  private Cryptomus cryptomus;
+
+  @Nullable
+  public CryptoPayment createPayment(@NotNull PaymentBill bill) {
+    ShopCart cart = bill.getCart();
+    try {
+      return cryptomus.createPayment(
+        PaymentCreateData.builder()
+          .amount(BigDecimal.valueOf(cart.getPrice()))
+          .currency(Currency.RUB.name())
+          .redirectUrl("https://discord.gg/milkshake")
+          .lifetime(30, TimeUnit.MINUTES)
+          .build()
+      );
+    } catch (IOException e) {
+      e.printStackTrace();
+      return null;
+    }
+  }
+
+  public void checkPayments() throws IOException {
+    // Получаем все неоплаченные счета
+    Set<PaymentBill> bills = billsManager.getBills(PaymentSystem.CRYPTOMUS);
+    PaymentList payments = cryptomus.getPayments(null);
+    
+    for (PaymentBill bill : bills) {
+      CryptoPayment payment = paymentsMap.get(bill.getPaymentId());
+      if (payment.getPaymentStatus().isPaid()) {
+        bill.complete(); // Выдача товара
+      }
+    }
+  }
+
+  @Override
+  protected void onLoad() {
+    cryptomus = Cryptomus.create(
+      config.getCryptomusMerchantId(),
+      config.getCryptomusToken()
+    );
+  }
+}</code></pre>
+      </div>
+
+      <div class="bg-[#1f1f1f] rounded-2xl p-6">
+        <div class="flex items-center gap-2 mb-3">
+          <i class="ph-fill ph-rocket text-[#FF337D] text-2xl"></i>
+          <h2 class="text-2xl font-semibold">Возможности SDK</h2>
+        </div>
+        <ul class="space-y-2 text-gray-300">
+          <li class="flex gap-2"><span class="text-[#FF337D]">✓</span> Создание платежей с указанием суммы, валюты, времени жизни</li>
+          <li class="flex gap-2"><span class="text-[#FF337D]">✓</span> Получение списка платежей с фильтрацией</li>
+          <li class="flex gap-2"><span class="text-[#FF337D]">✓</span> Проверка статуса платежа (paid, error, waiting)</li>
+          <li class="flex gap-2"><span class="text-[#FF337D]">✓</span> Автоматическое обновление статусов через API</li>
+          <li class="flex gap-2"><span class="text-[#FF337D]">✓</span> Поддержка всех криптовалют, доступных в Cryptomus</li>
+        </ul>
+      </div>
+
+      <div class="bg-[#1f1f1f] rounded-2xl p-6">
+        <div class="flex items-center gap-2 mb-3">
+          <i class="ph-fill ph-download text-[#FF337D] text-2xl"></i>
+          <h2 class="text-2xl font-semibold">Установка</h2>
+        </div>
+        <p class="text-gray-300 mb-2"><strong>Maven</strong></p>
+        <pre class="bg-black/40 p-3 rounded-lg overflow-x-auto text-sm text-gray-300"><code>&lt;repository&gt;
+    &lt;id&gt;jitpack.io&lt;/id&gt;
+    &lt;url&gt;https://jitpack.io&lt;/url&gt;
+&lt;/repository&gt;
+
+&lt;dependency&gt;
+    &lt;groupId&gt;com.github.DeelTer&lt;/groupId&gt;
+    &lt;artifactId&gt;CryptomusSDK&lt;/artifactId&gt;
+    &lt;version&gt;1.0.0&lt;/version&gt;
+&lt;/dependency&gt;</code></pre>
+        <p class="text-gray-300 mt-4 mb-2"><strong>Gradle</strong></p>
+        <pre class="bg-black/40 p-3 rounded-lg overflow-x-auto text-sm text-gray-300"><code>dependencyResolutionManagement {
+    repositories {
+        mavenCentral()
+        maven { url 'https://jitpack.io' }
+    }
+}
+
+dependencies {
+    implementation 'com.github.DeelTer:CryptomusSDK:1.0.0'
+}</code></pre>
+      </div>
+
+      <div class="bg-[#1f1f1f] rounded-2xl p-6">
+        <a href="https://github.com/DeelTer/CryptomusSDK" target="_blank" 
+          class="inline-flex items-center gap-2 bg-[#FF337D] px-6 py-3 rounded-xl font-medium hover:bg-[#e62e6e] transition">
+          <i class="ph-fill ph-github-logo"></i> Перейти на GitHub
+        </a>
+      </div>
+    </div>
+  `}];function i(){setTimeout(()=>{window.PhosphorIcons&&typeof window.PhosphorIcons.loadIcons==`function`&&window.PhosphorIcons.loadIcons()},10)}function a(){let e=document.getElementById(`skills`);e&&(e.innerHTML=`
     <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
       ${t.map((e,t)=>`
         <div class="skill-card opacity-0" 
