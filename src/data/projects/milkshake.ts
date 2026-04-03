@@ -20,6 +20,19 @@ export const milkshake: Project = {
           </h2>
           <p class="text-gray-300">Мы взяли лучшее от уютных и популярных серверов того времени. Целевая аудитория — игроки в League of Legends, Valorant, Minecraft, Genshin Impact и другие игры от Hoyoverse.</p>
         </div>
+
+        <div class="bg-[#1f1f1f] rounded-2xl p-6">
+          <div class="flex items-center gap-2 mb-3">
+            <i class="ph-fill ph-crown text-[#FF337D] text-2xl"></i>
+            <h2 class="text-2xl font-semibold">Моя роль</h2>
+          </div>
+          <ul class="space-y-2 text-gray-300">
+            <li class="flex gap-2"><span class="text-[#FF337D]">✓</span> Администрирование сообщества</li>
+            <li class="flex gap-2"><span class="text-[#FF337D]">✓</span> Разработка бота и техническая поддержка</li>
+            <li class="flex gap-2"><span class="text-[#FF337D]">✓</span> Поиск партнёров</li>
+            <li class="flex gap-2"><span class="text-[#FF337D]">✓</span> Дизайн и брендинг</li>
+          </ul>
+        </div>
         
         <div class="bg-[#1f1f1f] rounded-2xl p-6">
           <h2 class="text-2xl font-semibold mb-3 flex items-center gap-2">
