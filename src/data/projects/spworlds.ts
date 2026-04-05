@@ -5,7 +5,7 @@ export const spWorlds: Project = {
     title: "#СП сервера", 
     subtitle: "Minecraft", 
     slug: "spworlds",
-    image: "./images/spworlds/cover.png", 
+    image: "./images/spworlds/cover.webp", 
     category: ["minecraft", "other", "code"], 
     starred: true, 
     shortDesc: "Администрирование и разработка серверов у стримера Пятёрки", 

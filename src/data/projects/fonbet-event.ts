@@ -5,7 +5,7 @@ export const fonbetEvent: Project = {
     title: "Fonbet Ивент",
     subtitle: "Оффлайн, Организация",
     slug: "fonbet-event",
-    image: "./images/fonbet/cover.png",
+    image: "./images/fonbet/cover.webp",
     category: ["other", "offline", "company"],
     starred: true,
     shortDesc: "Интерактив на куполе в планетарии",
@@ -57,13 +57,13 @@ export const fonbetEvent: Project = {
           <div class="carousel" data-carousel>
             <div class="carousel-slides">
               <div class="carousel-slide">
-                <img src="./images/fonbet/event-screen-1.png" alt="Фотография с мероприятия #1">
+                <img src="./images/fonbet/event-screen-1.webp" alt="Фотография с мероприятия #1">
               </div>
               <div class="carousel-slide">
-                <img src="./images/fonbet/event-screen-2.png" alt="Фотография с мероприятия #2">
+                <img src="./images/fonbet/event-screen-2.webp" alt="Фотография с мероприятия #2">
               </div>
               <div class="carousel-slide">
-                <img src="./images/fonbet/event-screen-3.png" alt="Фотография с мероприятия #3">
+                <img src="./images/fonbet/event-screen-3.webp" alt="Фотография с мероприятия #3">
               </div>
             </div>
             <button class="carousel-prev" aria-label="Назад"><i class="ph-bold ph-caret-left"></i></button>

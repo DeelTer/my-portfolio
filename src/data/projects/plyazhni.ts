@@ -5,7 +5,7 @@ export const plyazhni: Project = {
     title: "Пляжный",
     subtitle: "TikTok",
     slug: "plyazhni",
-    image: "./images/tiktok/deelter/cover.jpg",
+    image: "./images/tiktok/deelter/cover.webp",
     category: ["tiktok", "other"],
     starred: true,
     shortDesc: "Контент по игре Minecraft, инструкции для VR",
@@ -53,7 +53,7 @@ export const plyazhni: Project = {
             <div class="carousel-slides">
               <div class="carousel-slide">
                 <a href="https://vt.tiktok.com/ZSHLm15oy/" target="_blank" class="block relative group">
-                  <img src="./images/tiktok/deelter/thumbnail-1.jpg" alt="Превью видео 1" class="w-full h-auto rounded-lg">
+                  <img src="./images/tiktok/deelter/thumbnail-1.webp" alt="Превью видео 1" class="w-full h-auto rounded-lg">
                   <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition flex items-center justify-center rounded-lg">
                     <span class="text-white text-sm font-medium px-3 py-1 bg-[#FF337D] rounded-full">Смотреть →</span>
                   </div>
@@ -61,7 +61,7 @@ export const plyazhni: Project = {
               </div>
               <div class="carousel-slide">
                 <a href="https://vt.tiktok.com/ZSHLmN1rX/" target="_blank" class="block relative group">
-                  <img src="./images/tiktok/deelter/thumbnail-2.jpg" alt="Превью видео 2" class="w-full h-auto rounded-lg">
+                  <img src="./images/tiktok/deelter/thumbnail-2.webp" alt="Превью видео 2" class="w-full h-auto rounded-lg">
                   <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition flex items-center justify-center rounded-lg">
                     <span class="text-white text-sm font-medium px-3 py-1 bg-[#FF337D] rounded-full">Смотреть →</span>
                   </div>
@@ -69,7 +69,7 @@ export const plyazhni: Project = {
               </div>
               <div class="carousel-slide">
                 <a href="https://vt.tiktok.com/ZSHLasLQ3/" target="_blank" class="block relative group">
-                  <img src="./images/tiktok/deelter/thumbnail-3.jpg" alt="Превью видео 3" class="w-full h-auto rounded-lg">
+                  <img src="./images/tiktok/deelter/thumbnail-3.webp" alt="Превью видео 3" class="w-full h-auto rounded-lg">
                   <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition flex items-center justify-center rounded-lg">
                     <span class="text-white text-sm font-medium px-3 py-1 bg-[#FF337D] rounded-full">Смотреть →</span>
                   </div>
@@ -91,10 +91,10 @@ export const plyazhni: Project = {
           <div class="carousel" data-carousel>
             <div class="carousel-slides">
               <div class="carousel-slide">
-                <img src="./images/tiktok/deelter/stats-1.jpg" alt="Аналитика канала 1" class="w-full h-auto rounded-lg">
+                <img src="./images/tiktok/deelter/stats-1.webp" alt="Аналитика канала 1" class="w-full h-auto rounded-lg">
               </div>
               <div class="carousel-slide">
-                <img src="./images/tiktok/deelter/stats-2.jpg" alt="Аналитика канала 2" class="w-full h-auto rounded-lg">
+                <img src="./images/tiktok/deelter/stats-2.webp" alt="Аналитика канала 2" class="w-full h-auto rounded-lg">
               </div>
             </div>
             <button class="carousel-prev" aria-label="Назад"><i class="ph-bold ph-caret-left"></i></button>

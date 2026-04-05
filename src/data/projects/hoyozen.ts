@@ -5,7 +5,7 @@ export const hoyozen: Project = {
   title: "Hoyozen",
   subtitle: "Telegram",
   slug: "hoyozen",
-  image: "./images/hoyozen/cover.png",
+  image: "./images/hoyozen/cover.webp",
   category: ["telegram"],
   starred: false,
   shortDesc: "Новости по игре Zenless Zone Zero",

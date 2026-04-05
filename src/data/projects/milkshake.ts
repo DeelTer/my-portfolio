@@ -5,7 +5,7 @@ export const milkshake: Project = {
     title: "Milkshake",
     slug: "milkshake",
     subtitle: "Discord",
-    image: "./images/milkshake/cover.png",
+    image: "./images/milkshake/cover.webp",
     category: ["discord", "code"],
     starred: true,
     shortDesc: "Сообщество для знакомств и совместных игр",
@@ -40,7 +40,7 @@ export const milkshake: Project = {
           </h2>
           <p class="text-gray-300 mb-4">Главный персонаж — девушка с кошачьими ушками по имени <strong>Милка</strong> (от названия «Милкшейк») с дурашливым характером. Её образ используется в эмодзи, дизайне и рекламных материалах.</p>
           <div class="bg-[#2a2a2a] rounded-xl p-4 text-center">
-            <img src="./images/milkshake/emojies.png" 
+            <img src="./images/milkshake/emojies.webp" 
                 alt="Эмодзи Милки" 
                 class="max-w-full h-auto mx-auto rounded-lg">
             <p class="text-gray-400 text-sm mt-2">Набор эмодзи с Милкой для Discord-сервера</p>

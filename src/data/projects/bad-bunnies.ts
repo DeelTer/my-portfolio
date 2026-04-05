@@ -5,7 +5,7 @@ export const badBunnies: Project = {
   title: "Bad Bunnies",
   subtitle: "Discord",
   slug: "bad-bunnies",
-  image: "./images/badbunnies/cover.jpg",
+  image: "./images/badbunnies/cover.webp",
   category: ["discord", "new", "code"],
   starred: true,
   shortDesc: "Пространство для свободного общения",
@@ -42,7 +42,7 @@ export const badBunnies: Project = {
           </div>
           <p class="text-gray-300 mb-4">В качестве главного персонажа был выбран кролик с выбитым глазом. Оформлен в чуть менее дружелюбном, местами токсичном стиле.</p>
           <div class="bg-[#2a2a2a] rounded-xl p-4 text-center">
-            <img src="./images/badbunnies/emojies.png" 
+            <img src="./images/badbunnies/emojies.webp" 
                 alt="Эмодзи Bad Bunnies" 
                 class="max-w-full h-auto mx-auto rounded-lg">
             <p class="text-gray-400 text-sm mt-2">Набор эмодзи с кроликом</p>
@@ -56,7 +56,7 @@ export const badBunnies: Project = {
           </div>
           <p class="text-gray-300 mb-4">Мы взяли лучшее от Milkshake, чтобы учесть все ошибки разработки и вдохнуть свежести в старый код. Система стала гибкой, послушной и удобной.</p>
           <div class="bg-[#2a2a2a] rounded-xl p-4 text-center">
-            <img src="./images/badbunnies/stats.png" 
+            <img src="./images/badbunnies/stats.webp" 
                 alt="Скриншот бота" 
                 class="max-w-full h-auto mx-auto rounded-lg">
             <p class="text-gray-400 text-sm mt-2">Интерфейс бота Bad Bunnies</p>

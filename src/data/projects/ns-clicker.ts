@@ -5,7 +5,7 @@ export const nsClicker: Project = {
     title: "BetBoom Кликер",
     subtitle: "Telegram, Организация",
     slug: "ns-clicker",
-    image: "./images/betboom/ns_clicker/cover.png",
+    image: "./images/betboom/ns_clicker/cover.webp",
     category: ["telegram", "company"],
     starred: true,
     shortDesc: "Разработка мини-апп приложения",
@@ -45,13 +45,13 @@ export const nsClicker: Project = {
           <div class="carousel" data-carousel>
             <div class="carousel-slides">
               <div class="carousel-slide">
-                <img src="./images/betboom/ns_clicker/app-1.jpg" alt="Главный экран кликера">
+                <img src="./images/betboom/ns_clicker/app-1.webp" alt="Главный экран кликера">
               </div>
               <div class="carousel-slide">
-                <img src="./images/betboom/ns_clicker/app-2.png" alt="Бусты">
+                <img src="./images/betboom/ns_clicker/app-2.webp" alt="Бусты">
               </div>
               <div class="carousel-slide">
-                <img src="./images/betboom/ns_clicker/app-3.jpg" alt="Аукционы">
+                <img src="./images/betboom/ns_clicker/app-3.webp" alt="Аукционы">
               </div>
             </div>
             <button class="carousel-prev" aria-label="Назад"><i class="ph-bold ph-caret-left"></i></button>

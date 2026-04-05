@@ -5,7 +5,7 @@ export const betboomEsports: Project = {
   title: "BetBoom Esports",
   subtitle: "Discord, Организация",
   slug: "betboom-esports",
-  image: "./images/betboom/esports/cover.jpg",
+  image: "./images/betboom/esports/cover.webp",
   category: ["discord", "company", "code"],
   starred: true,
   shortDesc: "Официальный Discord BetBoom Esports",
@@ -37,7 +37,7 @@ export const betboomEsports: Project = {
           </div>
           <p class="text-gray-300 mb-4">Периодически анонсируем сезоны, в течение которых участники могут заработать ценные призы при помощи активности. Еженедельные турниры и задания.</p>
           <div class="bg-[#2a2a2a] rounded-xl p-4 text-center">
-            <img src="./images/betboom/esports/seasons.png" 
+            <img src="./images/betboom/esports/seasons.webp" 
                 alt="Сезонные активности" 
                 class="max-w-full h-auto mx-auto rounded-lg">
             <p class="text-gray-400 text-sm mt-2">Пример визуального оформления сезона</p>
@@ -59,7 +59,7 @@ export const betboomEsports: Project = {
           </div>
           <p class="text-gray-300 mb-4">На праздники организовываем ивенты, ограниченные по времени. Например, на 14 февраля участники могли писать друг другу валентинки с персонажами Dota 2.</p>
           <div class="bg-[#2a2a2a] rounded-xl p-4 text-center">
-            <img src="./images/betboom/esports/valentine.png" 
+            <img src="./images/betboom/esports/valentine.webp" 
                 alt="Валентинки" 
                 class="max-w-full h-auto mx-auto rounded-lg">
             <p class="text-gray-400 text-sm mt-2">Ивент ко Дню святого Валентина</p>
@@ -77,10 +77,10 @@ export const betboomEsports: Project = {
           <div class="carousel" data-carousel>
             <div class="carousel-slides">
               <div class="carousel-slide">
-                <img src="./images/betboom/esports/tournament-1.png" alt="Турнир 1">
+                <img src="./images/betboom/esports/tournament-1.webp" alt="Турнир 1">
               </div>
               <div class="carousel-slide">
-                <img src="./images/betboom/esports/tournament-2.jpg" alt="Турнир 2">
+                <img src="./images/betboom/esports/tournament-2.webp" alt="Турнир 2">
               </div>
             </div>
             <button class="carousel-prev" aria-label="Назад"><i class="ph-bold ph-caret-left"></i></button>

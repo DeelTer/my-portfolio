@@ -5,7 +5,7 @@ export const wbBomb: Project = {
   title: "WB BOMB",
   subtitle: "Telegram",
   slug: "wbbomb",
-  image: "./images/wbbomb/cover.png",
+  image: "./images/wbbomb/cover.webp",
   category: ["telegram"],
   starred: false,
   shortDesc: "Подборки с маркетплейсов",

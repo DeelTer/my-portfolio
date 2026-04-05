@@ -5,7 +5,7 @@ export const dailyFurina: Project = {
   title: "Daily Furina",
   subtitle: "Telegram",
   slug: "dailyfurina",
-  image: "./images/dailyfurina/cover.png",
+  image: "./images/dailyfurina/cover.webp",
   category: ["telegram"],
   starred: false,
   shortDesc: "Творческий канал по персонажу из Genshin Impact",

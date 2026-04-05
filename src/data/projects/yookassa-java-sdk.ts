@@ -5,7 +5,7 @@ export const yookassaJavaSDK: Project = {
   title: "YooKassa Java SDK",
   subtitle: "Open Source / Библиотека",
   slug: "yookassa-java-sdk",
-  image: "./images/yookassa/cover.png",
+  image: "./images/yookassa/cover.webp",
   category: ["opensource", "java", "code", "company"],
   starred: true,
   shortDesc: "Официально признанная SDK для интеграции",
@@ -23,10 +23,10 @@ export const yookassaJavaSDK: Project = {
         <div class="carousel" data-carousel>
           <div class="carousel-slides">
             <div class="carousel-slide">
-              <img src="./images/yookassa/official-1.jpg" alt="Письмо от ЮKassa" class="w-full h-auto rounded-lg">
-            </div>
+              <img src="./images/yookassa/official-2.webp" alt="Страница сообщества ЮKassa" class="w-full h-auto rounded-lg">
+            </div>  
             <div class="carousel-slide">
-              <img src="./images/yookassa/official-2.jpg" alt="Страница сообщества ЮKassa" class="w-full h-auto rounded-lg">
+              <img src="./images/yookassa/official-1.webp" alt="Письмо от ЮKassa" class="w-full h-auto rounded-lg">
             </div>
           </div>
           <button class="carousel-prev" aria-label="Назад"><i class="ph-bold ph-caret-left"></i></button>

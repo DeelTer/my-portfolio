@@ -5,7 +5,7 @@ export const genshinForum: Project = {
   title: "Genshin Forum",
   subtitle: "Telegram",
   slug: "genshinforum",
-  image: "./images/genshinforum/cover.png",
+  image: "./images/genshinforum/cover.webp",
   category: ["telegram"],
   starred: false,
   shortDesc: "Новости и находки по Genshin Impact",

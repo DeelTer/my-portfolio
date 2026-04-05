@@ -5,7 +5,7 @@ export const gifDiscord: Project = {
   title: "GIF Discord",
   subtitle: "Telegram",
   slug: "gif-discord",
-  image: "./images/artpix/cover.jpg",
+  image: "./images/artpix/cover.webp",
   category: ["telegram", "code"],
   starred: true,
   shortDesc: "Готовые анимированные оформления для профиля",
@@ -21,7 +21,7 @@ export const gifDiscord: Project = {
           </div>
           <p class="text-gray-300 mb-4">Сделать так, чтобы люди оставляли свои запросы в комментариях под постами, а мы делали по ним готовые профили.</p>
           <div class="bg-[#2a2a2a] rounded-xl p-4 text-center">
-            <img src="./images/artpix/post-example.png" 
+            <img src="./images/artpix/post-example.webp" 
                 alt="Пример поста" 
                 class="max-w-full h-auto mx-auto rounded-lg">
             <p class="text-gray-400 text-sm mt-2">Пример поста с запросами подписчиков</p>
@@ -38,13 +38,13 @@ export const gifDiscord: Project = {
           <div class="carousel" data-carousel>
             <div class="carousel-slides">
               <div class="carousel-slide">
-                <img src="./images/artpix/post-production-1.png" alt="Скриншот работы бота 1">
+                <img src="./images/artpix/post-production-1.webp" alt="Скриншот работы бота 1">
               </div>
               <div class="carousel-slide">
-                <img src="./images/artpix/post-production-2.png" alt="Скриншот работы бота 2">
+                <img src="./images/artpix/post-production-2.webp" alt="Скриншот работы бота 2">
               </div>
               <div class="carousel-slide">
-                <img src="./images/artpix/post-production-3.png" alt="Скриншот работы бота 3">
+                <img src="./images/artpix/post-production-3.webp" alt="Скриншот работы бота 3">
               </div>
             </div>
             <button class="carousel-prev" aria-label="Назад"><i class="ph-bold ph-caret-left"></i></button>
