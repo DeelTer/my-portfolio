@@ -6,7 +6,7 @@ export const cryptomusJavaSDK: Project = {
   subtitle: "Open Source / Библиотека",
   slug: "cryptomus-java-sdk",
   image: "./images/cryptomus/cover.webp",
-  category: ["opensource", "java", "code"],
+  category: ["opensource", "java", "code", "sdk"],
   starred: false,
   shortDesc: "SDK для интеграции криптоплатежей",
   fullContent: `
