@@ -30,7 +30,7 @@ export const connectionsData = {
     },
     { 
       id: "mike_lisetskiy", 
-      label: "Михаил Лисицкий", 
+      label: "Михаил Лисецкий", 
       category: "friend",
       "description": "Директор фестивалей Стримфест и GAMEДНИ, медиа и ивент-продюсер",
       image: "./images/avatars/mike_lisetsky.webp"
