@@ -1,6 +1,4 @@
-// src/utils/connectionsGraph.ts
 import { forceSimulation, forceLink, forceManyBody, forceCenter, forceCollide } from 'd3-force';
-import type { ConnectionNode, ConnectionLink } from '../data/connections';
 
 export function initConnectionsGraph(containerId: string, data: any) {
   const container = document.getElementById(containerId) as HTMLDivElement;
