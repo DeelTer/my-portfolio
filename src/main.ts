@@ -3,7 +3,10 @@ import { renderSkills, filterProjects, switchTab } from './utils/render';
 import { openProject, closeModal } from './utils/modal';
 import { initAudioPlayer } from './utils/audioPlayer';
 import { projects } from './data/projects';
+import { connectionsData } from './data/connections';
+import { initConnectionsGraph } from './utils/connectionsGraph';
 import './style.css';
+
 
 // === РОУТИНГ ПО SLUG ===
 
@@ -44,6 +47,7 @@ document.addEventListener('DOMContentLoaded', () => {
   renderSkills();
   filterProjects('all');
   initAudioPlayer();
+  initConnectionsGraph('connections-graph', connectionsData);
 
   // Роутинг
   handleRoute();                      // обработать текущий URL при загрузке
