@@ -1,3 +1,4 @@
+// src/utils/connectionsGraph.ts
 import { forceSimulation, forceLink, forceManyBody, forceCenter, forceCollide } from 'd3-force';
 
 export function initConnectionsGraph(containerId: string, data: any) {
@@ -6,6 +7,7 @@ export function initConnectionsGraph(containerId: string, data: any) {
 
   const canvas = document.createElement('canvas');
   canvas.className = 'w-full rounded-3xl border border-white/10 bg-[#0a0a0a]';
+  canvas.style.touchAction = 'none'; // отключаем скролл и зум жестами на canvas
   container.appendChild(canvas);
 
   const ctx = canvas.getContext('2d', { alpha: true })!;
@@ -41,7 +43,7 @@ export function initConnectionsGraph(containerId: string, data: any) {
     .force('center', forceCenter(width / 2, height / 2))
     .force('collision', forceCollide().radius((d: any) => (d.category === 'me' ? 42 : 28)));
 
-  // ++ Обновлённый colorMap с недостающими категориями
+  // Обновлённый colorMap с недостающими категориями
   const colorMap: Record<string, string> = {
     me: '#FF337D',
     agency: '#a78bfa',
@@ -57,10 +59,10 @@ export function initConnectionsGraph(containerId: string, data: any) {
     default: '#94a3b8'
   };
 
-  // ++ Переменная для хранения узла под курсором
+  // Переменная для хранения узла под курсором
   let hoveredNode: any = null;
 
-  // ++ Обработчик движения мыши — ищем узел под курсором
+  // Обработчик движения мыши — ищем узел под курсором
   canvas.addEventListener('mousemove', (e) => {
     const rect = canvas.getBoundingClientRect();
     const mx = e.clientX - rect.left;
@@ -80,13 +82,13 @@ export function initConnectionsGraph(containerId: string, data: any) {
     }
   });
 
-  // ++ Когда мышь уходит с canvas, убираем тултип
+  // Когда мышь уходит с canvas, убираем тултип
   canvas.addEventListener('mouseleave', () => {
     hoveredNode = null;
     draw();
   });
 
-    function draw() {
+  function draw() {
     ctx.clearRect(0, 0, width, height);
 
     // === СВЯЗИ ===
@@ -212,7 +214,7 @@ export function initConnectionsGraph(containerId: string, data: any) {
 
   simulation.on('tick', draw);
 
-  // Drag (оставь без изменений)
+  // Drag
   let dragged: any = null;
   canvas.addEventListener('pointerdown', (e) => {
     const rect = canvas.getBoundingClientRect();
@@ -226,6 +228,7 @@ export function initConnectionsGraph(containerId: string, data: any) {
     });
 
     if (dragged) {
+      e.preventDefault(); // блокируем скролл при перетаскивании
       simulation.alphaTarget(0.3).restart();
       dragged.fx = mx;
       dragged.fy = my;
