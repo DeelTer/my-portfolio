@@ -8,34 +8,27 @@ import { initConnectionsGraph } from './utils/connectionsGraph';
 import './style.css';
 
 
-// === РОУТИНГ ПО SLUG ===
-
-// Поиск проекта по slug
 function getProjectBySlug(slug: string) {
   return projects.find(p => p.slug === slug);
 }
 
-// Обновление URL при открытии проекта
+
 function updateURLForProject(project: { slug: string }) {
   const newUrl = `${window.location.origin}/${project.slug}`;
   window.history.pushState({ projectSlug: project.slug }, '', newUrl);
 }
 
-// Обработка маршрута при загрузке страницы или нажатии назад/вперёд
+
 function handleRoute() {
   const path = window.location.pathname.slice(1); // убираем ведущий слэш
   if (path) {
     const project = getProjectBySlug(path);
     if (project) {
-      // Вызываем напрямую оригинальную openProject из modal.ts
-      // (без обёртки, чтобы не создавать цикл обновления URL)
       openProject(project.id);
     } else {
-      // Проект не найден — закрываем модалку
       closeModal();
     }
   } else {
-    // Корневой путь — закрываем модалку
     closeModal();
   }
 }

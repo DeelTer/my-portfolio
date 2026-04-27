@@ -14,6 +14,7 @@ import { nsClicker } from './ns-clicker';
 import { yookassaJavaSDK } from './yookassa-java-sdk';
 import { cryptomusJavaSDK } from './cryptomus-java-sdk.ts';
 import { lisskinsJava } from './lisskins-java-sdk.ts';
+import { tntOnlineEvents } from './tnt-online-event.ts';
 
 export const projects: Project[] = [
   milkshake,
@@ -30,5 +31,6 @@ export const projects: Project[] = [
   nsClicker,
   yookassaJavaSDK,
   cryptomusJavaSDK,
-  lisskinsJava
+  lisskinsJava,
+  tntOnlineEvents
 ];

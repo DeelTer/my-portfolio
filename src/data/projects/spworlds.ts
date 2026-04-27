@@ -44,6 +44,12 @@ export const spWorlds: Project = {
             <h2 class="text-2xl font-semibold">Результат и влияние</h2>
           </div>
           <p class="text-gray-300">Благодаря работе на СП у меня появились сильные связи в Minecraft-комьюнити. Многие до сих пор помнят меня как админа СП-мини и SpWorlds. Этот опыт стал фундаментом для последующих проектов.</p>
+          <div class="bg-[#2a2a2a] rounded-xl p-4 text-center mt-4">
+            <img src="./images/spworlds/screen.webp" 
+                alt="Скриншот сервера SpWorlds" 
+                class="max-w-full h-auto mx-auto rounded-lg">
+            <p class="text-gray-400 text-sm mt-2">Скриншот с сервера SpWorlds</p>
+          </div>
         </div>
       </div>
     ` 

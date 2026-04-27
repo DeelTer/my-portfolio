@@ -99,8 +99,15 @@ export const connectionsData = {
       image: "./images/avatars/gamedni.webp",
       description: "Фестиваль по видеоиграм"
     },
+    { 
+      id: "tnt_online", 
+      label: "TNT_online", 
+      category: "company",
+      description: "ТНТ покоряет мир стриминга, гейминга",
+      image: "./images/avatars/tnt_online.webp",
+    },
 
-    // === КЛАСТЕРЫ (обобщённые группы — создают объём) ===
+    // === КЛАСТЕРЫ (обобщённые группы) ===
     { 
       id: "designers", 
       label: "Дизайнеры & художники", 
@@ -202,6 +209,7 @@ export const connectionsData = {
     { source: "telegram_admins", target: "shop_admins" },
     { source: "5opka", target: "shop_admins" },
     { source: "5opka", target: "minecraft_admins" },
+    { source: "5opka", target: "tnt_online" },
     { source: "betboom_headsmm", target: "telegram_admins" }
   ]
 };
