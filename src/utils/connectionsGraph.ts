@@ -17,7 +17,7 @@ export function initConnectionsGraph(containerId: string, data: any) {
 
   function resizeCanvas() {
     width = container.clientWidth;
-    height = Math.max(480, Math.min(620, window.innerHeight * 0.55));
+    height = Math.max(520, Math.min(700, window.innerHeight * 0.6));
     canvas.width = width;
     canvas.height = height;
   }
@@ -38,8 +38,8 @@ export function initConnectionsGraph(containerId: string, data: any) {
   });
 
   const simulation = forceSimulation(nodes)
-    .force('link', forceLink(links).id((d: any) => d.id).distance(115))
-    .force('charge', forceManyBody().strength(-340))
+    .force('link', forceLink(links).id((d: any) => d.id).distance(128))
+    .force('charge', forceManyBody().strength(-360))
     .force('center', forceCenter(width / 2, height / 2))
     .force('collision', forceCollide().radius((d: any) => (d.category === 'me' ? 42 : 28)));
 
