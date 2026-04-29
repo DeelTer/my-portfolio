@@ -60,6 +60,61 @@
           </div>
         </div>
       </div>
+    `},{id:2,title:`BetBoom Esports`,subtitle:`Discord, Организация`,slug:`betboom-esports`,image:`./images/betboom/esports/cover.webp`,category:[`discord`,`company`,`code`],starred:!0,shortDesc:`Официальный Discord BetBoom Esports`,fullContent:`
+      <div class="space-y-6">
+        <h1 class="text-4xl font-bold">BetBoom Esports</h1>
+        <p class="text-xl text-gray-300">Дискорд-сервер для любителей киберспорта и азартных игр. Здесь часто проводятся ивенты, включая клозы, турниры и розыгрыши с ценными призами для участников.</p>
+        
+        <div class="bg-[#1f1f1f] rounded-2xl p-6">
+          <div class="flex items-center gap-2 mb-3">
+            <i class="ph-fill ph-crown text-[#FF337D] text-2xl"></i>
+            <h2 class="text-2xl font-semibold">Моя роль</h2>
+          </div>
+          <p class="text-gray-300">Технический администратор и комьюнити-менеджер. Проектирую активности, сезоны и генерирую идеи для ивентов.</p>
+        </div>
+        
+        <div class="bg-[#1f1f1f] rounded-2xl p-6">
+          <div class="flex items-center gap-2 mb-3">
+            <i class="ph-fill ph-lightbulb text-[#FF337D] text-2xl"></i>
+            <h2 class="text-2xl font-semibold">Идея проекта</h2>
+          </div>
+          <p class="text-gray-300">Формирование лояльности, организация пространства для совместных игр 5 на 5. Целевая аудитория — игроки Dota 2 / CS2 / MLBB.</p>
+        </div>
+        
+        <div class="bg-[#1f1f1f] rounded-2xl p-6">
+          <div class="flex items-center gap-2 mb-3">
+            <i class="ph-fill ph-calendar text-[#FF337D] text-2xl"></i>
+            <h2 class="text-2xl font-semibold">Сезонность</h2>
+          </div>
+          <p class="text-gray-300">Периодически анонсируем сезоны, в течение которых участники могут заработать ценные призы при помощи активности. Еженедельные турниры и задания.</p>
+        </div>
+        
+        <div class="bg-[#1f1f1f] rounded-2xl p-6">
+          <div class="flex items-center gap-2 mb-3">
+            <i class="ph-fill ph-trophy text-[#FF337D] text-2xl"></i>
+            <h2 class="text-2xl font-semibold">Еженедельные турниры</h2>
+          </div>
+          <p class="text-gray-300">Каждую неделю участники могут принять участие в турнирах с предварительной регистрацией. Наградой выступают Фрибеты. Обычно собирается до 10 команд.</p>
+          <p class="text-gray-300 mt-4">Помогал в организации крупного турнира: 16+ команд и более 100 человек на пике онлайна.</p>
+        </div>
+        
+        <div class="bg-[#1f1f1f] rounded-2xl p-6">
+          <div class="flex items-center gap-2 mb-3">
+            <i class="ph-fill ph-heart text-[#FF337D] text-2xl"></i>
+            <h2 class="text-2xl font-semibold">Временные активности</h2>
+          </div>
+          <p class="text-gray-300">На праздники организовывал временные ивенты. Например, на 14 февраля участники могли писать друг другу валентинки с персонажами Dota 2.</p>
+        </div>
+
+        <div class="bg-[#1f1f1f] rounded-2xl p-6">
+          <div class="flex flex-col md:flex-row gap-6 items-start">
+            <a href="https://discord.gg/betboom-esports" target="_blank" 
+              class="inline-flex items-center gap-2 bg-[#FF337D] px-6 py-3 rounded-xl font-medium hover:bg-[#e62e6e] transition">
+              <i class="ph-fill ph-discord-logo"></i> Войти на сервер
+            </a>
+          </div>
+        </div>
+      </div>
     `},{id:3,title:`GIF Discord`,subtitle:`Telegram`,slug:`gif-discord`,image:`./images/artpix/cover.webp`,category:[`telegram`,`code`],starred:!0,shortDesc:`Готовые анимированные оформления для профиля`,fullContent:`
       <div class="space-y-6">
         <h1 class="text-4xl font-bold">GIF Discord</h1>
@@ -902,12 +957,15 @@ dependencies {
       `:``}
       
       <div class="relative aspect-video bg-zinc-900 overflow-hidden">
+        <!-- Заглушка показывается всегда, но скрывается, когда картинка загружена -->
+        <div class="absolute inset-0 bg-zinc-800 animate-pulse"></div>
         <img src="${e.image}" 
              alt="${e.title}" 
-             class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+             class="relative w-full h-full object-cover transition-opacity duration-500 opacity-0"
              loading="lazy"
              decoding="async"
-             onerror="this.src='https://via.placeholder.com/1280x720/1a1a1a/ffffff?text=No+Image'">
+             onload="this.style.opacity='1'; this.previousElementSibling.style.display='none';"
+             onerror="this.src='https://via.placeholder.com/1280x720/1a1a1a/ffffff?text=No+Image'; this.style.opacity='1'; this.previousElementSibling.style.display='none';">
       </div>
       
       <div class="p-5">
@@ -916,7 +974,15 @@ dependencies {
         <p class="text-gray-400 text-sm line-clamp-2">${e.shortDesc}</p>
       </div>
     </div>
-  `).join(``),i(),setTimeout(()=>{t.querySelectorAll(`.opacity-0`).forEach(e=>{e.classList.add(`animate-fade-in-up`)})},10)}function c(e){return[...e].sort((e,t)=>e.starred&&!t.starred?-1:!e.starred&&t.starred?1:e.id-t.id)}function l(e){document.querySelectorAll(`.filter-btn`).forEach(t=>{let n=t.getAttribute(`data-filter`)===e;t.classList.toggle(`active`,n),t.setAttribute(`aria-pressed`,n?`true`:`false`)});let t;t=e===`all`?r:e===`starred`?r.filter(e=>e.starred===!0):r.filter(t=>t.category.includes(e)),s(t)}function u(e){document.querySelectorAll(`.tab-btn`).forEach((t,n)=>{t.classList.toggle(`active`,n===e),t.setAttribute(`aria-selected`,n===e?`true`:`false`)}),e===0?a():o()}function d(){document.querySelectorAll(`#modal .carousel`).forEach(e=>{if(e.hasAttribute(`data-initialized`))return;e.setAttribute(`data-initialized`,`true`);let t=e.querySelector(`.carousel-slides`),n=e.querySelector(`.carousel-prev`),r=e.querySelector(`.carousel-next`),i=e.querySelector(`.carousel-dots`);if(!t||!n||!r||!i)return;let a=0,o=t.children.length;if(o<=1){n.style.display=`none`,r.style.display=`none`;return}i.innerHTML=``;for(let e=0;e<o;e++){let t=document.createElement(`div`);t.classList.add(`dot`),e===0&&t.classList.add(`active`),t.addEventListener(`click`,()=>l(e)),i.appendChild(t)}let s=i.querySelectorAll(`.dot`);function c(){t.style.transform=`translateX(-${a*100}%)`,s.forEach((e,t)=>{e.classList.toggle(`active`,t===a)})}function l(e){a=(e+o)%o,c()}n.addEventListener(`click`,()=>l(a-1)),r.addEventListener(`click`,()=>l(a+1)),c()})}function f(e){let t=r.find(t=>t.id===e);if(!t)return;let n=document.getElementById(`modal`),i=document.getElementById(`modal-content`);i.innerHTML=t.fullContent,n.classList.remove(`hidden`),n.classList.add(`flex`),document.body.style.overflow=`hidden`,setTimeout(()=>{d()},100)}function p(){let e=document.getElementById(`modal`);if(e&&!e.classList.contains(`hidden`)){e.classList.add(`hidden`),e.classList.remove(`flex`),document.body.style.overflow=``;let t=window.location.pathname;t!==`/`&&t!==``&&window.history.pushState({},``,`/`)}}function m(){document.body.insertAdjacentHTML(`beforeend`,`
+  `).join(``),i(),setTimeout(()=>{t.querySelectorAll(`.opacity-0`).forEach(e=>{e.classList.add(`animate-fade-in-up`)})},10)}function c(e){return[...e].sort((e,t)=>e.starred&&!t.starred?-1:!e.starred&&t.starred?1:e.id-t.id)}function l(e){document.querySelectorAll(`.filter-btn`).forEach(t=>{let n=t.getAttribute(`data-filter`)===e;t.classList.toggle(`active`,n),t.setAttribute(`aria-pressed`,n?`true`:`false`)});let t;t=e===`all`?r:e===`starred`?r.filter(e=>e.starred===!0):r.filter(t=>t.category.includes(e)),s(t)}function u(e){document.querySelectorAll(`.tab-btn`).forEach((t,n)=>{t.classList.toggle(`active`,n===e),t.setAttribute(`aria-selected`,n===e?`true`:`false`)}),e===0?a():o()}function d(){document.querySelectorAll(`#modal .carousel`).forEach(e=>{if(e.hasAttribute(`data-initialized`))return;e.setAttribute(`data-initialized`,`true`);let t=e.querySelector(`.carousel-slides`),n=e.querySelector(`.carousel-prev`),r=e.querySelector(`.carousel-next`),i=e.querySelector(`.carousel-dots`);if(!t||!n||!r||!i)return;let a=0,o=t.children.length;if(o<=1){n.style.display=`none`,r.style.display=`none`;return}i.innerHTML=``;for(let e=0;e<o;e++){let t=document.createElement(`div`);t.classList.add(`dot`),e===0&&t.classList.add(`active`),t.addEventListener(`click`,()=>l(e)),i.appendChild(t)}let s=i.querySelectorAll(`.dot`);function c(){t.style.transform=`translateX(-${a*100}%)`,s.forEach((e,t)=>{e.classList.toggle(`active`,t===a)})}function l(e){a=(e+o)%o,c()}n.addEventListener(`click`,()=>l(a-1)),r.addEventListener(`click`,()=>l(a+1)),c()})}function f(e){let t=r.find(t=>t.id===e);if(!t)return;let n=document.getElementById(`modal`),i=document.getElementById(`modal-content`);i.innerHTML=(t.image?`
+      <div class="relative w-full rounded-2xl overflow-hidden mb-6 aspect-video bg-zinc-900">
+        <div class="absolute inset-0 bg-zinc-800 animate-pulse"></div>
+        <img src="${t.image}" 
+             alt="${t.title}" 
+             class="relative w-full h-full object-cover transition-opacity duration-500 opacity-0"
+             onload="this.style.opacity='1'; this.previousElementSibling.style.display='none';"
+             onerror="this.style.opacity='1'; this.previousElementSibling.style.display='none'; this.src='https://via.placeholder.com/1280x720/1a1a1a/ffffff?text=No+Image';">
+      </div>`:``)+t.fullContent,n.classList.remove(`hidden`),n.classList.add(`flex`),document.body.style.overflow=`hidden`,setTimeout(()=>{d()},100)}function p(){let e=document.getElementById(`modal`);if(e&&!e.classList.contains(`hidden`)){e.classList.add(`hidden`),e.classList.remove(`flex`),document.body.style.overflow=``;let t=window.location.pathname;t!==`/`&&t!==``&&window.history.pushState({},``,`/`)}}function m(){document.body.insertAdjacentHTML(`beforeend`,`
       <div id="audio-player" class="fixed bottom-4 right-4 z-50">
         <button id="audio-toggle"
                 class="bg-[#1a1a1a] hover:bg-[#FF337D] w-14 h-14 flex items-center justify-center rounded-2xl shadow-lg transition-all duration-300 hover:scale-105 border border-white/10 hover:border-[#FF337D]/50">
