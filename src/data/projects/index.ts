@@ -1,6 +1,5 @@
 import type { Project } from '../types';
 import { milkshake } from './milkshake';
-import { betboomEsports } from './betboom-esports';
 import { gifDiscord } from './gif-discord';
 import { badBunnies } from './bad-bunnies';
 import { dailyFurina } from './dailyfurina';
@@ -18,7 +17,6 @@ import { tntOnlineEvents } from './tnt-online-event.ts';
 
 export const projects: Project[] = [
   milkshake,
-  betboomEsports,
   gifDiscord,
   badBunnies,
   dailyFurina,
