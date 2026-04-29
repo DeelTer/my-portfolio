@@ -4,7 +4,6 @@ function initCarousel() {
   const carousels = document.querySelectorAll('#modal .carousel');
   
   carousels.forEach((carousel) => {
-    // Защита от повторной инициализации
     if (carousel.hasAttribute('data-initialized')) return;
     carousel.setAttribute('data-initialized', 'true');
 
@@ -24,7 +23,6 @@ function initCarousel() {
       return;
     }
 
-    // Создаём точки управления
     dotsContainer.innerHTML = '';
     for (let i = 0; i < totalSlides; i++) {
       const dot = document.createElement('div');
@@ -47,11 +45,9 @@ function initCarousel() {
       updateCarousel();
     }
 
-    // Назначаем обработчики на кнопки
     prevBtn.addEventListener('click', () => goToSlide(currentIndex - 1));
     nextBtn.addEventListener('click', () => goToSlide(currentIndex + 1));
 
-    // Первоначальное состояние
     updateCarousel();
   });
 }
@@ -63,12 +59,23 @@ export function openProject(id: number) {
   const modal = document.getElementById("modal") as HTMLDivElement;
   const content = document.getElementById("modal-content") as HTMLDivElement;
 
-  content.innerHTML = project.fullContent;
+  const coverHTML = project.image 
+    ? `
+      <div class="relative w-full rounded-2xl overflow-hidden mb-6 aspect-video bg-zinc-900">
+        <div class="absolute inset-0 bg-zinc-800 animate-pulse"></div>
+        <img src="${project.image}" 
+             alt="${project.title}" 
+             class="relative w-full h-full object-cover transition-opacity duration-500 opacity-0"
+             onload="this.style.opacity='1'; this.previousElementSibling.style.display='none';"
+             onerror="this.style.opacity='1'; this.previousElementSibling.style.display='none'; this.src='https://via.placeholder.com/1280x720/1a1a1a/ffffff?text=No+Image';">
+      </div>`
+    : '';
+
+  content.innerHTML = coverHTML + project.fullContent;
   modal.classList.remove("hidden");
   modal.classList.add("flex");
   document.body.style.overflow = "hidden";
 
-  // Небольшая задержка, чтобы DOM полностью отрисовался
   setTimeout(() => {
     initCarousel();
   }, 100);
@@ -83,7 +90,6 @@ export function closeModal() {
     modal.classList.remove("flex");
     document.body.style.overflow = "";
     
-    // Очищаем URL, если он содержит slug проекта
     const currentPath = window.location.pathname;
     if (currentPath !== '/' && currentPath !== '') {
       window.history.pushState({}, '', '/');

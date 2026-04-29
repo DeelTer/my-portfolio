@@ -82,12 +82,15 @@ export function renderProjects(filteredProjects: Project[]) {
       ` : ''}
       
       <div class="relative aspect-video bg-zinc-900 overflow-hidden">
+        <!-- Заглушка показывается всегда, но скрывается, когда картинка загружена -->
+        <div class="absolute inset-0 bg-zinc-800 animate-pulse"></div>
         <img src="${project.image}" 
              alt="${project.title}" 
-             class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+             class="relative w-full h-full object-cover transition-opacity duration-500 opacity-0"
              loading="lazy"
              decoding="async"
-             onerror="this.src='https://via.placeholder.com/1280x720/1a1a1a/ffffff?text=No+Image'">
+             onload="this.style.opacity='1'; this.previousElementSibling.style.display='none';"
+             onerror="this.src='https://via.placeholder.com/1280x720/1a1a1a/ffffff?text=No+Image'; this.style.opacity='1'; this.previousElementSibling.style.display='none';">
       </div>
       
       <div class="p-5">
