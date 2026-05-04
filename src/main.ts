@@ -12,15 +12,13 @@ function getProjectBySlug(slug: string) {
   return projects.find(p => p.slug === slug);
 }
 
-
 function updateURLForProject(project: { slug: string }) {
   const newUrl = `${window.location.origin}/${project.slug}`;
   window.history.pushState({ projectSlug: project.slug }, '', newUrl);
 }
 
-
 function handleRoute() {
-  const path = window.location.pathname.slice(1); // убираем ведущий слэш
+  const path = window.location.pathname.slice(1);
   if (path) {
     const project = getProjectBySlug(path);
     if (project) {
@@ -33,6 +31,19 @@ function handleRoute() {
   }
 }
 
+function initScrollReveal() {
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        (entry.target as HTMLElement).classList.add('visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.08 });
+
+  document.querySelectorAll('.section-reveal').forEach(el => observer.observe(el));
+}
+
 // === ИНИЦИАЛИЗАЦИЯ ===
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -41,10 +52,10 @@ document.addEventListener('DOMContentLoaded', () => {
   filterProjects('all');
   initAudioPlayer();
   initConnectionsGraph('connections-graph', connectionsData);
+  initScrollReveal();
 
-  // Роутинг
-  handleRoute();                      // обработать текущий URL при загрузке
-  window.addEventListener('popstate', handleRoute); // навигация назад/вперёд
+  handleRoute();
+  window.addEventListener('popstate', handleRoute);
 
   document.addEventListener('keydown', (e) => {
     if (e.key === "Escape") closeModal();
@@ -53,7 +64,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
 // === ГЛОБАЛЬНЫЕ ФУНКЦИИ ДЛЯ HTML ===
 
-// Обёртка для openProject, которая обновляет URL при клике на карточку
 (window as any).openProject = (id: number) => {
   const project = projects.find(p => p.id === id);
   if (project) {
@@ -84,7 +94,6 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 };
 
-// Закрытие меню при клике вне его
 document.addEventListener('click', (e) => {
   const menu = document.getElementById('contact-menu');
   const btn = document.getElementById('contact-btn');

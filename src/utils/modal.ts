@@ -2,7 +2,7 @@ import { projects } from '../data/projects';
 
 function initCarousel() {
   const carousels = document.querySelectorAll('#modal .carousel');
-  
+
   carousels.forEach((carousel) => {
     if (carousel.hasAttribute('data-initialized')) return;
     carousel.setAttribute('data-initialized', 'true');
@@ -59,12 +59,12 @@ export function openProject(id: number) {
   const modal = document.getElementById("modal") as HTMLDivElement;
   const content = document.getElementById("modal-content") as HTMLDivElement;
 
-  const coverHTML = project.image 
+  const coverHTML = project.image
     ? `
       <div class="relative w-full rounded-2xl overflow-hidden mb-6 aspect-video bg-zinc-900">
-        <div class="absolute inset-0 bg-zinc-800 animate-pulse"></div>
-        <img src="${project.image}" 
-             alt="${project.title}" 
+        <div class="absolute inset-0 bg-zinc-800" data-skeleton></div>
+        <img src="${project.image}"
+             alt="${project.title}"
              class="relative w-full h-full object-cover transition-opacity duration-500 opacity-0"
              onload="this.style.opacity='1'; this.previousElementSibling.style.display='none';"
              onerror="this.style.opacity='1'; this.previousElementSibling.style.display='none'; this.src='https://via.placeholder.com/1280x720/1a1a1a/ffffff?text=No+Image';">
@@ -72,9 +72,11 @@ export function openProject(id: number) {
     : '';
 
   content.innerHTML = coverHTML + project.fullContent;
-  modal.classList.remove("hidden");
-  modal.classList.add("flex");
-  document.body.style.overflow = "hidden";
+
+  // Снимаем класс закрытия, показываем модал
+  modal.classList.remove('hidden', 'modal-closing');
+  modal.classList.add('flex');
+  document.body.style.overflow = 'hidden';
 
   setTimeout(() => {
     initCarousel();
@@ -83,16 +85,18 @@ export function openProject(id: number) {
 
 export function closeModal() {
   const modal = document.getElementById("modal") as HTMLDivElement;
-  const isOpen = modal && !modal.classList.contains("hidden");
-  
-  if (isOpen) {
-    modal.classList.add("hidden");
-    modal.classList.remove("flex");
-    document.body.style.overflow = "";
-    
+  if (!modal || modal.classList.contains('hidden')) return;
+
+  modal.classList.add('modal-closing');
+
+  setTimeout(() => {
+    modal.classList.add('hidden');
+    modal.classList.remove('flex', 'modal-closing');
+    document.body.style.overflow = '';
+
     const currentPath = window.location.pathname;
     if (currentPath !== '/' && currentPath !== '') {
       window.history.pushState({}, '', '/');
     }
-  }
+  }, 220);
 }
