@@ -207,20 +207,12 @@ export function initConnectionsGraph(containerId: string, data: any) {
     });
 
     ctx.restore();
-    description.textContent = hoveredNode ? `${hoveredNode.label}${hoveredNode.description ? ' — ' + hoveredNode.description : ''}` : 'Наведите на узел, чтобы узнать больше.';
+    description.textContent = hoveredNode ? `${hoveredNode.label}${hoveredNode.description ? ' — ' + hoveredNode.description : ''}` : 'Наведите на узел или коснитесь его, чтобы узнать больше.';
   }
 
   const description = document.createElement('p');
   description.className = 'graph-description';
   container.appendChild(description);
-  const picker = document.createElement('select');
-  picker.setAttribute('aria-label', 'Выбрать человека или сообщество');
-  picker.className = 'graph-picker';
-  picker.add(new Option('Люди и сообщества…', ''));
-  nodes.forEach(node => picker.add(new Option(node.label, node.id)));
-  picker.addEventListener('change', () => { hoveredNode = nodes.find(node => node.id === picker.value); draw(); });
-  container.appendChild(picker);
-
   simulation.on('tick', draw);
 
   // Drag
@@ -237,6 +229,8 @@ export function initConnectionsGraph(containerId: string, data: any) {
     });
 
     if (dragged) {
+      hoveredNode = dragged;
+      draw();
       e.preventDefault(); // блокируем скролл при перетаскивании
       canvas.setPointerCapture(e.pointerId);
       if (!reducedMotion.matches) simulation.alphaTarget(0.15).restart();

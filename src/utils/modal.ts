@@ -1,3 +1,4 @@
+import { initProjectExtras } from './projectExtras';
 import { projects } from '../data/projects';
 let previousFocus: HTMLElement | null = null;
 
@@ -15,6 +16,8 @@ function initCarousel() {
 
     if (!slidesContainer || !prevBtn || !nextBtn || !dotsContainer) return;
 
+    prevBtn.textContent = '‹';
+    nextBtn.textContent = '›';
     let currentIndex = 0;
     const totalSlides = slidesContainer.children.length;
 
@@ -82,6 +85,7 @@ export function openProject(id: number) {
   document.body.style.overflow = 'hidden';
 
   initCarousel();
+  initProjectExtras(content);
   modal.querySelector('.modal-panel')!.scrollTop = 0;
   modal.querySelector<HTMLButtonElement>('.modal-close')?.focus();
   Array.from(document.body.children).forEach(el => { if (el !== modal && el instanceof HTMLElement && el.tagName !== 'SCRIPT') el.inert = true; });

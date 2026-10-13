@@ -38,7 +38,7 @@ document.addEventListener('keydown', e => {
   if (modal.classList.contains('hidden')) return;
   if (e.key === 'Escape') closeModal();
   if (e.key === 'Tab') {
-    const items = Array.from(modal.querySelectorAll<HTMLElement>('a[href],button,[tabindex="0"]')).filter(el => el.getClientRects().length);
+    const items = Array.from(modal.querySelectorAll<HTMLElement>('a[href],button,iframe,[tabindex="0"]')).filter(el => el.getClientRects().length);
     const first = items[0], last = items[items.length - 1];
     if (e.shiftKey && document.activeElement === first) { e.preventDefault(); last?.focus(); }
     else if (!e.shiftKey && document.activeElement === last) { e.preventDefault(); first?.focus(); }

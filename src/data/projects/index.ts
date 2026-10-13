@@ -1,3 +1,4 @@
+import { vrCamera } from './vrcamera';
 import type { Project } from '../types';
 import { milkshake } from './milkshake';
 import { betboomEsports } from './betboom-esports';
@@ -17,6 +18,7 @@ import { lisskinsJava } from './lisskins-java-sdk.ts';
 import { tntOnlineEvents } from './tnt-online-event.ts';
 
 export const projects: Project[] = [
+  vrCamera,
   milkshake,
   betboomEsports,
   gifDiscord,

@@ -21,3 +21,9 @@ The monochrome layout uses system fonts, local icons, a 640 x 640 WebP portrait 
 ## Validation (2026-10-13)
 
 Production build and headless Edge checks passed: all 16 project dialogs and images, category filtering, tools tab, hash-link refresh, Escape, focus trapping and reduced motion. No horizontal overflow at widths 360, 390, 768 and 1024 px. Desktop and mobile screenshots visually reviewed. These are local browser checks, not measured field performance or a guarantee of identical performance on every device.
+
+## Project details
+
+YooKassa describes SDK 2.1.0; installation examples stay pinned to that version. Opening its detail view makes one GitHub Releases API request per page session with a four-second timeout. A valid stable release updates the badge/link using textContent; failures keep the static 2.1.0 link. No token or backend is required on GitHub Pages.
+
+VRCamera uses the mod's local icon and a click-to-load YouTube embed. YouTube receives no iframe request until the visitor presses play; a direct video link remains available. Closing the dialog removes the player.
