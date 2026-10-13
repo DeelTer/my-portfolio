@@ -14,27 +14,27 @@ export const lisskinsJava: Project = {
       <h1 class="text-4xl font-bold">Lisskins Java Client</h1>
       <p class="text-xl text-gray-300">
         Типобезопасный клиент для автоматизации работы с маркетплейсом LIS-SKINS.
-        Написан по <a href="https://lis-skins.stoplight.io/docs/lis-skins/dzq78x3edc19r-api-overview" target="_blank" class="text-[#FF337D] hover:underline">официальной документации API</a>, но не является официальным SDK.
+        Написан по <a href="https://lis-skins.stoplight.io/docs/lis-skins/dzq78x3edc19r-api-overview" target="_blank" class="text-[#e5e5e5] hover:underline">официальной документации API</a>, но не является официальным SDK.
       </p>
 
       <div class="bg-[#1f1f1f] rounded-2xl p-6">
         <div class="flex items-center gap-2 mb-3">
-          <i class="ph-fill ph-star text-[#FF337D] text-2xl"></i>
+          <i class="ph-fill ph-star text-[#e5e5e5] text-2xl"></i>
           <h2 class="text-2xl font-semibold">Возможности</h2>
         </div>
         <ul class="space-y-2 text-gray-300">
-          <li class="flex items-start gap-2"><i class="ph-fill ph-check-circle text-[#FF337D] mt-1 shrink-0"></i> Полное покрытие методов API v1 (баланс, покупка, поиск, вывод, возврат)</li>
-          <li class="flex items-start gap-2"><i class="ph-fill ph-check-circle text-[#FF337D] mt-1 shrink-0"></i> Синхронные и асинхронные методы</li>
-          <li class="flex items-start gap-2"><i class="ph-fill ph-check-circle text-[#FF337D] mt-1 shrink-0"></i> Автоматический ретрай при 429 Too Many Requests с учётом заголовка retry-after</li>
-          <li class="flex items-start gap-2"><i class="ph-fill ph-check-circle text-[#FF337D] mt-1 shrink-0"></i> Опциональный WebSocket-клиент для событий в реальном времени</li>
-          <li class="flex items-start gap-2"><i class="ph-fill ph-check-circle text-[#FF337D] mt-1 shrink-0"></i> Чистые DTO с Jackson</code></li>
-          <li class="flex items-start gap-2"><i class="ph-fill ph-check-circle text-[#FF337D] mt-1 shrink-0"></i> Строковые константы для статусов, игр, ошибок и событий WebSocket</li>
+          <li class="flex items-start gap-2"><i class="ph-fill ph-check-circle text-[#e5e5e5] mt-1 shrink-0"></i> Полное покрытие методов API v1 (баланс, покупка, поиск, вывод, возврат)</li>
+          <li class="flex items-start gap-2"><i class="ph-fill ph-check-circle text-[#e5e5e5] mt-1 shrink-0"></i> Синхронные и асинхронные методы</li>
+          <li class="flex items-start gap-2"><i class="ph-fill ph-check-circle text-[#e5e5e5] mt-1 shrink-0"></i> Автоматический ретрай при 429 Too Many Requests с учётом заголовка retry-after</li>
+          <li class="flex items-start gap-2"><i class="ph-fill ph-check-circle text-[#e5e5e5] mt-1 shrink-0"></i> Опциональный WebSocket-клиент для событий в реальном времени</li>
+          <li class="flex items-start gap-2"><i class="ph-fill ph-check-circle text-[#e5e5e5] mt-1 shrink-0"></i> Чистые DTO с Jackson</code></li>
+          <li class="flex items-start gap-2"><i class="ph-fill ph-check-circle text-[#e5e5e5] mt-1 shrink-0"></i> Строковые константы для статусов, игр, ошибок и событий WebSocket</li>
         </ul>
       </div>
 
       <div class="bg-[#1f1f1f] rounded-2xl p-6">
         <div class="flex items-center gap-2 mb-3">
-          <i class="ph-fill ph-code text-[#FF337D] text-2xl"></i>
+          <i class="ph-fill ph-code text-[#e5e5e5] text-2xl"></i>
           <h2 class="text-2xl font-semibold">Быстрый старт</h2>
         </div>
         <p class="text-gray-300 mb-2"><strong>Создание клиента</strong></p>
@@ -70,7 +70,7 @@ client.getWebSocketManager().connect();</code></pre>
 
       <div class="bg-[#1f1f1f] rounded-2xl p-6">
         <div class="flex items-center gap-2 mb-3">
-          <i class="ph-fill ph-download text-[#FF337D] text-2xl"></i>
+          <i class="ph-fill ph-download text-[#e5e5e5] text-2xl"></i>
           <h2 class="text-2xl font-semibold">Установка</h2>
         </div>
         <p class="text-gray-300 mb-2"><strong>Maven</strong></p>
@@ -99,7 +99,7 @@ dependencies {
 
       <div class="bg-[#1f1f1f] rounded-2xl p-6">
         <a href="https://github.com/DeelTer/lisskins-java" target="_blank" 
-          class="inline-flex items-center gap-2 bg-[#FF337D] px-6 py-3 rounded-xl font-medium hover:bg-[#e62e6e] transition">
+          class="inline-flex items-center gap-2 bg-[#e5e5e5] px-6 py-3 rounded-xl font-medium hover:bg-[#e62e6e] transition">
           <i class="ph-fill ph-github-logo"></i> Перейти на GitHub
         </a>
       </div>

@@ -75,7 +75,7 @@ export function initCanvasBubbles() {
         b.alphaSpeed = Math.abs(b.alphaSpeed);
       }
 
-      // Базовый розовый: hsl(340, 100%, 60%) ≈ #FF337D
+      // Базовый розовый: hsl(340, 100%, 60%) ≈ #e5e5e5
       const h = 340 + b.hue;
       const gradient = ctx.createRadialGradient(b.x, b.y, b.radius * 0.15, b.x, b.y, b.radius);
       gradient.addColorStop(0, `hsla(${h}, 100%, 60%, ${b.alpha * 0.65})`);

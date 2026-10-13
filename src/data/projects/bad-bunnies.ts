@@ -16,7 +16,7 @@ export const badBunnies: Project = {
         
         <div class="bg-[#1f1f1f] rounded-2xl p-6">
           <div class="flex items-center gap-2 mb-3">
-            <i class="ph-fill ph-lightbulb text-[#FF337D] text-2xl"></i>
+            <i class="ph-fill ph-lightbulb text-[#e5e5e5] text-2xl"></i>
             <h2 class="text-2xl font-semibold">Идея проекта</h2>
           </div>
           <p class="text-gray-300">Мы взяли лучшее от популярных серверов, чтобы предложить альтернативу любителям полу-токсичных проектов. Целевая аудитория — игроки League of Legends / Valorant / Dota 2 / CS2.</p>
@@ -24,20 +24,20 @@ export const badBunnies: Project = {
 
         <div class="bg-[#1f1f1f] rounded-2xl p-6">
           <div class="flex items-center gap-2 mb-3">
-            <i class="ph-fill ph-crown text-[#FF337D] text-2xl"></i>
+            <i class="ph-fill ph-crown text-[#e5e5e5] text-2xl"></i>
             <h2 class="text-2xl font-semibold">Моя роль</h2>
           </div>
           <ul class="space-y-2 text-gray-300">
-            <li class="flex gap-2"><span class="text-[#FF337D]">✓</span> Администрирование сообщества</li>
-            <li class="flex gap-2"><span class="text-[#FF337D]">✓</span> Разработка бота и техническая поддержка</li>
-            <li class="flex gap-2"><span class="text-[#FF337D]">✓</span> Поиск партнёров</li>
-            <li class="flex gap-2"><span class="text-[#FF337D]">✓</span> Дизайн и брендинг</li>
+            <li class="flex gap-2"><span class="text-[#e5e5e5]">✓</span> Администрирование сообщества</li>
+            <li class="flex gap-2"><span class="text-[#e5e5e5]">✓</span> Разработка бота и техническая поддержка</li>
+            <li class="flex gap-2"><span class="text-[#e5e5e5]">✓</span> Поиск партнёров</li>
+            <li class="flex gap-2"><span class="text-[#e5e5e5]">✓</span> Дизайн и брендинг</li>
           </ul>
         </div>
         
         <div class="bg-[#1f1f1f] rounded-2xl p-6">
           <div class="flex items-center gap-2 mb-3">
-            <i class="ph-fill ph-cat text-[#FF337D] text-2xl"></i>
+            <i class="ph-fill ph-cat text-[#e5e5e5] text-2xl"></i>
             <h2 class="text-2xl font-semibold">Разработка маскота</h2>
           </div>
           <p class="text-gray-300 mb-4">В качестве главного персонажа был выбран кролик с выбитым глазом. Оформлен в чуть менее дружелюбном, местами токсичном стиле.</p>
@@ -51,7 +51,7 @@ export const badBunnies: Project = {
         
         <div class="bg-[#1f1f1f] rounded-2xl p-6">
           <div class="flex items-center gap-2 mb-3">
-            <i class="ph-fill ph-robot text-[#FF337D] text-2xl"></i>
+            <i class="ph-fill ph-robot text-[#e5e5e5] text-2xl"></i>
             <h2 class="text-2xl font-semibold">Разработка бота</h2>
           </div>
           <p class="text-gray-300 mb-4">Мы взяли лучшее от Milkshake, чтобы учесть все ошибки разработки и вдохнуть свежести в старый код. Система стала гибкой, послушной и удобной.</p>
@@ -65,7 +65,7 @@ export const badBunnies: Project = {
         
         <div class="bg-[#1f1f1f] rounded-2xl p-6">
           <a href="https://discord.gg/badbunnies" target="_blank" 
-            class="inline-flex items-center gap-2 bg-[#FF337D] px-6 py-3 rounded-xl font-medium hover:bg-[#e62e6e] transition">
+            class="inline-flex items-center gap-2 bg-[#e5e5e5] px-6 py-3 rounded-xl font-medium hover:bg-[#e62e6e] transition">
             <i class="ph-fill ph-discord-logo"></i> Войти на сервер
           </a>
         </div>

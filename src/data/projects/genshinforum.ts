@@ -16,7 +16,7 @@ export const genshinForum: Project = {
         
         <div class="bg-[#1f1f1f] rounded-2xl p-6">
           <div class="flex items-center gap-2 mb-3">
-            <i class="ph-fill ph-newspaper text-[#FF337D] text-2xl"></i>
+            <i class="ph-fill ph-newspaper text-[#e5e5e5] text-2xl"></i>
             <h2 class="text-2xl font-semibold">Идея проекта</h2>
           </div>
           <p class="text-gray-300">Изначально это должен был быть канал, где люди делятся своим мнением касательно новых обновлений, но пока идея отложена в ящик. Сейчас — агрегатор контента из других соцсетей.</p>
@@ -24,7 +24,7 @@ export const genshinForum: Project = {
         
         <div class="bg-[#1f1f1f] rounded-2xl p-6">
           <a href="https://t.me/genshinforum" target="_blank" 
-             class="inline-flex items-center gap-2 bg-[#FF337D] px-6 py-3 rounded-xl font-medium hover:bg-[#e62e6e] transition">
+             class="inline-flex items-center gap-2 bg-[#e5e5e5] px-6 py-3 rounded-xl font-medium hover:bg-[#e62e6e] transition">
             <i class="ph-fill ph-telegram-logo"></i> Перейти в канал
           </a>
         </div>

@@ -1,0 +1,125 @@
+@font-face { font-family: Phosphor-Fill; src: url('./assets/icons.woff2') format('woff2'); font-display: swap; }
+.ph-fill { font-family: Phosphor-Fill !important; font-style: normal; font-weight: normal; line-height: 1; display: inline-block; }
+.ph-fill.ph-brain:before {
+  content: "\e74e";
+}
+.ph-fill.ph-calendar:before {
+  content: "\e108";
+}
+.ph-fill.ph-camera:before {
+  content: "\e10e";
+}
+.ph-fill.ph-caret-left:before {
+  content: "\e138";
+}
+.ph-fill.ph-caret-right:before {
+  content: "\e13a";
+}
+.ph-fill.ph-cat:before {
+  content: "\e748";
+}
+.ph-fill.ph-chart-line:before {
+  content: "\e154";
+}
+.ph-fill.ph-chats:before {
+  content: "\e17c";
+}
+.ph-fill.ph-check-circle:before {
+  content: "\e184";
+}
+.ph-fill.ph-code:before {
+  content: "\e1bc";
+}
+.ph-fill.ph-coins:before {
+  content: "\e78e";
+}
+.ph-fill.ph-crown:before {
+  content: "\e614";
+}
+.ph-fill.ph-cube:before {
+  content: "\e1da";
+}
+.ph-fill.ph-discord-logo:before {
+  content: "\e61a";
+}
+.ph-fill.ph-download:before {
+  content: "\e20a";
+}
+.ph-fill.ph-envelope:before {
+  content: "\e214";
+}
+.ph-fill.ph-figma-logo:before {
+  content: "\e22e";
+}
+.ph-fill.ph-film-strip:before {
+  content: "\e792";
+}
+.ph-fill.ph-github-logo:before {
+  content: "\e576";
+}
+.ph-fill.ph-heart:before {
+  content: "\e2a8";
+}
+.ph-fill.ph-image:before {
+  content: "\e2ca";
+}
+.ph-fill.ph-image-square:before {
+  content: "\e2cc";
+}
+.ph-fill.ph-lightbulb:before {
+  content: "\e2dc";
+}
+.ph-fill.ph-megaphone:before {
+  content: "\e324";
+}
+.ph-fill.ph-monitor:before {
+  content: "\e32e";
+}
+.ph-fill.ph-newspaper:before {
+  content: "\e344";
+}
+.ph-fill.ph-palette:before {
+  content: "\e6c8";
+}
+.ph-fill.ph-paperclip:before {
+  content: "\e39a";
+}
+.ph-fill.ph-pencil:before {
+  content: "\e3ae";
+}
+.ph-fill.ph-robot:before {
+  content: "\e762";
+}
+.ph-fill.ph-rocket:before {
+  content: "\e3fc";
+}
+.ph-fill.ph-scissors:before {
+  content: "\eae0";
+}
+.ph-fill.ph-shopping-cart:before {
+  content: "\e41e";
+}
+.ph-fill.ph-star:before {
+  content: "\e46a";
+}
+.ph-fill.ph-table:before {
+  content: "\e476";
+}
+.ph-fill.ph-telegram-logo:before {
+  content: "\e5bc";
+}
+.ph-fill.ph-tiktok-logo:before {
+  content: "\eaf2";
+}
+.ph-fill.ph-trophy:before {
+  content: "\e67e";
+}
+.ph-fill.ph-users:before {
+  content: "\e4d6";
+}
+.ph-fill.ph-video:before {
+  content: "\e740";
+}
+.ph-fill.ph-waveform:before {
+  content: "\e802";
+}

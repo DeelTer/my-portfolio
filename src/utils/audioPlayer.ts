@@ -2,7 +2,7 @@ export function initAudioPlayer() {
   const playerHTML = `
       <div id="audio-player" class="fixed bottom-4 right-4 z-50">
         <button id="audio-toggle"
-                class="bg-[#1a1a1a] hover:bg-[#FF337D] w-14 h-14 flex items-center justify-center rounded-2xl shadow-lg transition-all duration-300 hover:scale-105 border border-white/10 hover:border-[#FF337D]/50">
+                class="bg-[#1a1a1a] hover:bg-[#e5e5e5] w-14 h-14 flex items-center justify-center rounded-2xl shadow-lg transition-all duration-300 hover:scale-105 border border-white/10 hover:border-[#e5e5e5]/50">
           <i id="audio-icon" class="ph-fill ph-music-note text-2xl"></i>
         </button>
       </div>

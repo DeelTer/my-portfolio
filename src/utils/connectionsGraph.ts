@@ -45,7 +45,7 @@ export function initConnectionsGraph(containerId: string, data: any) {
 
   // Обновлённый colorMap с недостающими категориями
   const colorMap: Record<string, string> = {
-    me: '#FF337D',
+    me: '#e5e5e5',
     agency: '#a78bfa',
     company: '#60a5fa',
     betboom: '#f43f5e',
@@ -114,7 +114,7 @@ export function initConnectionsGraph(containerId: string, data: any) {
       const y = node.y;
 
       // Тень
-      ctx.shadowColor = isMe ? '#FF337D' : '#64748b';
+      ctx.shadowColor = isMe ? '#e5e5e5' : '#64748b';
       ctx.shadowBlur = isMe ? 30 : 14;
 
       const hasImage = node.image && images.has(node.id);

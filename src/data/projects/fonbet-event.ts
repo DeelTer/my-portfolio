@@ -16,21 +16,21 @@ export const fonbetEvent: Project = {
         
         <div class="bg-[#1f1f1f] rounded-2xl p-6">
           <div class="flex items-center gap-2 mb-3">
-            <i class="ph-fill ph-chats text-[#FF337D] text-2xl"></i>
+            <i class="ph-fill ph-chats text-[#e5e5e5] text-2xl"></i>
             <h2 class="text-2xl font-semibold">Моя роль</h2>
           </div>
           <ul class="space-y-2 text-gray-300">
-            <li class="flex gap-2"><span class="text-[#FF337D]">✓</span> Коммуникация с заказчиком и их клиентом</li>
-            <li class="flex gap-2"><span class="text-[#FF337D]">✓</span> Участие во всех созвонах, сбор и уточнение требований</li>
-            <li class="flex gap-2"><span class="text-[#FF337D]">✓</span> Формирование технического задания для команды разработки</li>
-            <li class="flex gap-2"><span class="text-[#FF337D]">✓</span> Ручное тестирование приложений (купол + планшеты), поиск и документирование багов</li>
-            <li class="flex gap-2"><span class="text-[#FF337D]">✓</span> Презентация готового решения клиентам и заказчику</li>
+            <li class="flex gap-2"><span class="text-[#e5e5e5]">✓</span> Коммуникация с заказчиком и их клиентом</li>
+            <li class="flex gap-2"><span class="text-[#e5e5e5]">✓</span> Участие во всех созвонах, сбор и уточнение требований</li>
+            <li class="flex gap-2"><span class="text-[#e5e5e5]">✓</span> Формирование технического задания для команды разработки</li>
+            <li class="flex gap-2"><span class="text-[#e5e5e5]">✓</span> Ручное тестирование приложений (купол + планшеты), поиск и документирование багов</li>
+            <li class="flex gap-2"><span class="text-[#e5e5e5]">✓</span> Презентация готового решения клиентам и заказчику</li>
           </ul>
         </div>
         
         <div class="bg-[#1f1f1f] rounded-2xl p-6">
           <div class="flex items-center gap-2 mb-3">
-            <i class="ph-fill ph-cube text-[#FF337D] text-2xl"></i>
+            <i class="ph-fill ph-cube text-[#e5e5e5] text-2xl"></i>
             <h2 class="text-2xl font-semibold">Техническая составляющая</h2>
           </div>
           <p class="text-gray-300 mb-4">Проект включал две точки взаимодействия с пользователем:</p>
@@ -43,7 +43,7 @@ export const fonbetEvent: Project = {
         
         <div class="bg-[#1f1f1f] rounded-2xl p-6">
           <div class="flex items-center gap-2 mb-3">
-            <i class="ph-fill ph-check-circle text-[#FF337D] text-2xl"></i>
+            <i class="ph-fill ph-check-circle text-[#e5e5e5] text-2xl"></i>
             <h2 class="text-2xl font-semibold">Результат</h2>
           </div>
           <p class="text-gray-300">Мероприятие успешно проведено, клиент и заказчик остались довольны. Благодаря чёткой передаче требований и тестированию удалось избежать критических багов на ивенте и уложиться в сроки.</p>
@@ -51,7 +51,7 @@ export const fonbetEvent: Project = {
         
         <div class="bg-[#1f1f1f] rounded-2xl p-6">
           <div class="flex items-center gap-2 mb-3">
-            <i class="ph-fill ph-camera text-[#FF337D] text-2xl"></i>
+            <i class="ph-fill ph-camera text-[#e5e5e5] text-2xl"></i>
             <h2 class="text-2xl font-semibold">Фото с ивента</h2>
           </div>
           <div class="carousel" data-carousel>

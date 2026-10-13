@@ -1,107 +1,46 @@
-import { initCanvasBubbles } from './utils/bubbles';
 import { renderSkills, filterProjects, switchTab } from './utils/render';
 import { openProject, closeModal } from './utils/modal';
-import { initAudioPlayer } from './utils/audioPlayer';
 import { projects } from './data/projects';
 import { connectionsData } from './data/connections';
-import { initConnectionsGraph } from './utils/connectionsGraph';
+import './icons.css';
 import './style.css';
 
-
-function getProjectBySlug(slug: string) {
-  return projects.find(p => p.slug === slug);
-}
-
-function updateURLForProject(project: { slug: string }) {
-  const newUrl = `${window.location.origin}/${project.slug}`;
-  window.history.pushState({ projectSlug: project.slug }, '', newUrl);
-}
-
 function handleRoute() {
-  const path = window.location.pathname.slice(1);
-  if (path) {
-    const project = getProjectBySlug(path);
-    if (project) {
-      openProject(project.id);
-    } else {
-      closeModal();
-    }
-  } else {
-    closeModal();
+  const slug = location.hash.startsWith('#project/') ? location.hash.slice(9) : '';
+  const project = projects.find(p => p.slug === slug);
+  if (project) openProject(project.id); else closeModal(false);
+}
+Object.assign(window, {
+  openProject: (id: number) => {
+    const project = projects.find(p => p.id === id);
+    if (project) location.hash = `project/${project.slug}`;
+  }, closeModal, filterProjects, switchTab
+});
+renderSkills();
+filterProjects('all');
+const graph = document.getElementById('connections-graph');
+if (graph) graph.innerHTML = `<div class="connections-list">${connectionsData.nodes.filter(n => n.id !== 'roman').map(n => `<div><span>${n.label}</span>${n.description ? `<p>${n.description}</p>` : ''}</div>`).join('')}</div>`;
+handleRoute();
+window.addEventListener('hashchange', handleRoute);
+document.addEventListener('keydown', e => {
+  const modal = document.getElementById('modal')!;
+  if (modal.classList.contains('hidden')) return;
+  if (e.key === 'Escape') closeModal();
+  if (e.key === 'Tab') {
+    const items = Array.from(modal.querySelectorAll<HTMLElement>('a[href],button,[tabindex="0"]')).filter(el => el.getClientRects().length);
+    const first = items[0], last = items[items.length - 1];
+    if (e.shiftKey && document.activeElement === first) { e.preventDefault(); last?.focus(); }
+    else if (!e.shiftKey && document.activeElement === last) { e.preventDefault(); first?.focus(); }
   }
-}
-
-function initScrollReveal() {
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        (entry.target as HTMLElement).classList.add('visible');
-        observer.unobserve(entry.target);
-      }
-    });
-  }, { threshold: 0.08 });
-
-  document.querySelectorAll('.section-reveal').forEach(el => observer.observe(el));
-}
-
-// === ИНИЦИАЛИЗАЦИЯ ===
-
-document.addEventListener('DOMContentLoaded', () => {
-  initCanvasBubbles();
-  renderSkills();
-  filterProjects('all');
-  initAudioPlayer();
-  initConnectionsGraph('connections-graph', connectionsData);
-  initScrollReveal();
-
-  handleRoute();
-  window.addEventListener('popstate', handleRoute);
-
-  document.addEventListener('keydown', (e) => {
-    if (e.key === "Escape") closeModal();
-  });
 });
 
-// === ГЛОБАЛЬНЫЕ ФУНКЦИИ ДЛЯ HTML ===
 
-(window as any).openProject = (id: number) => {
-  const project = projects.find(p => p.id === id);
-  if (project) {
-    openProject(id);
-    updateURLForProject(project);
-  }
-};
-
-(window as any).closeModal = closeModal;
-(window as any).filterProjects = filterProjects;
-(window as any).switchTab = switchTab;
-
-// === МЕНЮ КОНТАКТОВ ===
-
-(window as any).toggleContactMenu = (e: Event) => {
-  e.stopImmediatePropagation();
-  const menu = document.getElementById('contact-menu') as HTMLDivElement;
-  const btn = document.getElementById('contact-btn') as HTMLButtonElement;
-  if (!menu || !btn) return;
-
-  const isOpen = !menu.classList.contains('hidden');
-  if (isOpen) {
-    menu.classList.add('hidden');
-    btn.classList.remove('!bg-gray-200', 'shadow-md');
-  } else {
-    menu.classList.remove('hidden');
-    btn.classList.add('!bg-gray-200', 'shadow-md');
-  }
-};
-
-document.addEventListener('click', (e) => {
-  const menu = document.getElementById('contact-menu');
-  const btn = document.getElementById('contact-btn');
-  if (menu && btn) {
-    const target = e.target as HTMLElement;
-    if (!menu.contains(target) && target !== btn && !btn.contains(target)) {
-      menu.classList.add('hidden');
-      btn.classList.remove('!bg-gray-200', 'shadow-md');
-    }
-  }
+document.querySelector('[role="tablist"]')?.addEventListener('keydown', event => {
+  const e = event as KeyboardEvent;
+  if (!['ArrowLeft', 'ArrowRight', 'Home', 'End'].includes(e.key)) return;
+  e.preventDefault();
+  const current = document.getElementById('tab0')!.getAttribute('aria-selected') === 'true' ? 0 : 1;
+  const next = e.key === 'Home' ? 0 : e.key === 'End' ? 1 : 1 - current;
+  switchTab(next);
+  document.getElementById(`tab${next}`)?.focus();
 });

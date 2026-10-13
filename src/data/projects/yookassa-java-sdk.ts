@@ -12,14 +12,14 @@ export const yookassaJavaSDK: Project = {
   fullContent: `
     <div class="space-y-6">
       <h1 class="text-4xl font-bold">YooKassa Java SDK</h1>
-      <p class="text-xl text-gray-300">Библиотека для создания умных платежей через сервис ЮKassa. Официально добавлена в <a href="https://yookassa.ru/developers/using-api/using-sdks#community" target="_blank" class="text-[#FF337D] hover:underline">список библиотек сообщества</a>.</p>
+      <p class="text-xl text-gray-300">Библиотека для создания умных платежей через сервис ЮKassa. Официально добавлена в <a href="https://yookassa.ru/developers/using-api/using-sdks#community" target="_blank" class="text-[#e5e5e5] hover:underline">список библиотек сообщества</a>.</p>
 
       <div class="bg-[#1f1f1f] rounded-2xl p-6">
         <div class="flex items-center gap-2 mb-3">
-          <i class="ph-fill ph-check-circle text-[#FF337D] text-2xl"></i>
+          <i class="ph-fill ph-check-circle text-[#e5e5e5] text-2xl"></i>
           <h2 class="text-2xl font-semibold">Официальное признание</h2>
         </div>
-        <p class="text-gray-300 mb-4">Библиотека прошла проверку технических специалистов ЮKassa и была добавлена на <a href="https://yookassa.ru/developers/using-api/using-sdks#community" target="_blank" class="text-[#FF337D] hover:underline">страницу SDK сообщества</a>. Это подтверждает качество и безопасность кода, а также доверие со стороны платёжного сервиса.</p>
+        <p class="text-gray-300 mb-4">Библиотека прошла проверку технических специалистов ЮKassa и была добавлена на <a href="https://yookassa.ru/developers/using-api/using-sdks#community" target="_blank" class="text-[#e5e5e5] hover:underline">страницу SDK сообщества</a>. Это подтверждает качество и безопасность кода, а также доверие со стороны платёжного сервиса.</p>
         <div class="carousel" data-carousel>
           <div class="carousel-slides">
             <div class="carousel-slide">
@@ -38,7 +38,7 @@ export const yookassaJavaSDK: Project = {
 
       <div class="bg-[#1f1f1f] rounded-2xl p-6">
         <div class="flex items-center gap-2 mb-3">
-          <i class="ph-fill ph-code text-[#FF337D] text-2xl"></i>
+          <i class="ph-fill ph-code text-[#e5e5e5] text-2xl"></i>
           <h2 class="text-2xl font-semibold">Пример использования</h2>
         </div>
         <p class="text-gray-300 mb-2"><strong>Инициализация API</strong></p>
@@ -65,7 +65,7 @@ export const yookassaJavaSDK: Project = {
 
       <div class="bg-[#1f1f1f] rounded-2xl p-6">
         <div class="flex items-center gap-2 mb-3">
-          <i class="ph-fill ph-download text-[#FF337D] text-2xl"></i>
+          <i class="ph-fill ph-download text-[#e5e5e5] text-2xl"></i>
           <h2 class="text-2xl font-semibold">Установка</h2>
         </div>
         <p class="text-gray-300 mb-2"><strong>Maven</strong></p>
@@ -94,7 +94,7 @@ dependencies {
 
       <div class="bg-[#1f1f1f] rounded-2xl p-6">
         <a href="https://github.com/DeelTer/YooKassaSDK" target="_blank" 
-          class="inline-flex items-center gap-2 bg-[#FF337D] px-6 py-3 rounded-xl font-medium hover:bg-[#e62e6e] transition">
+          class="inline-flex items-center gap-2 bg-[#e5e5e5] px-6 py-3 rounded-xl font-medium hover:bg-[#e62e6e] transition">
           <i class="ph-fill ph-github-logo"></i> Перейти на GitHub
         </a>
       </div>

@@ -16,20 +16,20 @@ export const tntOnlineEvents: Project = {
       
       <div class="bg-[#1f1f1f] rounded-2xl p-6">
         <div class="flex items-center gap-2 mb-3">
-          <i class="ph-fill ph-chats text-[#FF337D] text-2xl"></i>
+          <i class="ph-fill ph-chats text-[#e5e5e5] text-2xl"></i>
           <h2 class="text-2xl font-semibold">Моя роль</h2>
         </div>
         <ul class="space-y-2 text-gray-300">
-          <li class="flex gap-2"><span class="text-[#FF337D]">✓</span> Техническая поддержка сервера в реальном времени</li>
-          <li class="flex gap-2"><span class="text-[#FF337D]">✓</span> Мониторинг состояния и быстрая реакция на сбои</li>
-          <li class="flex gap-2"><span class="text-[#FF337D]">✓</span> Оперативное устранение неполадок, чтобы стрим не прерывался</li>
-          <li class="flex gap-2"><span class="text-[#FF337D]">✓</span> Контроль за нагрузкой и стабильностью игрового процесса</li>
+          <li class="flex gap-2"><span class="text-[#e5e5e5]">✓</span> Техническая поддержка сервера в реальном времени</li>
+          <li class="flex gap-2"><span class="text-[#e5e5e5]">✓</span> Мониторинг состояния и быстрая реакция на сбои</li>
+          <li class="flex gap-2"><span class="text-[#e5e5e5]">✓</span> Оперативное устранение неполадок, чтобы стрим не прерывался</li>
+          <li class="flex gap-2"><span class="text-[#e5e5e5]">✓</span> Контроль за нагрузкой и стабильностью игрового процесса</li>
         </ul>
       </div>
       
       <div class="bg-[#1f1f1f] rounded-2xl p-6">
         <div class="flex items-center gap-2 mb-3">
-          <i class="ph-fill ph-users text-[#FF337D] text-2xl"></i>
+          <i class="ph-fill ph-users text-[#e5e5e5] text-2xl"></i>
           <h2 class="text-2xl font-semibold">Участники стрима</h2>
         </div>
         <p class="text-gray-300 mb-4">В ивенте принимали участие известные стримеры и их подписчики:</p>
@@ -42,7 +42,7 @@ export const tntOnlineEvents: Project = {
       
       <div class="bg-[#1f1f1f] rounded-2xl p-6">
         <div class="flex items-center gap-2 mb-3">
-          <i class="ph-fill ph-check-circle text-[#FF337D] text-2xl"></i>
+          <i class="ph-fill ph-check-circle text-[#e5e5e5] text-2xl"></i>
           <h2 class="text-2xl font-semibold">Результат</h2>
         </div>
         <p class="text-gray-300">Стрим прошёл без серьёзных технических сбоев, сервер выдержал нагрузку, а зрители и участники остались довольны. Я получил ценный опыт работы в стрессовых условиях и подтвердил способность быстро решать проблемы на живом мероприятии.</p>
@@ -50,7 +50,7 @@ export const tntOnlineEvents: Project = {
       
       <div class="bg-[#1f1f1f] rounded-2xl p-6">
         <div class="flex items-center gap-2 mb-3">
-          <i class="ph-fill ph-video text-[#FF337D] text-2xl"></i>
+          <i class="ph-fill ph-video text-[#e5e5e5] text-2xl"></i>
           <h2 class="text-2xl font-semibold">Запись стрима</h2>
         </div>
         <div class="relative w-full" style="padding-bottom: 56.25%;">

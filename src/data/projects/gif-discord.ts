@@ -16,7 +16,7 @@ export const gifDiscord: Project = {
         
         <div class="bg-[#1f1f1f] rounded-2xl p-6">
           <div class="flex items-center gap-2 mb-3">
-            <i class="ph-fill ph-lightbulb text-[#FF337D] text-2xl"></i>
+            <i class="ph-fill ph-lightbulb text-[#e5e5e5] text-2xl"></i>
             <h2 class="text-2xl font-semibold">Идея проекта</h2>
           </div>
           <p class="text-gray-300 mb-4">Сделать так, чтобы люди оставляли свои запросы в комментариях под постами, а мы делали по ним готовые профили.</p>
@@ -30,7 +30,7 @@ export const gifDiscord: Project = {
         
         <div class="bg-[#1f1f1f] rounded-2xl p-6">
           <div class="flex items-center gap-2 mb-3">
-            <i class="ph-fill ph-robot text-[#FF337D] text-2xl"></i>
+            <i class="ph-fill ph-robot text-[#e5e5e5] text-2xl"></i>
             <h2 class="text-2xl font-semibold">Разработка бота</h2>
           </div>
           <p class="text-gray-300 mb-4">Для продажи оформлений «не для всех» был разработан бот, который отдаёт медиа-файлы по коду. Для хостинга картинок используется сам Telegram — бот пересылает их из канала-архива.</p>
@@ -55,19 +55,19 @@ export const gifDiscord: Project = {
         
         <div class="bg-[#1f1f1f] rounded-2xl p-6">
           <div class="flex items-center gap-2 mb-3">
-            <i class="ph-fill ph-coins text-[#FF337D] text-2xl"></i>
+            <i class="ph-fill ph-coins text-[#e5e5e5] text-2xl"></i>
             <h2 class="text-2xl font-semibold">Монетизация</h2>
           </div>
           <ul class="space-y-2 text-gray-300">
-            <li class="flex gap-2"><span class="text-[#FF337D]">✓</span> Продажа рекламных мест</li>
-            <li class="flex gap-2"><span class="text-[#FF337D]">✓</span> Ограниченные оформления за звёзды (Telegram Stars)</li>
-            <li class="flex gap-2"><span class="text-[#FF337D]">✓</span> Продажа профилей напрямую</li>
+            <li class="flex gap-2"><span class="text-[#e5e5e5]">✓</span> Продажа рекламных мест</li>
+            <li class="flex gap-2"><span class="text-[#e5e5e5]">✓</span> Ограниченные оформления за звёзды (Telegram Stars)</li>
+            <li class="flex gap-2"><span class="text-[#e5e5e5]">✓</span> Продажа профилей напрямую</li>
           </ul>
         </div>
         
         <div class="bg-[#1f1f1f] rounded-2xl p-6">
           <a href="https://t.me/gif_discord" target="_blank" 
-            class="inline-flex items-center gap-2 bg-[#FF337D] px-6 py-3 rounded-xl font-medium hover:bg-[#e62e6e] transition">
+            class="inline-flex items-center gap-2 bg-[#e5e5e5] px-6 py-3 rounded-xl font-medium hover:bg-[#e62e6e] transition">
             <i class="ph-fill ph-telegram-logo"></i> Перейти в канал
           </a>
         </div>

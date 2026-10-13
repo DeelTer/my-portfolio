@@ -16,7 +16,7 @@ export const plyazhni: Project = {
 
         <div class="bg-[#1f1f1f] rounded-2xl p-6">
           <div class="flex items-center gap-2 mb-3">
-            <i class="ph-fill ph-video text-[#FF337D] text-2xl"></i>
+            <i class="ph-fill ph-video text-[#e5e5e5] text-2xl"></i>
             <h2 class="text-2xl font-semibold">Концепция канала</h2>
           </div>
           <p class="text-gray-300">Цель — сделать VR-гейминг в Minecraft доступным и понятным. Я рассказываю, какой шлем выбрать, как его настроить, как избежать ошибок, а также делюсь лайфхаками и показываю моменты из игр. Видео строятся по принципу «вопрос — ответ» или пошаговые инструкции.</p>
@@ -24,21 +24,21 @@ export const plyazhni: Project = {
 
         <div class="bg-[#1f1f1f] rounded-2xl p-6">
           <div class="flex items-center gap-2 mb-3">
-            <i class="ph-fill ph-scissors text-[#FF337D] text-2xl"></i>
+            <i class="ph-fill ph-scissors text-[#e5e5e5] text-2xl"></i>
             <h2 class="text-2xl font-semibold">Процесс создания</h2>
           </div>
           <p class="text-gray-300 mb-4">Сначала я пишу сценарий, стараясь сделать его полезным и интересным. Затем снимаю футажи в игре (иногда с помощью захвата экрана шлема). Монтаж делаю в CapCut — это быстро и позволяет эффективно добавлять субтитры, музыку и эффекты.</p>
           <ul class="space-y-2 text-gray-300">
-            <li class="flex gap-2"><span class="text-[#FF337D]">✓</span> Написание сценария с чёткой структурой</li>
-            <li class="flex gap-2"><span class="text-[#FF337D]">✓</span> Запись игрового процесса в VR</li>
-            <li class="flex gap-2"><span class="text-[#FF337D]">✓</span> Монтаж в CapCut с акцентами на ключевые моменты</li>
-            <li class="flex gap-2"><span class="text-[#FF337D]">✓</span> Оформление текстом, звуком, динамичной нарезкой</li>
+            <li class="flex gap-2"><span class="text-[#e5e5e5]">✓</span> Написание сценария с чёткой структурой</li>
+            <li class="flex gap-2"><span class="text-[#e5e5e5]">✓</span> Запись игрового процесса в VR</li>
+            <li class="flex gap-2"><span class="text-[#e5e5e5]">✓</span> Монтаж в CapCut с акцентами на ключевые моменты</li>
+            <li class="flex gap-2"><span class="text-[#e5e5e5]">✓</span> Оформление текстом, звуком, динамичной нарезкой</li>
           </ul>
         </div>
 
         <div class="bg-[#1f1f1f] rounded-2xl p-6">
           <div class="flex items-center gap-2 mb-3">
-            <i class="ph-fill ph-lightbulb text-[#FF337D] text-2xl"></i>
+            <i class="ph-fill ph-lightbulb text-[#e5e5e5] text-2xl"></i>
             <h2 class="text-2xl font-semibold">Для кого это</h2>
           </div>
           <p class="text-gray-300">Начинающие пользователи VR, которые хотят попробовать Minecraft в виртуальной реальности, но не знают, с чего начать. А также опытные игроки, ищущие лайфхаки и вдохновение для новых проектов в VR.</p>
@@ -46,7 +46,7 @@ export const plyazhni: Project = {
 
         <div class="bg-[#1f1f1f] rounded-2xl p-6">
           <div class="flex items-center gap-2 mb-3">
-            <i class="ph-fill ph-image text-[#FF337D] text-2xl"></i>
+            <i class="ph-fill ph-image text-[#e5e5e5] text-2xl"></i>
             <h2 class="text-2xl font-semibold">Примеры видео</h2>
           </div>
           <div class="carousel" data-carousel>
@@ -55,7 +55,7 @@ export const plyazhni: Project = {
                 <a href="https://vt.tiktok.com/ZSHLm15oy/" target="_blank" class="block relative group">
                   <img src="./images/tiktok/deelter/thumbnail-1.webp" alt="Превью видео 1" class="w-full h-auto rounded-lg">
                   <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition flex items-center justify-center rounded-lg">
-                    <span class="text-white text-sm font-medium px-3 py-1 bg-[#FF337D] rounded-full">Смотреть →</span>
+                    <span class="text-white text-sm font-medium px-3 py-1 bg-[#e5e5e5] rounded-full">Смотреть →</span>
                   </div>
                 </a>
               </div>
@@ -63,7 +63,7 @@ export const plyazhni: Project = {
                 <a href="https://vt.tiktok.com/ZSHLmN1rX/" target="_blank" class="block relative group">
                   <img src="./images/tiktok/deelter/thumbnail-2.webp" alt="Превью видео 2" class="w-full h-auto rounded-lg">
                   <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition flex items-center justify-center rounded-lg">
-                    <span class="text-white text-sm font-medium px-3 py-1 bg-[#FF337D] rounded-full">Смотреть →</span>
+                    <span class="text-white text-sm font-medium px-3 py-1 bg-[#e5e5e5] rounded-full">Смотреть →</span>
                   </div>
                 </a>
               </div>
@@ -71,7 +71,7 @@ export const plyazhni: Project = {
                 <a href="https://vt.tiktok.com/ZSHLasLQ3/" target="_blank" class="block relative group">
                   <img src="./images/tiktok/deelter/thumbnail-3.webp" alt="Превью видео 3" class="w-full h-auto rounded-lg">
                   <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition flex items-center justify-center rounded-lg">
-                    <span class="text-white text-sm font-medium px-3 py-1 bg-[#FF337D] rounded-full">Смотреть →</span>
+                    <span class="text-white text-sm font-medium px-3 py-1 bg-[#e5e5e5] rounded-full">Смотреть →</span>
                   </div>
                 </a>
               </div>
@@ -85,7 +85,7 @@ export const plyazhni: Project = {
 
         <div class="bg-[#1f1f1f] rounded-2xl p-6">
           <div class="flex items-center gap-2 mb-3">
-            <i class="ph-fill ph-chart-line text-[#FF337D] text-2xl"></i>
+            <i class="ph-fill ph-chart-line text-[#e5e5e5] text-2xl"></i>
             <h2 class="text-2xl font-semibold">Статистика канала</h2>
           </div>
           <div class="carousel" data-carousel>
@@ -106,7 +106,7 @@ export const plyazhni: Project = {
 
         <div class="bg-[#1f1f1f] rounded-2xl p-6">
           <a href="https://tiktok.com/@deelter" target="_blank" 
-            class="inline-flex items-center gap-2 bg-[#FF337D] px-6 py-3 rounded-xl font-medium hover:bg-[#e62e6e] transition">
+            class="inline-flex items-center gap-2 bg-[#e5e5e5] px-6 py-3 rounded-xl font-medium hover:bg-[#e62e6e] transition">
             <i class="ph-fill ph-tiktok-logo"></i> Перейти в TikTok
           </a>
         </div>

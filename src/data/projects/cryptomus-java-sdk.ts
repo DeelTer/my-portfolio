@@ -16,10 +16,10 @@ export const cryptomusJavaSDK: Project = {
 
       <div class="bg-[#1f1f1f] rounded-2xl p-6">
         <div class="flex items-center gap-2 mb-3">
-          <i class="ph-fill ph-code text-[#FF337D] text-2xl"></i>
+          <i class="ph-fill ph-code text-[#e5e5e5] text-2xl"></i>
           <h2 class="text-2xl font-semibold">Реальное применение</h2>
         </div>
-        <p class="text-gray-300 mb-4">Библиотека используется в боевом проекте <strong class="text-[#FF337D]">Milkshake</strong> для приёма донатов через криптовалюту. Вот фрагмент реального кода из модуля оплаты:</p>
+        <p class="text-gray-300 mb-4">Библиотека используется в боевом проекте <strong class="text-[#e5e5e5]">Milkshake</strong> для приёма донатов через криптовалюту. Вот фрагмент реального кода из модуля оплаты:</p>
         <pre class="bg-black/40 p-3 rounded-lg overflow-x-auto text-sm text-gray-300"><code>public class CryptomusManager extends AbstractManager {
 
   private Cryptomus cryptomus;
@@ -67,21 +67,21 @@ export const cryptomusJavaSDK: Project = {
 
       <div class="bg-[#1f1f1f] rounded-2xl p-6">
         <div class="flex items-center gap-2 mb-3">
-          <i class="ph-fill ph-rocket text-[#FF337D] text-2xl"></i>
+          <i class="ph-fill ph-rocket text-[#e5e5e5] text-2xl"></i>
           <h2 class="text-2xl font-semibold">Возможности SDK</h2>
         </div>
         <ul class="space-y-2 text-gray-300">
-          <li class="flex gap-2"><span class="text-[#FF337D]">✓</span> Создание платежей с указанием суммы, валюты, времени жизни</li>
-          <li class="flex gap-2"><span class="text-[#FF337D]">✓</span> Получение списка платежей с фильтрацией</li>
-          <li class="flex gap-2"><span class="text-[#FF337D]">✓</span> Проверка статуса платежа (paid, error, waiting)</li>
-          <li class="flex gap-2"><span class="text-[#FF337D]">✓</span> Автоматическое обновление статусов через API</li>
-          <li class="flex gap-2"><span class="text-[#FF337D]">✓</span> Поддержка всех криптовалют, доступных в Cryptomus</li>
+          <li class="flex gap-2"><span class="text-[#e5e5e5]">✓</span> Создание платежей с указанием суммы, валюты, времени жизни</li>
+          <li class="flex gap-2"><span class="text-[#e5e5e5]">✓</span> Получение списка платежей с фильтрацией</li>
+          <li class="flex gap-2"><span class="text-[#e5e5e5]">✓</span> Проверка статуса платежа (paid, error, waiting)</li>
+          <li class="flex gap-2"><span class="text-[#e5e5e5]">✓</span> Автоматическое обновление статусов через API</li>
+          <li class="flex gap-2"><span class="text-[#e5e5e5]">✓</span> Поддержка всех криптовалют, доступных в Cryptomus</li>
         </ul>
       </div>
 
       <div class="bg-[#1f1f1f] rounded-2xl p-6">
         <div class="flex items-center gap-2 mb-3">
-          <i class="ph-fill ph-download text-[#FF337D] text-2xl"></i>
+          <i class="ph-fill ph-download text-[#e5e5e5] text-2xl"></i>
           <h2 class="text-2xl font-semibold">Установка</h2>
         </div>
         <p class="text-gray-300 mb-2"><strong>Maven</strong></p>
@@ -110,7 +110,7 @@ dependencies {
 
       <div class="bg-[#1f1f1f] rounded-2xl p-6">
         <a href="https://github.com/DeelTer/CryptomusSDK" target="_blank" 
-          class="inline-flex items-center gap-2 bg-[#FF337D] px-6 py-3 rounded-xl font-medium hover:bg-[#e62e6e] transition">
+          class="inline-flex items-center gap-2 bg-[#e5e5e5] px-6 py-3 rounded-xl font-medium hover:bg-[#e62e6e] transition">
           <i class="ph-fill ph-github-logo"></i> Перейти на GitHub
         </a>
       </div>

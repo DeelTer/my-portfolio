@@ -1,4 +1,5 @@
 import { projects } from '../data/projects';
+let previousFocus: HTMLElement | null = null;
 
 function initCarousel() {
   const carousels = document.querySelectorAll('#modal .carousel');
@@ -25,8 +26,9 @@ function initCarousel() {
 
     dotsContainer.innerHTML = '';
     for (let i = 0; i < totalSlides; i++) {
-      const dot = document.createElement('div');
+      const dot = document.createElement('button');
       dot.classList.add('dot');
+      dot.setAttribute('aria-label', `Слайд ${i + 1}`);
       if (i === 0) dot.classList.add('active');
       dot.addEventListener('click', () => goToSlide(i));
       dotsContainer.appendChild(dot);
@@ -67,10 +69,11 @@ export function openProject(id: number) {
              alt="${project.title}"
              class="relative w-full h-full object-cover transition-opacity duration-500 opacity-0"
              onload="this.style.opacity='1'; this.previousElementSibling.style.display='none';"
-             onerror="this.style.opacity='1'; this.previousElementSibling.style.display='none'; this.src='https://via.placeholder.com/1280x720/1a1a1a/ffffff?text=No+Image';">
+             onerror="this.style.opacity='1'; this.previousElementSibling.style.display='none'; this.onerror=null; this.style.visibility='hidden';">
       </div>`
     : '';
 
+  if (modal.classList.contains('hidden')) previousFocus = document.activeElement as HTMLElement;
   content.innerHTML = coverHTML + project.fullContent;
 
   // Снимаем класс закрытия, показываем модал
@@ -78,25 +81,20 @@ export function openProject(id: number) {
   modal.classList.add('flex');
   document.body.style.overflow = 'hidden';
 
-  setTimeout(() => {
-    initCarousel();
-  }, 100);
+  initCarousel();
+  modal.querySelector('.modal-panel')!.scrollTop = 0;
+  modal.querySelector<HTMLButtonElement>('.modal-close')?.focus();
+  Array.from(document.body.children).forEach(el => { if (el !== modal && el instanceof HTMLElement && el.tagName !== 'SCRIPT') el.inert = true; });
 }
 
-export function closeModal() {
-  const modal = document.getElementById("modal") as HTMLDivElement;
+export function closeModal(updateURL = true) {
+  const modal = document.getElementById('modal');
   if (!modal || modal.classList.contains('hidden')) return;
-
-  modal.classList.add('modal-closing');
-
-  setTimeout(() => {
-    modal.classList.add('hidden');
-    modal.classList.remove('flex', 'modal-closing');
-    document.body.style.overflow = '';
-
-    const currentPath = window.location.pathname;
-    if (currentPath !== '/' && currentPath !== '') {
-      window.history.pushState({}, '', '/');
-    }
-  }, 220);
+  modal.classList.add('hidden');
+  modal.classList.remove('flex');
+  document.body.style.overflow = '';
+  Array.from(document.body.children).forEach(el => { if (el instanceof HTMLElement) el.inert = false; });
+  document.getElementById('modal-content')!.innerHTML = '';
+  if (updateURL && location.hash.startsWith('#project/')) history.replaceState(null, '', location.pathname + location.search);
+  previousFocus?.focus({ preventScroll: true });
 }
