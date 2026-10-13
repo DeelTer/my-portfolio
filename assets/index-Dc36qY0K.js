@@ -1,4 +1,4 @@
-(function(){let e=document.createElement(`link`).relList;if(e&&e.supports&&e.supports(`modulepreload`))return;for(let e of document.querySelectorAll(`link[rel="modulepreload"]`))n(e);new MutationObserver(e=>{for(let t of e)if(t.type===`childList`)for(let e of t.addedNodes)e.tagName===`LINK`&&e.rel===`modulepreload`&&n(e)}).observe(document,{childList:!0,subtree:!0});function t(e){let t={};return e.integrity&&(t.integrity=e.integrity),e.referrerPolicy&&(t.referrerPolicy=e.referrerPolicy),e.crossOrigin===`use-credentials`?t.credentials=`include`:e.crossOrigin===`anonymous`?t.credentials=`omit`:t.credentials=`same-origin`,t}function n(e){if(e.ep)return;e.ep=!0;let n=t(e);fetch(e.href,n)}})();var e=[{name:`Управление сообществами`,icon:`users`,category:`Навыки`},{name:`Программирование на Java`,icon:`code`,category:`Навыки`},{name:`AI Промпт-инженеринг`,icon:`brain`,category:`Навыки`},{name:`Контент-Менеджмент`,icon:`megaphone`,category:`Навыки`},{name:`Брендинг сообществ`,icon:`palette`,category:`Навыки`},{name:`Видеомонтаж`,icon:`monitor`,category:`Навыки`},{name:`Дизайн`,icon:`pencil`,category:`Навыки`}],t=[{name:`Figma`,icon:`figma-logo`},{name:`IntelliJ IDEA`,icon:`code`},{name:`Adobe Photoshop`,icon:`image-square`},{name:`Adobe After Effects`,icon:`film-strip`},{name:`Adobe Premiere`,icon:`video`},{name:`Adobe Audition`,icon:`waveform`},{name:`Capcut`,icon:`scissors`},{name:`Excel / Google docs`,icon:`table`},{name:`Grok / DeepSeek / ChatGPT`,icon:`brain`}],n=[{id:17,title:`VRCamera`,subtitle:`Minecraft / Мой мод`,slug:`vrcamera`,image:`./images/vrcamera/icon.png`,category:[`code`,`java`,`opensource`,`other`],starred:!0,shortDesc:`Камера для стримов, роликов и фото в Minecraft — с VR и без`,fullContent:`
+(function(){let e=document.createElement(`link`).relList;if(e&&e.supports&&e.supports(`modulepreload`))return;for(let e of document.querySelectorAll(`link[rel="modulepreload"]`))n(e);new MutationObserver(e=>{for(let t of e)if(t.type===`childList`)for(let e of t.addedNodes)e.tagName===`LINK`&&e.rel===`modulepreload`&&n(e)}).observe(document,{childList:!0,subtree:!0});function t(e){let t={};return e.integrity&&(t.integrity=e.integrity),e.referrerPolicy&&(t.referrerPolicy=e.referrerPolicy),e.crossOrigin===`use-credentials`?t.credentials=`include`:e.crossOrigin===`anonymous`?t.credentials=`omit`:t.credentials=`same-origin`,t}function n(e){if(e.ep)return;e.ep=!0;let n=t(e);fetch(e.href,n)}})();var e=[{name:`Управление сообществами`,icon:`users`,category:`Навыки`},{name:`Программирование на Java`,icon:`code`,category:`Навыки`},{name:`Работа с ИИ`,icon:`brain`,category:`Навыки`},{name:`Контент-Менеджмент`,icon:`megaphone`,category:`Навыки`},{name:`Брендинг сообществ`,icon:`palette`,category:`Навыки`},{name:`Видеомонтаж`,icon:`monitor`,category:`Навыки`},{name:`Дизайн`,icon:`pencil`,category:`Навыки`}],t=[{name:`Figma`,icon:`figma-logo`},{name:`IntelliJ IDEA`,icon:`code`},{name:`Adobe Photoshop`,icon:`image-square`},{name:`Adobe After Effects`,icon:`film-strip`},{name:`Adobe Premiere`,icon:`video`},{name:`Adobe Audition`,icon:`waveform`},{name:`Capcut`,icon:`scissors`},{name:`Excel / Google docs`,icon:`table`},{name:`Grok / DeepSeek / ChatGPT`,icon:`brain`}],n=[{id:17,title:`VRCamera`,subtitle:`Minecraft / Мой мод`,slug:`vrcamera`,image:`./images/vrcamera/cover.webp`,category:[`code`,`java`,`opensource`,`other`],starred:!0,shortDesc:`Камера для стримов, роликов и фото в Minecraft — с VR и без`,fullContent:`
     <div class="space-y-6">
       <h1 class="text-4xl font-bold">VRCamera</h1>
       <p class="text-xl text-gray-300">Мой мод для съёмки в Minecraft. Ты играешь, а камера показывает тебя со стороны: следует за персонажем, сама меняет ракурсы или стоит там, где ты её оставил. Работает в VR и на обычном ПК.</p>
@@ -8,7 +8,7 @@
       <p class="text-sm text-gray-400">Если видео не открывается — <a class="underline" href="https://youtu.be/3B1tzZj08eM" target="_blank" rel="noopener noreferrer">смотреть на YouTube ↗</a></p>
       <section class="project-detail-block">
         <h2>Снимай, пока играешь</h2>
-        <p>Автоматический режим выбирает ракурсы и держит персонажа в кадре. Можно закрепить любимый угол или расставить до 26 камер и переключаться между ними. На ПК картинка выводится в отдельное окно — его удобно захватывать в OBS.</p>
+        <p>Автоматический режим выбирает ракурсы и держит персонажа в кадре. Можно закрепить любимый угол или расставить камеры и переключаться между ними. На ПК картинка выводится в отдельное окно — его удобно захватывать в OBS.</p>
       </section>
       <section class="project-detail-block">
         <h2>Камеру можно взять в руки</h2>
@@ -19,12 +19,10 @@
         <p>Можно снимать другого игрока, добавить друга в кадр или включить зелёный фон. Фото сохраняются на компьютер. С дополнительным серверным плагином игроки могут видеть общие фотографии и камеры.</p>
       </section>
       <section class="project-detail-block">
-        <h2>Как попробовать</h2>
-        <p>Нужны Minecraft 26.2 или 26.3, Java 25, Fabric и Fabric API. Для VR — ещё Vivecraft. Для каждой версии Minecraft есть отдельная сборка.</p>
-        <p>Установи мод, зайди в мир и нажми F8. На ПК команда <code>/vrcam screen window</code> откроет окно камеры.</p>
-        <p class="text-sm">Камера дополнительно нагружает видеокарту. Отдельное окно на ПК не поддерживает шейдеры.</p>
+        <h2>Хочешь попробовать?</h2>
+        <p>Скачать мод и посмотреть, как его установить, можно на GitHub.</p>
       </section>
-      <a href="https://github.com/DeelTer/VRCamera" target="_blank" rel="noopener noreferrer" class="primary-link inline-flex">Код и инструкция ↗</a>
+      <a href="https://github.com/DeelTer/VRCamera" target="_blank" rel="noopener noreferrer" class="primary-link inline-flex">VRCamera на GitHub ↗</a>
     </div>
   `},{id:1,title:`Milkshake`,slug:`milkshake`,subtitle:`Discord`,image:`./images/milkshake/cover.webp`,category:[`discord`,`code`],starred:!0,shortDesc:`Сообщество для знакомств и совместных игр`,fullContent:`
       <div class="space-y-6">
