@@ -3,7 +3,7 @@ import type { Skill, Tool } from './types';
 export const skillsData: Skill[] = [
   { name: "Управление сообществами", icon: "users", category: "Навыки" },
   { name: "Программирование на Java", icon: "code", category: "Навыки" },
-  { name: "AI Промпт-инженеринг", icon: "brain", category: "Навыки" },
+  { name: "Работа с ИИ", icon: "brain", category: "Навыки" },
   { name: "Контент-Менеджмент", icon: "megaphone", category: "Навыки" },
   { name: "Брендинг сообществ", icon: "palette", category: "Навыки" },
   { name: "Видеомонтаж", icon: "monitor", category: "Навыки" },

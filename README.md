@@ -26,4 +26,4 @@ Production build and headless Edge checks passed: all 16 project dialogs and ima
 
 YooKassa describes SDK 2.1.0; installation examples stay pinned to that version. Opening its detail view makes one GitHub Releases API request per page session with a four-second timeout. A valid stable release updates the badge/link using textContent; failures keep the static 2.1.0 link. No token or backend is required on GitHub Pages.
 
-VRCamera uses the mod's local icon and a click-to-load YouTube embed. YouTube receives no iframe request until the visitor presses play; a direct video link remains available. Closing the dialog removes the player.
+VRCamera uses a locally hosted WebP cover supplied by the author and a click-to-load YouTube embed. YouTube receives no iframe request until the visitor presses play; a direct video link remains available. Closing the dialog removes the player.
