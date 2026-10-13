@@ -13,7 +13,7 @@ export const yookassaJavaSDK: Project = {
     <div class="space-y-6">
       <h1 class="text-4xl font-bold">YooKassa Java SDK</h1>
       <p class="text-xl text-gray-300">Я разрабатываю неофициальную Java-библиотеку для ЮKassa. Она помогает принимать платежи, делать возвраты и работать с чеками без ручной сборки HTTP-запросов.</p>
-      <p><a data-yookassa-release href="https://github.com/DeelTer/YooKassaSDK/releases/tag/2.1.0" target="_blank" rel="noopener noreferrer" class="underline">Версия 2.1.0 · GitHub Releases ↗</a></p>
+      <p><a data-yookassa-release href="https://github.com/DeelTer/YooKassaSDK/releases/tag/2.1.0" target="_blank" rel="noopener noreferrer" class="underline">Версия 2.1.0 · GitHub Releases <i class="ph-fill ph-arrow-up-right" aria-hidden="true"></i></a></p>
       <section class="project-detail-block">
         <h2>Что умеет библиотека</h2>
         <p>Покрывает все 34 операции спецификации API v3: платежи, способы оплаты, счета, возвраты, чеки, выплаты, безопасные сделки и подписки на уведомления.</p>
@@ -64,7 +64,7 @@ try (YooKassa api = YooKassa.create(
 }</code></pre>
         <p>Клиент синхронный: запросы выполняют в рабочем потоке. Перед использованием в своём проекте платёжный сценарий нужно проверить в тестовом магазине ЮKassa.</p>
       </section>
-      <a href="https://github.com/DeelTer/YooKassaSDK" target="_blank" rel="noopener noreferrer" class="primary-link inline-flex">Код и документация на GitHub ↗</a>
+      <a href="https://github.com/DeelTer/YooKassaSDK" target="_blank" rel="noopener noreferrer" class="primary-link inline-flex">Код и документация на GitHub <i class="ph-fill ph-arrow-up-right" aria-hidden="true"></i></a>
     </div>
   `,
 };

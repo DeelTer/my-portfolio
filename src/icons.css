@@ -123,3 +123,6 @@
 .ph-fill.ph-waveform:before {
   content: "\e802";
 }
+.ph-fill.ph-arrow-up-right:before {
+  content: "\e092";
+}

@@ -30,7 +30,10 @@ export function initProjectExtras(container: HTMLElement) {
   const releaseLink = container.querySelector<HTMLAnchorElement>('[data-yookassa-release]');
   if (releaseLink) void getLatestYooKassaRelease().then(tag => {
     if (!tag || !releaseLink.isConnected) return;
-    releaseLink.textContent = `Последний релиз: ${tag} · GitHub ↗`;
+    const icon = document.createElement('i');
+    icon.className = 'ph-fill ph-arrow-up-right';
+    icon.setAttribute('aria-hidden', 'true');
+    releaseLink.replaceChildren(document.createTextNode(`Последний релиз: ${tag} · GitHub `), icon);
     releaseLink.href = `https://github.com/DeelTer/YooKassaSDK/releases/tag/${encodeURIComponent(tag)}`;
   });
 

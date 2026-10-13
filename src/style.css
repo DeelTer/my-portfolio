@@ -41,7 +41,11 @@ body > .max-w-5xl { max-width: 1240px; padding-top: 0; }
 .project-card { border: 0; border-radius: 0; background: transparent; box-shadow: none; transition: transform 160ms ease; }
 .project-card:hover { transform: translateY(-3px); box-shadow: none; }
 .project-card > div:last-child { padding: 18px 0; border-bottom: 1px solid #333; }
-.project-card img { filter: grayscale(1); }
+.project-card img { filter: grayscale(1); transition: filter 180ms ease, opacity 180ms ease; }
+@media (hover: hover) and (pointer: fine) {
+  .project-card:hover img { filter: grayscale(0); }
+}
+.project-card:focus-visible img { filter: grayscale(0); }
 .project-card h3 { font-size: 24px; font-weight: 500; letter-spacing: -.6px; }
 .project-card .text-gray-400 { color: #aaa; }
 [data-skeleton] { background: #191919; }
