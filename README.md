@@ -16,7 +16,7 @@ Pushes to `main` build the site and publish `dist` to `gh-pages`. Keep `public/C
 
 ## Design and performance
 
-The monochrome layout uses system fonts, local icons, a 640 x 640 WebP portrait (33,012 bytes), and lazy project thumbnails. No canvas background, force simulation, autoplay audio, scroll interception, or external icon CDN runs on the page. Short interaction animations use transforms and opacity; reduced-motion preferences disable them. Project dialogs support Escape, focus trapping and focus restoration. The icon CSS contains only the selectors used by current content; add new selectors from the licensed Phosphor source if introducing new icons.
+The monochrome layout uses system fonts, local icons, a 640 x 640 WebP portrait (33,012 bytes), and lazy project thumbnails. No canvas background, autoplay audio, scroll interception, or external icon CDN runs on the page. The interactive connections graph loads near its section, pauses outside the viewport and in hidden tabs, and settles without animation for reduced-motion users. Short interaction animations use transforms and opacity; reduced-motion preferences disable them. Project dialogs support Escape, focus trapping and focus restoration. The icon CSS contains only the selectors used by current content; add new selectors from the licensed Phosphor source if introducing new icons.
 
 ## Validation (2026-10-13)
 

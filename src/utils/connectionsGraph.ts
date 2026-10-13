@@ -7,19 +7,30 @@ export function initConnectionsGraph(containerId: string, data: any) {
 
   const canvas = document.createElement('canvas');
   canvas.className = 'w-full rounded-3xl border border-white/10 bg-[#0a0a0a]';
-  canvas.style.touchAction = 'none'; // отключаем скролл и зум жестами на canvas
+  canvas.style.touchAction = 'pan-y';
+  canvas.style.filter = 'grayscale(1)';
+  canvas.setAttribute('aria-label', 'Граф связей Романа, людей и сообществ');
+  canvas.setAttribute('role', 'img');
   container.appendChild(canvas);
 
   const ctx = canvas.getContext('2d', { alpha: true })!;
 
   let width = 0;
   let height = 0;
+  let scale = 1;
+  let offsetX = 0;
+  let offsetY = 0;
+  let visible = false;
+  const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
 
   function resizeCanvas() {
     width = container.clientWidth;
     height = Math.max(520, Math.min(700, window.innerHeight * 0.6));
-    canvas.width = width;
-    canvas.height = height;
+    const ratio = Math.min(window.devicePixelRatio || 1, 2);
+    canvas.width = Math.round(width * ratio);
+    canvas.height = Math.round(height * ratio);
+    canvas.style.height = `${height}px`;
+    ctx.setTransform(ratio, 0, 0, ratio, 0, 0);
   }
   resizeCanvas();
 
@@ -32,7 +43,7 @@ export function initConnectionsGraph(containerId: string, data: any) {
     if (node.image) {
       const img = new Image();
       img.src = node.image;
-      img.onload = () => images.set(node.id, img);
+      img.onload = () => { images.set(node.id, img); if (visible) draw(); };
       img.onerror = () => console.warn(`Не удалось загрузить аватарку: ${node.image}`);
     }
   });
@@ -41,7 +52,8 @@ export function initConnectionsGraph(containerId: string, data: any) {
     .force('link', forceLink(links).id((d: any) => d.id).distance(128))
     .force('charge', forceManyBody().strength(-360))
     .force('center', forceCenter(width / 2, height / 2))
-    .force('collision', forceCollide().radius((d: any) => (d.category === 'me' ? 42 : 28)));
+    .force('collision', forceCollide().radius((d: any) => (d.category === 'me' ? 60 : 48)))
+    .stop();
 
   // Обновлённый colorMap с недостающими категориями
   const colorMap: Record<string, string> = {
@@ -65,10 +77,11 @@ export function initConnectionsGraph(containerId: string, data: any) {
   // Обработчик движения мыши — ищем узел под курсором
   canvas.addEventListener('mousemove', (e) => {
     const rect = canvas.getBoundingClientRect();
-    const mx = e.clientX - rect.left;
-    const my = e.clientY - rect.top;
+    const mx = (e.clientX - rect.left - offsetX) / scale;
+    const my = (e.clientY - rect.top - offsetY) / scale;
 
     // Ищем узел, в который попала мышь
+    const previousHovered = hoveredNode;
     hoveredNode = nodes.find((node: any) => {
       const dx = node.x - mx;
       const dy = node.y - my;
@@ -77,7 +90,7 @@ export function initConnectionsGraph(containerId: string, data: any) {
     });
 
     // Если нашли — перерисовываем, чтобы показать тултип
-    if (hoveredNode) {
+    if (hoveredNode !== previousHovered) {
       draw(); // перерисовка при каждом движении, если узел найден
     }
   });
@@ -91,6 +104,18 @@ export function initConnectionsGraph(containerId: string, data: any) {
   function draw() {
     ctx.clearRect(0, 0, width, height);
 
+    const minX = Math.min(...nodes.map(n => n.x)) - 100;
+    const maxX = Math.max(...nodes.map(n => n.x)) + 100;
+    const minY = Math.min(...nodes.map(n => n.y)) - 60;
+    const maxY = Math.max(...nodes.map(n => n.y)) + 90;
+    if (!dragged) {
+      scale = Math.min(1, width / (maxX - minX), height / (maxY - minY));
+      offsetX = (width - (maxX + minX) * scale) / 2;
+      offsetY = (height - (maxY + minY) * scale) / 2;
+    }
+    ctx.save();
+    ctx.translate(offsetX, offsetY);
+    ctx.scale(scale, scale);
     // === СВЯЗИ ===
     ctx.strokeStyle = 'rgba(255, 255, 255, 0.28)';
     ctx.lineWidth = 2.2;
@@ -115,7 +140,7 @@ export function initConnectionsGraph(containerId: string, data: any) {
 
       // Тень
       ctx.shadowColor = isMe ? '#e5e5e5' : '#64748b';
-      ctx.shadowBlur = isMe ? 30 : 14;
+      ctx.shadowBlur = 0;
 
       const hasImage = node.image && images.has(node.id);
       const img = hasImage ? images.get(node.id) : null;
@@ -163,6 +188,14 @@ export function initConnectionsGraph(containerId: string, data: any) {
 
       ctx.shadowBlur = 0;
 
+      if (node === hoveredNode) {
+        ctx.strokeStyle = '#fff';
+        ctx.lineWidth = 2;
+        ctx.beginPath();
+        ctx.arc(x, y, radius + 8, 0, Math.PI * 2);
+        ctx.stroke();
+      }
+
       // Подпись
       ctx.fillStyle = '#f1f5f9';
       ctx.font = isMe 
@@ -173,44 +206,20 @@ export function initConnectionsGraph(containerId: string, data: any) {
       ctx.fillText(node.label, x, y + radius + 28);
     });
 
-    // === ТУЛТИП (только если есть description) ===
-    if (hoveredNode && hoveredNode.description) {
-      const text = hoveredNode.description;
-      const x = hoveredNode.x;
-      const y = hoveredNode.y;
-      const radius = hoveredNode.category === 'me' ? 34 : (hoveredNode.category === 'freelance' || hoveredNode.category === 'tg' || hoveredNode.category === 'discord' || hoveredNode.category === 'event' ? 19 : 26);
-
-      // Измеряем текст
-      ctx.font = '500 12px system-ui, -apple-system, sans-serif';
-      const textWidth = ctx.measureText(text).width;
-      const padding = 10;
-      const tooltipHeight = 30;
-      const tooltipWidth = textWidth + padding * 2;
-
-      // Позиция тултипа справа-сверху от узла
-      let tipX = x + radius + 10;
-      let tipY = y - radius - 10 - tooltipHeight;
-
-      // Чтобы не улетел за край canvas
-      if (tipX + tooltipWidth > width) tipX = x - tooltipWidth - radius - 10;
-      if (tipY < 5) tipY = y + radius + 10;
-
-      // Рисуем фон
-      ctx.fillStyle = 'rgba(30, 30, 30, 0.95)';
-      ctx.strokeStyle = 'rgba(255, 255, 255, 0.3)';
-      ctx.lineWidth = 1;
-      ctx.beginPath();
-      ctx.roundRect(tipX, tipY, tooltipWidth, tooltipHeight, 8);
-      ctx.fill();
-      ctx.stroke();
-
-      // Текст
-      ctx.fillStyle = '#ffffff';
-      ctx.textAlign = 'left';
-      ctx.textBaseline = 'middle';
-      ctx.fillText(text, tipX + padding, tipY + tooltipHeight / 2);
-    }
+    ctx.restore();
+    description.textContent = hoveredNode ? `${hoveredNode.label}${hoveredNode.description ? ' — ' + hoveredNode.description : ''}` : 'Наведите на узел, чтобы узнать больше.';
   }
+
+  const description = document.createElement('p');
+  description.className = 'graph-description';
+  container.appendChild(description);
+  const picker = document.createElement('select');
+  picker.setAttribute('aria-label', 'Выбрать человека или сообщество');
+  picker.className = 'graph-picker';
+  picker.add(new Option('Люди и сообщества…', ''));
+  nodes.forEach(node => picker.add(new Option(node.label, node.id)));
+  picker.addEventListener('change', () => { hoveredNode = nodes.find(node => node.id === picker.value); draw(); });
+  container.appendChild(picker);
 
   simulation.on('tick', draw);
 
@@ -218,8 +227,8 @@ export function initConnectionsGraph(containerId: string, data: any) {
   let dragged: any = null;
   canvas.addEventListener('pointerdown', (e) => {
     const rect = canvas.getBoundingClientRect();
-    const mx = e.clientX - rect.left;
-    const my = e.clientY - rect.top;
+    const mx = (e.clientX - rect.left - offsetX) / scale;
+    const my = (e.clientY - rect.top - offsetY) / scale;
 
     dragged = nodes.find((node: any) => {
       const dx = node.x - mx;
@@ -229,7 +238,8 @@ export function initConnectionsGraph(containerId: string, data: any) {
 
     if (dragged) {
       e.preventDefault(); // блокируем скролл при перетаскивании
-      simulation.alphaTarget(0.3).restart();
+      canvas.setPointerCapture(e.pointerId);
+      if (!reducedMotion.matches) simulation.alphaTarget(0.15).restart();
       dragged.fx = mx;
       dragged.fy = my;
     }
@@ -238,26 +248,45 @@ export function initConnectionsGraph(containerId: string, data: any) {
   window.addEventListener('pointermove', (e) => {
     if (!dragged) return;
     const rect = canvas.getBoundingClientRect();
-    dragged.fx = e.clientX - rect.left;
-    dragged.fy = e.clientY - rect.top;
+    dragged.fx = (e.clientX - rect.left - offsetX) / scale;
+    dragged.fy = (e.clientY - rect.top - offsetY) / scale;
+    if (reducedMotion.matches) { dragged.x = dragged.fx; dragged.y = dragged.fy; draw(); }
   });
 
-  window.addEventListener('pointerup', () => {
+  const endDrag = () => {
     if (dragged) {
       dragged.fx = null;
       dragged.fy = null;
       dragged = null;
       simulation.alphaTarget(0);
     }
-  });
+  };
+  canvas.addEventListener('pointerup', endDrag);
+  canvas.addEventListener('pointercancel', endDrag);
+  canvas.addEventListener('lostpointercapture', endDrag);
 
   // Resize
   const resizeObserver = new ResizeObserver(() => {
+    const nextHeight = Math.max(520, Math.min(700, window.innerHeight * 0.6));
+    if (container.clientWidth === width && nextHeight === height) return;
     resizeCanvas();
     simulation.force('center', forceCenter(width / 2, height / 2));
-    simulation.alpha(0.3).restart();
+    simulation.alpha(0.3);
+    settleOrResume();
   });
   resizeObserver.observe(container);
 
-  setTimeout(() => simulation.alpha(1).restart(), 100);
+  function settleOrResume() {
+    if (!visible || document.hidden) { simulation.stop(); return; }
+    if (reducedMotion.matches) { simulation.stop(); simulation.tick(180); draw(); }
+    else if (simulation.alpha() > simulation.alphaMin()) simulation.restart();
+    else draw();
+  }
+  new IntersectionObserver(entries => {
+    visible = entries[0].isIntersecting;
+    if (!visible) endDrag();
+    settleOrResume();
+  }).observe(canvas);
+  document.addEventListener('visibilitychange', () => { if (document.hidden) endDrag(); settleOrResume(); });
+  reducedMotion.addEventListener('change', settleOrResume);
 }

@@ -19,7 +19,18 @@ Object.assign(window, {
 renderSkills();
 filterProjects('all');
 const graph = document.getElementById('connections-graph');
-if (graph) graph.innerHTML = `<div class="connections-list">${connectionsData.nodes.filter(n => n.id !== 'roman').map(n => `<div><span>${n.label}</span>${n.description ? `<p>${n.description}</p>` : ''}</div>`).join('')}</div>`;
+if (graph) {
+  const observer = new IntersectionObserver(entries => {
+    if (!entries.some(entry => entry.isIntersecting)) return;
+    observer.disconnect();
+    void import('./utils/connectionsGraph').then(({ initConnectionsGraph }) => {
+      initConnectionsGraph('connections-graph', connectionsData);
+    }).catch(() => {
+      graph.textContent = 'Граф не загрузился. Попробуйте обновить страницу.';
+    });
+  }, { rootMargin: '200px' });
+  observer.observe(graph);
+}
 handleRoute();
 window.addEventListener('hashchange', handleRoute);
 document.addEventListener('keydown', e => {

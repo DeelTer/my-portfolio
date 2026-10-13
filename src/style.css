@@ -79,3 +79,8 @@ footer { margin-top: 24px !important; }
 }
 @media(max-width: 380px) { .site-nav > div { gap: 10px; }.wordmark { font-size: 20px; }.connections-list { grid-template-columns: 1fr; } }
 @media(prefers-reduced-motion: reduce) { *, *::before, *::after { animation: none !important; transition: none !important; scroll-behavior: auto !important; } }
+
+#connections-graph { min-height: 620px; }
+.graph-description { min-height: 3.5em; margin-top: 14px; color: #aaa; font-size: 13px; line-height: 1.6; }
+.graph-picker { width: 100%; max-width: 380px; background: #111; color: #eee; border: 1px solid #444; padding: 12px; font-size: 14px; }
+.hero-description { max-width: 480px; }
