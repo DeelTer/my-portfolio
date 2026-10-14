@@ -19,6 +19,13 @@ body > .max-w-5xl { max-width: 1240px; padding-top: 0; }
 .eyebrow { font: 11px/1.6 monospace; letter-spacing: 1.6px; color: #aaa; }
 .hero h1 { font-size: clamp(54px, 6.4vw, 88px); font-weight: 800; letter-spacing: -.065em; line-height: 1.02; margin: 28px 0; }
 .hero h1 span { color: #9b9b9b; }
+@media (prefers-reduced-motion: no-preference) {
+  .hero h1 { animation: hero-intro 250ms ease-out; }
+}
+@keyframes hero-intro {
+  from { opacity: 0; transform: translateY(6px); }
+  to { opacity: 1; transform: translateY(0); }
+}
 .hero-description { font-size: 17px; line-height: 1.65; color: #aaa; }
 .hero-actions { display: flex; flex-wrap: wrap; gap: 25px; align-items: center; margin-top: 32px; font-size: 13px; }
 .primary-link { padding: 17px 23px; background: #f2f2f0; color: #111; display: flex; gap: 30px; align-items: center; transition: transform 160ms ease, background-color 160ms ease; }
