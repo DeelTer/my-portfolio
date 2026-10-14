@@ -58,7 +58,7 @@ export const betboomEsports: Project = {
         <div class="bg-[#1f1f1f] rounded-2xl p-6">
           <div class="flex flex-col md:flex-row gap-6 items-start">
             <a href="https://discord.gg/betboom-esports" target="_blank" 
-              class="inline-flex items-center gap-2 bg-[#e5e5e5] px-6 py-3 rounded-xl font-medium hover:bg-[#e62e6e] transition">
+              class="primary-link project-action">
               <i class="ph-fill ph-discord-logo"></i> Войти на сервер
             </a>
           </div>

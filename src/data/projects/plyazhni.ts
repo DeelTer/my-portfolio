@@ -55,7 +55,7 @@ export const plyazhni: Project = {
                 <a href="https://vt.tiktok.com/ZSHLm15oy/" target="_blank" class="block relative group">
                   <img src="./images/tiktok/deelter/thumbnail-1.webp" alt="Превью видео 1" class="w-full h-auto rounded-lg">
                   <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition flex items-center justify-center rounded-lg">
-                    <span class="text-white text-sm font-medium px-3 py-1 bg-[#e5e5e5] rounded-full">Смотреть →</span>
+                    <span class="video-link-label">Смотреть →</span>
                   </div>
                 </a>
               </div>
@@ -63,7 +63,7 @@ export const plyazhni: Project = {
                 <a href="https://vt.tiktok.com/ZSHLmN1rX/" target="_blank" class="block relative group">
                   <img src="./images/tiktok/deelter/thumbnail-2.webp" alt="Превью видео 2" class="w-full h-auto rounded-lg">
                   <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition flex items-center justify-center rounded-lg">
-                    <span class="text-white text-sm font-medium px-3 py-1 bg-[#e5e5e5] rounded-full">Смотреть →</span>
+                    <span class="video-link-label">Смотреть →</span>
                   </div>
                 </a>
               </div>
@@ -71,7 +71,7 @@ export const plyazhni: Project = {
                 <a href="https://vt.tiktok.com/ZSHLasLQ3/" target="_blank" class="block relative group">
                   <img src="./images/tiktok/deelter/thumbnail-3.webp" alt="Превью видео 3" class="w-full h-auto rounded-lg">
                   <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition flex items-center justify-center rounded-lg">
-                    <span class="text-white text-sm font-medium px-3 py-1 bg-[#e5e5e5] rounded-full">Смотреть →</span>
+                    <span class="video-link-label">Смотреть →</span>
                   </div>
                 </a>
               </div>
@@ -106,7 +106,7 @@ export const plyazhni: Project = {
 
         <div class="bg-[#1f1f1f] rounded-2xl p-6">
           <a href="https://tiktok.com/@deelter" target="_blank" 
-            class="inline-flex items-center gap-2 bg-[#e5e5e5] px-6 py-3 rounded-xl font-medium hover:bg-[#e62e6e] transition">
+            class="primary-link project-action">
             <i class="ph-fill ph-tiktok-logo"></i> Перейти в TikTok
           </a>
         </div>

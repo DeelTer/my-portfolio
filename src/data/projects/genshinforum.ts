@@ -24,7 +24,7 @@ export const genshinForum: Project = {
         
         <div class="bg-[#1f1f1f] rounded-2xl p-6">
           <a href="https://t.me/genshinforum" target="_blank" 
-             class="inline-flex items-center gap-2 bg-[#e5e5e5] px-6 py-3 rounded-xl font-medium hover:bg-[#e62e6e] transition">
+             class="primary-link project-action">
             <i class="ph-fill ph-telegram-logo"></i> Перейти в канал
           </a>
         </div>
