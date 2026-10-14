@@ -77,7 +77,7 @@
         <div class="bg-[#1f1f1f] rounded-2xl p-6">
           <div class="flex flex-col md:flex-row gap-6 items-start">
             <a href="https://discord.gg/milkshake" target="_blank" 
-              class="inline-flex items-center gap-2 bg-[#e5e5e5] px-6 py-3 rounded-xl font-medium hover:bg-[#e62e6e] transition">
+              class="primary-link project-action">
               <i class="ph-fill ph-discord-logo"></i> Войти на сервер
             </a>
             <div class="flex-1 discord-widget">
@@ -135,7 +135,7 @@
         <div class="bg-[#1f1f1f] rounded-2xl p-6">
           <div class="flex flex-col md:flex-row gap-6 items-start">
             <a href="https://discord.gg/betboom-esports" target="_blank" 
-              class="inline-flex items-center gap-2 bg-[#e5e5e5] px-6 py-3 rounded-xl font-medium hover:bg-[#e62e6e] transition">
+              class="primary-link project-action">
               <i class="ph-fill ph-discord-logo"></i> Войти на сервер
             </a>
           </div>
@@ -199,7 +199,7 @@
         
         <div class="bg-[#1f1f1f] rounded-2xl p-6">
           <a href="https://t.me/gif_discord" target="_blank" 
-            class="inline-flex items-center gap-2 bg-[#e5e5e5] px-6 py-3 rounded-xl font-medium hover:bg-[#e62e6e] transition">
+            class="primary-link project-action">
             <i class="ph-fill ph-telegram-logo"></i> Перейти в канал
           </a>
         </div>
@@ -260,7 +260,7 @@
         
         <div class="bg-[#1f1f1f] rounded-2xl p-6">
           <a href="https://discord.gg/badbunnies" target="_blank" 
-            class="inline-flex items-center gap-2 bg-[#e5e5e5] px-6 py-3 rounded-xl font-medium hover:bg-[#e62e6e] transition">
+            class="primary-link project-action">
             <i class="ph-fill ph-discord-logo"></i> Войти на сервер
           </a>
         </div>
@@ -280,7 +280,7 @@
         
         <div class="bg-[#1f1f1f] rounded-2xl p-6">
           <a href="https://t.me/lovelyFurina" target="_blank" 
-             class="inline-flex items-center gap-2 bg-[#e5e5e5] px-6 py-3 rounded-xl font-medium hover:bg-[#e62e6e] transition">
+             class="primary-link project-action">
             <i class="ph-fill ph-telegram-logo"></i> Перейти в канал
           </a>
         </div>
@@ -300,7 +300,7 @@
         
         <div class="bg-[#1f1f1f] rounded-2xl p-6">
           <a href="https://t.me/genshinforum" target="_blank" 
-             class="inline-flex items-center gap-2 bg-[#e5e5e5] px-6 py-3 rounded-xl font-medium hover:bg-[#e62e6e] transition">
+             class="primary-link project-action">
             <i class="ph-fill ph-telegram-logo"></i> Перейти в канал
           </a>
         </div>
@@ -320,7 +320,7 @@
         
         <div class="bg-[#1f1f1f] rounded-2xl p-6">
           <a href="https://t.me/hoyozen" target="_blank" 
-             class="inline-flex items-center gap-2 bg-[#e5e5e5] px-6 py-3 rounded-xl font-medium hover:bg-[#e62e6e] transition">
+             class="primary-link project-action">
             <i class="ph-fill ph-telegram-logo"></i> Перейти в канал
           </a>
         </div>
@@ -340,7 +340,7 @@
         
         <div class="bg-[#1f1f1f] rounded-2xl p-6">
           <a href="https://t.me/wbbomb" target="_blank" 
-             class="inline-flex items-center gap-2 bg-[#e5e5e5] px-6 py-3 rounded-xl font-medium hover:bg-[#e62e6e] transition">
+             class="primary-link project-action">
             <i class="ph-fill ph-telegram-logo"></i> Перейти в канал
           </a>
         </div>
@@ -434,7 +434,7 @@
                 <a href="https://vt.tiktok.com/ZSHLm15oy/" target="_blank" class="block relative group">
                   <img src="./images/tiktok/deelter/thumbnail-1.webp" alt="Превью видео 1" class="w-full h-auto rounded-lg">
                   <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition flex items-center justify-center rounded-lg">
-                    <span class="text-white text-sm font-medium px-3 py-1 bg-[#e5e5e5] rounded-full">Смотреть →</span>
+                    <span class="video-link-label">Смотреть →</span>
                   </div>
                 </a>
               </div>
@@ -442,7 +442,7 @@
                 <a href="https://vt.tiktok.com/ZSHLmN1rX/" target="_blank" class="block relative group">
                   <img src="./images/tiktok/deelter/thumbnail-2.webp" alt="Превью видео 2" class="w-full h-auto rounded-lg">
                   <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition flex items-center justify-center rounded-lg">
-                    <span class="text-white text-sm font-medium px-3 py-1 bg-[#e5e5e5] rounded-full">Смотреть →</span>
+                    <span class="video-link-label">Смотреть →</span>
                   </div>
                 </a>
               </div>
@@ -450,7 +450,7 @@
                 <a href="https://vt.tiktok.com/ZSHLasLQ3/" target="_blank" class="block relative group">
                   <img src="./images/tiktok/deelter/thumbnail-3.webp" alt="Превью видео 3" class="w-full h-auto rounded-lg">
                   <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition flex items-center justify-center rounded-lg">
-                    <span class="text-white text-sm font-medium px-3 py-1 bg-[#e5e5e5] rounded-full">Смотреть →</span>
+                    <span class="video-link-label">Смотреть →</span>
                   </div>
                 </a>
               </div>
@@ -485,7 +485,7 @@
 
         <div class="bg-[#1f1f1f] rounded-2xl p-6">
           <a href="https://tiktok.com/@deelter" target="_blank" 
-            class="inline-flex items-center gap-2 bg-[#e5e5e5] px-6 py-3 rounded-xl font-medium hover:bg-[#e62e6e] transition">
+            class="primary-link project-action">
             <i class="ph-fill ph-tiktok-logo"></i> Перейти в TikTok
           </a>
         </div>
@@ -762,7 +762,7 @@ dependencies {
 
       <div class="bg-[#1f1f1f] rounded-2xl p-6">
         <a href="https://github.com/DeelTer/CryptomusSDK" target="_blank" 
-          class="inline-flex items-center gap-2 bg-[#e5e5e5] px-6 py-3 rounded-xl font-medium hover:bg-[#e62e6e] transition">
+          class="primary-link project-action">
           <i class="ph-fill ph-github-logo"></i> Перейти на GitHub
         </a>
       </div>
@@ -785,7 +785,7 @@ dependencies {
           <li class="flex items-start gap-2"><i class="ph-fill ph-check-circle text-[#e5e5e5] mt-1 shrink-0"></i> Синхронные и асинхронные методы</li>
           <li class="flex items-start gap-2"><i class="ph-fill ph-check-circle text-[#e5e5e5] mt-1 shrink-0"></i> Автоматический ретрай при 429 Too Many Requests с учётом заголовка retry-after</li>
           <li class="flex items-start gap-2"><i class="ph-fill ph-check-circle text-[#e5e5e5] mt-1 shrink-0"></i> Опциональный WebSocket-клиент для событий в реальном времени</li>
-          <li class="flex items-start gap-2"><i class="ph-fill ph-check-circle text-[#e5e5e5] mt-1 shrink-0"></i> Чистые DTO с Jackson</code></li>
+          <li class="flex items-start gap-2"><i class="ph-fill ph-check-circle text-[#e5e5e5] mt-1 shrink-0"></i> Чистые DTO с Jackson</li>
           <li class="flex items-start gap-2"><i class="ph-fill ph-check-circle text-[#e5e5e5] mt-1 shrink-0"></i> Строковые константы для статусов, игр, ошибок и событий WebSocket</li>
         </ul>
       </div>
@@ -857,7 +857,7 @@ dependencies {
 
       <div class="bg-[#1f1f1f] rounded-2xl p-6">
         <a href="https://github.com/DeelTer/lisskins-java" target="_blank" 
-          class="inline-flex items-center gap-2 bg-[#e5e5e5] px-6 py-3 rounded-xl font-medium hover:bg-[#e62e6e] transition">
+          class="primary-link project-action">
           <i class="ph-fill ph-github-logo"></i> Перейти на GitHub
         </a>
       </div>
